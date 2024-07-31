@@ -1,0 +1,122 @@
+{
+  "add_bos_token": false,
+  "add_prefix_space": false,
+  "added_tokens_decoder": {
+    "30981": {
+      "content": "<EMAIL>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "30982": {
+      "content": "<SUB>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "30983": {
+      "content": "<TIME>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "30984": {
+      "content": "<DATE>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "30985": {
+      "content": "<SERIES>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "30986": {
+      "content": "<NUMBER>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "30987": {
+      "content": "<REPETITIVE>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "30988": {
+      "content": "<SINGLE>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "30989": {
+      "content": "<REGEX>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "30990": {
+      "content": "<SPECIAL>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "30991": {
+      "content": "<|eos|>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "30992": {
+      "content": "<|unk|>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    }
+  },
+  "additional_special_tokens": [
+    "<EMAIL>",
+    "<SUB>",
+    "<TIME>",
+    "<DATE>",
+    "<SERIES>",
+    "<NUMBER>",
+    "<REPETITIVE>",
+    "<SINGLE>",
+    "<REGEX>",
+    "<SPECIAL>"
+  ],
+  "bos_token": "<|bos|>",
+  "clean_up_tokenization_spaces": true,
+  "eos_token": "<|eos|>",
+  "errors": "replace",
+  "model_max_length": 1000000000000000019884624838656,
+  "pad_token": null,
+  "tokenizer_class": "GPT2Tokenizer",
+  "unk_token": "<|unk|>"
+}
