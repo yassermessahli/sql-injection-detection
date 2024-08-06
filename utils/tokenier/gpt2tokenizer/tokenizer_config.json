@@ -2,7 +2,7 @@
   "add_bos_token": false,
   "add_prefix_space": false,
   "added_tokens_decoder": {
-    "30981": {
+    "507": {
       "content": "<EMAIL>",
       "lstrip": false,
       "normalized": false,
@@ -10,7 +10,7 @@
       "single_word": false,
       "special": true
     },
-    "30982": {
+    "508": {
       "content": "<SUB>",
       "lstrip": false,
       "normalized": false,
@@ -18,7 +18,7 @@
       "single_word": false,
       "special": true
     },
-    "30983": {
+    "509": {
       "content": "<TIME>",
       "lstrip": false,
       "normalized": false,
@@ -26,7 +26,7 @@
       "single_word": false,
       "special": true
     },
-    "30984": {
+    "510": {
       "content": "<DATE>",
       "lstrip": false,
       "normalized": false,
@@ -34,7 +34,7 @@
       "single_word": false,
       "special": true
     },
-    "30985": {
+    "511": {
       "content": "<SERIES>",
       "lstrip": false,
       "normalized": false,
@@ -42,7 +42,7 @@
       "single_word": false,
       "special": true
     },
-    "30986": {
+    "512": {
       "content": "<NUMBER>",
       "lstrip": false,
       "normalized": false,
@@ -50,7 +50,7 @@
       "single_word": false,
       "special": true
     },
-    "30987": {
+    "513": {
       "content": "<REPETITIVE>",
       "lstrip": false,
       "normalized": false,
@@ -58,7 +58,7 @@
       "single_word": false,
       "special": true
     },
-    "30988": {
+    "514": {
       "content": "<SINGLE>",
       "lstrip": false,
       "normalized": false,
@@ -66,7 +66,7 @@
       "single_word": false,
       "special": true
     },
-    "30989": {
+    "515": {
       "content": "<REGEX>",
       "lstrip": false,
       "normalized": false,
@@ -74,7 +74,7 @@
       "single_word": false,
       "special": true
     },
-    "30990": {
+    "516": {
       "content": "<SPECIAL>",
       "lstrip": false,
       "normalized": false,
@@ -82,7 +82,15 @@
       "single_word": false,
       "special": true
     },
-    "30991": {
+    "30875": {
+      "content": "<|bos|>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "30876": {
       "content": "<|eos|>",
       "lstrip": false,
       "normalized": true,
@@ -90,7 +98,7 @@
       "single_word": false,
       "special": true
     },
-    "30992": {
+    "30877": {
       "content": "<|unk|>",
       "lstrip": false,
       "normalized": true,

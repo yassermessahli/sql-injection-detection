@@ -1,0 +1,552 @@
+-- general sql queries --
+-- label 1 --
+SELECT * FROM users WHERE id = 1;
+SELECT name, age FROM employees WHERE department = 'Sales';
+INSERT INTO orders (order_id, customer_id, order_date) VALUES (1, 2, '2024-08-04');
+UPDATE products SET price = price * 1.1 WHERE category = 'Electronics';
+DELETE FROM sessions WHERE session_date < '2024-01-01';
+SELECT COUNT(*) FROM sales WHERE sale_date BETWEEN '2023-01-01' AND '2023-12-31';
+SELECT customer_id, SUM(order_total) as total_spent FROM orders GROUP BY customer_id HAVING total_spent > 1000;
+SELECT p.product_name, c.category_name FROM products p JOIN categories c ON p.category_id = c.category_id WHERE c.category_name = 'Books';
+SELECT * FROM products WHERE price > 100 AND stock < 50;
+SELECT DISTINCT city FROM customers WHERE country = 'USA';
+CREATE TABLE new_table (id INT PRIMARY KEY, name VARCHAR(100));
+ALTER TABLE users ADD COLUMN email VARCHAR(255);
+DROP TABLE IF EXISTS old_table;
+SELECT AVG(salary) FROM employees WHERE department_id = 3;
+SELECT MAX(order_date) FROM orders;
+SELECT * FROM orders WHERE order_date > '2024-01-01' ORDER BY order_total DESC;
+SELECT * FROM users WHERE registration_date BETWEEN '2023-01-01' AND '2023-12-31';
+SELECT customer_id, COUNT(*) FROM orders GROUP BY customer_id;
+SELECT product_name FROM products WHERE stock > 0 ORDER BY product_name;
+
+
+-- general sentences --
+-- label 0 --
+The concert will start at 8 PM on August 10, 2024.
+The population of the city is approximately 1.5 million.
+On December 31, 2023, the world will celebrate New Year's Eve.
+The average temperature in July is around 30 degrees Celsius.
+The marathon will take place on November 5, 2024, in New York.
+My brother is 10 years old and loves playing soccer.
+The movie 'Inception' was released in 2010 and is a masterpiece.
+The last train leaves at 11:45 PM every night.
+The project starts on 2023-09-01 and ends on 2024-06-30.
+My favorite color is blue, and I have a cat named Whiskers.
+Alice was born on March 15, 1995, and loves to travel.
+The price of the product is $43.99 and ships on November 1st.
+In 2024, the Olympics will be held in Paris, France.
+The temperature today is 25 degrees Celsius.
+Yesterday was July 25, 2023, and it was sunny all day.
+
+
+
+-- random input --
+-- label 0 --
+John Smith
+123456
+John Smith is a software engineer with over 10 years of experience in web development. He enjoys coding in Python and JavaScript and has a passion for creating user-friendly applications.
+The quick brown fox jumps over the lazy dog.
+The cat chased the mouse around the garden.
+March 15, 2023
+Honey never spoils; archaeologists have found pots of honey in ancient Egyptian tombs that are over 3000 years old and still edible.
+Alice Johnson
+9876543210
+select on this 'table', 'database' that you want
+Alice Johnson recently graduated from university with a degree in marketing. She loves working with social media and helping brands connect with their audience through creative campaigns.
+2023-08-04 is a significant date for many people.
+I have a meeting scheduled for 10 AM tomorrow.
+December 31, 2024
+A group of flamingos is called a "flamboyance."
+Michael Brown
+3.14159
+Michael Brown is an avid traveler who has visited over 30 countries. His favorite destination is Japan, where he enjoyed the culture, food, and beautiful landscapes.
+The average temperature in July is around 30 degrees Celsius.
+The cake was delicious, and everyone enjoyed it.
+July 4, 2025
+Bananas are berries, but strawberries are not.
+Sarah Davis
+2024
+Sarah Davis is a talented artist who specializes in watercolor painting. She often finds inspiration in nature and enjoys painting landscapes and wildlife.
+My favorite book is "To Kill a Mockingbird" by Harper Lee.
+She bought a new car last week, and it's red.
+January 1, 2022
+The weather today is sunny with a chance of rain later.
+David Wilson
+1500
+
+-- sql-like normal text --
+-- label 0 --
+Select all the colors from the rainbow and filter them by brightness
+Update the records in the database where the user is not found
+Delete the unnecessary entries from the list and keep the important ones
+Insert a new row into the table of dreams and make sure it has a unique ID
+Join the tables of knowledge and wisdom to get the best results
+Select the first ten fruits from the basket and arrange them in alphabetical order
+Create a new view of the mountains and set the height to 3000 meters
+Count the number of stars in the sky and group them by brightness level
+Where is the best place to find hidden treasures in the database
+Select the top 5 movies of all time and order them by release date
+Update the status of the project to 'completed' and notify the team
+Filter the results where the answers are not clear and highlight them
+Select this table from here and put it where you go
+I have a 5*5 matrix and I do not know where I should select from it
+Delete all the duplicates from the list and keep the original entries
+Select the best route to the destination and avoid traffic
+Join the data from last year with this year's results and analyze the differences
+Insert a new entry for the unknown variable and define its parameters
+Group the items by category and sort them by price
+Where can I find the missing documents in the archive
+Select the rows where the temperature exceeds 100 degrees and alert the system
+Update the configuration settings to optimize performance and reduce errors
+Count how many times the word 'success' appears in the report
+Select the last five entries from the log and review them for errors
+Create a backup of the current settings and store it in the cloud
+Join the lists of participants and check for any duplicates
+Select the highest score from the test results and display it
+Where should I insert the new data into the existing structure
+Update the inventory count where items are running low and reorder them
+Select the unique identifiers from the dataset and export them to CSV
+Count the total number of hours worked and summarize the results
+Select the names of the winners and display them in a trophy case
+
+-- complex sql queries --
+-- label 1 --
+SELECT product_name, price FROM inventory WHERE stock > 50 AND category = 'Electronics'
+SELECT customer_id, COUNT(order_id) FROM orders WHERE order_date >= '2023-01-01' GROUP BY customr_id HAVING COUNT(order_id) > 5;
+SELECT name, email FROM users WHERE active = TRUE AND last_login > '2024-01-01'
+SELECT city, AVG(rating) FROM reviews WHERE product_id = 123 GROUP BY city HAVING AVG(rating) > .5;
+SELECT order_id, SUM(quantity) FROM order_details WHERE product_id IN (1, 2, 3) GROUP BY order_i;
+SELECT DISTINCT department FROM employees WHERE salary > 60000 ORDER BY department
+SELECT MAX(salary) AS highest_salary FROM employees WHERE position = 'Manager'
+SELECT name, age FROM customers WHERE registration_date < '2023-06-01' AND status = 'active'
+SELECT COUNT(*) FROM products WHERE discount > 0 AND available = TRUE
+SELECT user_id, login_count FROM user_activity WHERE last_active > '2023-12-31' ORDER BY login_cunt DESC;
+SELECT category, SUM(sales) FROM sales_data WHERE year = 2023 GROUP BY category
+SELECT first_name, last_name FROM staff WHERE role = 'Admin' AND status = 'active'
+SELECT COUNT(DISTINCT user_id) FROM purchases WHERE purchase_date BETWEEN '2023-01-01' AND '202312-31';
+SELECT product_id, SUM(quantity) FROM sales WHERE sale_date BETWEEN '2023-01-01' AND '2023-12-31 GROUP BY product_id;
+SELECT email FROM subscribers WHERE subscribed = TRUE AND last_email_sent < '2024-01-01'
+SELECT name, COUNT(*) FROM attendees WHERE event_id = 456 GROUP BY name HAVING COUNT(*) > 1
+SELECT AVG(price) FROM products WHERE category = 'Books' AND stock > 0
+SELECT user_id, COUNT(order_id) FROM orders WHERE order_date > '2023-01-01' GROUP BY user_id HAVNG COUNT(order_id) > 3;
+SELECT item_name, quantity FROM inventory WHERE location = 'Warehouse' AND quantity < 10
+SELECT DISTINCT country FROM customers WHERE last_purchase > '2024-01-01'
+SELECT product_name, SUM(revenue) FROM sales WHERE region = 'North' GROUP BY product_name
+SELECT user_id, MAX(login_date) FROM user_logins WHERE login_date > '2023-01-01' GROUP BY user_i;
+SELECT name, role FROM employees WHERE department = 'Sales' AND status = 'active'
+SELECT COUNT(*) FROM transactions WHERE amount > 1000 AND transaction_date BETWEEN '2023-01-01' ND '2023-12-31';
+SELECT customer_id, SUM(total_amount) FROM invoices WHERE status = 'Paid' GROUP BY customer_id
+SELECT product_id, AVG(rating) FROM product_reviews WHERE review_date > '2023-01-01' GROUP BY prduct_id;
+SELECT name FROM users WHERE age BETWEEN 18 AND 30 AND active = TRUE
+SELECT DISTINCT product_name FROM orders WHERE order_date > '2023-01-01'
+SELECT COUNT(*) FROM feedback WHERE rating < 3 AND feedback_date > '2023-01-01'
+SELECT user_id, COUNT(*) FROM comments WHERE post_id = 789 GROUP BY user_id HAVING COUNT(*) > 5
+SELECT AVG(salary) FROM employees WHERE department_id = 2 AND employment_status = 'Full-time'
+
+
+-- sql injections --
+-- label 1 --
+1 OR 1=1; --
+admin' -- 
+' OR 'a'='a'; --
+' UNION SELECT username, password FROM users; --
+' AND (SELECT COUNT(*) FROM users) > 0; --
+' OR EXISTS(SELECT * FROM products WHERE price < 100); --
+' OR (SELECT 1 FROM users WHERE username = 'admin') IS NOT NULL; --
+' AND (SELECT LENGTH(password) FROM users WHERE username = 'admin') = 8; --
+' UNION SELECT NULL, username, password FROM users; --
+1; DROP TABLE users; --
+1; SELECT * FROM products WHERE category = 'Electronics' AND price < 100; --
+' OR (SELECT CASE WHEN (1=1) THEN 1 ELSE 0 END) = 1; --
+' OR (SELECT COUNT(*) FROM information_schema.tables) > 0; --
+" AND (SELECT MIN(id) FROM users WHERE username LIKE 'a%') IS NOT NULL; --
+" UNION SELECT NULL, NULL, NULL FROM dual; --
+" OR (SELECT COUNT(*) FROM orders WHERE status = 'shipped') > 0; --
+" AND (SELECT COUNT(*) FROM products WHERE category_id = (SELECT id FROM categories WHERE name = 'Electronics')) > 0; --
+" OR (SELECT 1 FROM users WHERE username = 'admin') = 1; --
+" AND (SELECT COUNT(*) FROM information_schema.columns WHERE table_name = 'users') > 0; --
+" UNION SELECT NULL, (SELECT email FROM users WHERE username = 'admin'), NULL; --
+" OR (SELECT COUNT(*) FROM orders WHERE order_date > '2023-01-01') > 0; --
+" AND (SELECT COUNT(*) FROM users WHERE username = 'admin') > 0; --
+" OR (SELECT CASE WHEN (1=1) THEN 'true' ELSE 'false' END) = 'true'; --
+" AND (SELECT COUNT(*) FROM products WHERE price < 50) > 0; --
+" OR (SELECT 1 FROM users WHERE username = 'admin') = 1; --
+" AND (SELECT LENGTH(password) FROM users WHERE username = 'admin') = 8; --
+" UNION SELECT NULL, (SELECT username FROM users WHERE username = 'admin'), NULL; --
+' OR (SELECT COUNT(*) FROM orders WHERE status = 'pending') > 0; --
+' AND (SELECT COUNT(*) FROM feedback WHERE rating < 3) > 0; --
+' OR (SELECT COUNT(*) FROM products WHERE price < 50) > 0; --
+admin' OR '1'='1'; --
+' OR 1=1; --
+' UNION SELECT 1, 2, 3; --
+' AND 1=(SELECT COUNT(*) FROM tablename) -- 
+' OR 'x'='x' AND 'y'='y'; --
+' AND (SELECT 1 FROM dual) WHERE (SELECT COUNT(*) FROM orders) > 0; --
+' OR (SELECT COUNT(*) FROM users WHERE username = 'admin') > 0; --
+' AND (SELECT 1 FROM users WHERE username = 'admin') IS NOT NULL; --
+' UNION SELECT NULL, NULL, NULL FROM dual WHERE (SELECT COUNT(*) FROM users) = 0; --
+' OR (SELECT CASE WHEN (1=1) THEN 1 ELSE 0 END) = 1; --
+' AND (SELECT COUNT(*) FROM products WHERE category_id = (SELECT id FROM categories WHERE name = 'Electronics')) > 0; --
+' OR (SELECT 1 FROM users WHERE username = 'admin') IS NOT NULL; --
+' AND (SELECT SUBSTRING(username, 1, 1) FROM users WHERE username = 'admin') = 'a'; --
+' UNION SELECT NULL, username, password FROM users WHERE '1'='1' AND 'x'='x'; --
+' OR (SELECT COUNT(*) FROM orders WHERE order_date > '2023-01-01') > 0; --
+' AND (SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = database()) > 0; --
+1' OR '1'='
+' OR '1'='1' -
+' OR '1'='1' /
+' UNION SELECT username, password FROM users --
+' UNION SELECT null, username, password FROM users --
+" AND (SELECT COUNT(*) FROM users) > 0 --
+' OR EXISTS(SELECT * FROM users WHERE username = 'admin') --
+" OR 'a'='
+' OR 1=1 LIMIT 1; --
+" OR 1=1; -
+' AND 1=1; -
+") UNION SELECT 1, 'test', 'test' --
+') UNION SELECT NULL, username, password FROM users --
+"))) AND (SELECT SUBSTRING(password, 1, 1) FROM users WHERE username = 'admin') = 'a' --
+"))) OR (SELECT COUNT(*) FROM information_schema.tables) > 0 --
+"))) AND (SELECT LENGTH(password) FROM users WHERE username = 'admin') = 8 --
+"))) OR (SELECT 1 FROM dual) = 1 -
+") UNION SELECT 1, 2, 3, 4, 5 -
+") AND 1=(SELECT COUNT(*) FROM tablename) --
+") OR 'x'='x' AND 'y'='y'
+")) SELECT * FROM products WHERE id = 1 UNION SELECT username, password FROM users --
+")) AND (SELECT MIN(username) FROM users) = 'admin' --
+")) UNION SELECT username, password FROM users WHERE '1'='1' --
+')) OR (SELECT 1 FROM users WHERE username = 'admin') --
+')) OR (SELECT 1 FROM dual) = 1; --
+')) OR (SELECT COUNT(*) FROM users) > 0; --
+')) AND (SELECT 1 FROM users WHERE username = 'admin') IS NOT NULL --
+')) OR (SELECT 1 FROM users WHERE username = 'admin') IS NOT NULL; --
+')) OR (SELECT SUBSTRING(username, 1, 1) FROM users) = 'a' --
+')) OR (SELECT 1 FROM users WHERE username = 'admin') IS NOT NULL; --
+') UNION SELECT NULL, NULL, NULL FROM dual --
+') AND (SELECT 1 FROM users WHERE username = 'admin') IS NOT NULL; --
+') OR 1=1; DROP TABLE users; --
+') OR 1=1; SELECT * FROM products; --
+') AND (SELECT COUNT(*) FROM users WHERE username = 'admin') > 0 --
+' OR (SELECT 1 FROM users WHERE username = 'admin') = 1; --
+' UNION SELECT NULL, NULL, NULL FROM dual; --
+' OR (SELECT COUNT(*) FROM users) > 0; --
+' OR (SELECT 1 FROM users WHERE username = 'admin') = 1; --
+' OR (SELECT SUBSTRING(password, 1, 1) FROM users WHERE username = 'admin') = 'a'; --
+1' AND (SELECT COUNT(*) FROM users WHERE username = 'admin' AND password LIKE 'a%') > 0; --
+' OR (SELECT CASE WHEN (1=1) THEN 1 ELSE 0 END) = 1; --
+" UNION SELECT NULL, username, password FROM users WHERE '1'='1' LIMIT 1 OFFSET 0; --
+' AND (SELECT SUBSTRING(password, 1, 1) FROM users WHERE username = 'admin') = 'a'; --
+" OR EXISTS(SELECT * FROM products WHERE price < 100) AND 'x'='x'; --
+')) AND (SELECT 1 FROM dual) WHERE (SELECT COUNT(*) FROM orders) > 0; --
+' UNION SELECT 1, 'test', (SELECT email FROM users WHERE username = 'admin') --
+') AND (SELECT LENGTH(password) FROM users WHERE username = 'admin') = 8; --
+' OR (SELECT 1 FROM information_schema.tables WHERE table_schema = database()) IS NOT NULL; --
+'))) AND (SELECT MIN(id) FROM users WHERE username LIKE 'a%') IS NOT NULL; --
+' OR (SELECT COUNT(*) FROM information_schema.columns WHERE table_name = 'users') > 0; --
+' UNION SELECT 1, 2, (SELECT password FROM users WHERE username = 'admin') --
+" AND (SELECT COUNT(*) FROM orders WHERE order_date > '2023-01-01') > 0; --
+' OR (SELECT 1 FROM users WHERE username = 'admin') = 1; --
+'; AND (SELECT 1 FROM users WHERE username = 'admin') IS NOT NULL; --
+' UNION SELECT NULL, NULL, NULL FROM dual WHERE (SELECT COUNT(*) FROM users) = 0; --
+' OR (SELECT CASE WHEN (1=1) THEN 'true' ELSE 'false' END) = 'true'; --
+'; AND (SELECT COUNT(*) FROM products WHERE category_id = (SELECT id FROM categories WHERE name = Electronics')) > 0; --
+' OR (SELECT 1 FROM users WHERE username = 'admin') IS NOT NULL; --
+';( AND (SELECT SUBSTRING(username, 1, 1) FROM users WHERE username = 'admin') = 'a'; --
+' UNION SELECT NULL, username, password FROM users WHERE '1'='1' AND 'x'='x'; --
+' OR (SELECT COUNT(*) FROM orders WHERE status = 'shipped') > 0; --
+')) AND (SELECT 1 FROM users WHERE username = 'admin') IS NOT NULL; --
+' UNION SELECT NULL, NULL, NULL FROM dual WHERE (SELECT COUNT(*) FROM users) = 0; --
+' OR (SELECT CASE WHEN (1=1) THEN 1 ELSE 0 END) = 1; --
+')))) AND (SELECT COUNT(*) FROM products WHERE price < 100) > 0; --
+' OR (SELECT 1 FROM users WHERE username = 'admin') = 1; --
+' AND (SELECT LENGTH(password) FROM users WHERE username = 'admin') = 8; --
+')); UNION SELECT NULL, (SELECT email FROM users WHERE username = 'admin'), NULL; --
+' OR (SELECT COUNT(*) FROM orders WHERE order_date > '2023-01-01') > 0; --
+' AND (SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = database()) > 0; --
+' OR (SELECT CASE WHEN (1=1) THEN 'true' ELSE 'false' END) = 'true'; --
+
+-- texts with sql keywords -- 
+-- label 0 --
+The SELECT statement retrieves data from the database.
+I want to INSERT new records into the users table.
+Can you UPDATE the status of the order to shipped?
+The DELETE command removes entries from the table.
+We need to JOIN the customer data with their orders.
+The WHERE clause filters results based on specific criteria.
+I want to ORDER BY the last name in ascending order.
+The GROUP BY clause aggregates data for analysis.
+Let’s use a UNION to combine results from two queries.
+The database schema defines the structure of the tables.
+I need to create a VIEW for the sales summary.
+The transaction must be COMMITTED to save changes.
+Can you ROLLBACK the last transaction if it fails?
+The primary key uniquely identifies each record in the table.
+We should INDEX the columns for faster search performance.
+The HAVING clause is used to filter aggregated results.
+I’ll use the COUNT function to get the total number of users.
+The AVG function calculates the average sales amount.
+We need to SELECT DISTINCT values to avoid duplicates.
+The INSERT INTO statement adds new rows to the table.
+Can you show me the latest records using LIMIT?
+The database normalization process reduces data redundancy.
+The schema includes tables, views, and procedures.
+I want to retrieve the MAX salary from the employees table.
+The INNER JOIN combines rows from two or more tables.
+The OUTER JOIN retrieves matching rows and unmatched rows.
+We should use a subquery to filter results effectively.
+The LIKE operator allows pattern matching in queries.
+I’ll use the EXISTS operator to check for data presence.
+The SQL injection vulnerability can lead to data breaches.
+The TRUNCATE command quickly removes all rows from a table.
+We can use a temporary table for intermediate results.
+The database backup is essential for data recovery.
+I need to ALTER the table to add a new column.
+The database server must handle concurrent connections.
+The SELECT INTO statement creates a new table from a query.
+The data type defines the kind of data stored in a column.
+We can use the CASE statement for conditional logic in queries.
+The SQL syntax must be followed to avoid errors.
+The database engine processes the SQL commands efficiently.
+I want to change the data type of a column using ALTER.
+The GROUP_CONCAT function aggregates values into a single string.
+The data integrity constraints ensure accurate data entry.
+I’ll use the COALESCE function to handle NULL values.
+The database query optimizer improves performance.
+We need to define foreign key relationships between tables.
+The SQL command line interface allows direct database interaction.
+The data warehouse stores large volumes of historical data.
+I’ll use the CONCAT function to combine first and last names.
+The SQL statement must end with a semicolon.
+The REPLACE function updates specific values in a string.
+We can use the TRIM function to remove whitespace from data.
+The database log tracks all changes made to the data.
+I want to create a stored procedure for repetitive tasks.
+The SQL standard defines the syntax and rules for queries.
+The data visualization tools help analyze query results.
+I’ll use the GROUP BY clause to summarize sales data.
+The SQL command must be executed within a transaction.
+The data model outlines how data is structured
+The cat decided to SELECT the coziest spot in the house.
+I need to INSERT some new ideas into the project proposal.
+Can you UPDATE the presentation slides with the latest data?
+The DELETE button was accidentally pressed, removing important files.
+Let’s JOIN our efforts to complete the project on time.
+The WHERE are my keys? I can’t find them anywhere!
+I want to ORDER my thoughts before the meeting starts.
+The GROUP of friends decided to go on a trip together.
+I’ll UNION my playlist with yours for the party.
+The schema of the building was designed by a famous architect.
+I need to create a VIEW of the city from the rooftop.
+The transaction must be COMMITTED before we can proceed.
+Can you ROLLBACK the changes made to the document?
+The primary key to happiness is a positive mindset.
+We should INDEX our favorite movies for easy access.
+The HAVING fun at the carnival was unforgettable.
+I’ll COUNT the number of attendees for the event.
+The AVG temperature this week has been quite pleasant.
+We need to SELECT DISTINCT flavors for the ice cream menu.
+The INSERT INTO the recipe book was a delightful addition.
+Can you show me the LIMIT of your patience?
+The normalization of the data helped improve clarity.
+The schema of the project outlines our objectives.
+I want to retrieve the MAX score from the last game.
+The INNER circle of friends met for dinner last night.
+The OUTER edges of the paper were frayed and torn.
+We should use a subquery to find the best options.
+The LIKE-minded individuals gathered for the discussion.
+I’ll EXISTS in the moment and enjoy the experience.
+The SQL injection vulnerability was a major concern.
+The TRUNCATE of the old files made space for new ones.
+We can use a temporary solution until the main one is ready.
+The backup of the important files is essential.
+I need to ALTER my plans for the weekend.
+The server must handle concurrent requests efficiently.
+The SELECT INTO the new project was exciting.
+The data type of the new gadget is quite innovative.
+We can use the CASE scenario to decide the next steps.
+The syntax of the poem was beautifully crafted.
+The engine processes the commands with great efficiency.
+I want to change the data type of my favorite song.
+The GROUP of musicians played beautifully together.
+The COALESCE of their opinions led to a consensus.
+The integrity of the project was maintained throughout.
+I’ll use the CONCAT function to combine the names.
+The statement must end with a period for clarity.
+The REPLACE function updated the old information.
+We can TRIM the excess details from the report.
+The log tracks all changes made to the project.
+I want to create a stored memory for future reference.
+The standard defines the rules for our collaboration.
+The visualization tools helped present our findings.
+I’ll use the GROUP BY clause to categorize the results.
+The command must be executed within a defined timeframe.
+The model outlines how we will approach the task.
+The functions can simplify complex calculations.
+We need to optimize the workflow for better results.
+The connection string specifies the details for access.
+I’ll FETCH the latest updates from the team.
+The command can be executed using a simple script.
+The migration process transfers ideas between groups.
+The error messages help identify issues in the project.
+I want to use a CTE for better organization of thoughts.
+The client allows users to interact with the interface.
+The import process requires proper formatting of data.
+We can use the JSON format to handle structured information.
+The query can be parameterized for security purposes.
+The documentation of the project must be thorough.
+I’ll use the RANK function to prioritize tasks.
+The standard supports various formats for submission.
+The administrator manages user access to resources.
+The results can be returned in different formats.
+I want to use the ROLLUP for additional insights.
+The command can be scheduled for regular updates.
+The checks prevent invalid entries in the system.
+The query can be optimized using efficient methods.
+I’ll INTERSECT the two lists to find common items.
+The command can be executed in a timely manner.
+The export process generates reports for stakeholders.
+We can monitor performance using the profiling tools.
+The conditions can include multiple JOIN criteria.
+I want to use the CROSS JOIN to explore all possibilities.
+The cleansing process improves the quality of information.
+The command can be executed asynchronously if needed.
+The replication ensures that data is always available.
+I’ll create a new table for the upcoming events.
+The functions can be used to analyze different scenarios.
+The retention policy defines how long we keep records.
+The command can be executed in a batch for efficiency.
+The triggers automate responses based on specific events.
+I want to use the DROP command to remove unnecessary files.
+The query can be formatted for better readability.
+The analysis tools help visualize the project outcomes.
+The command can modify existing records as needed.
+The performance tuning improves overall efficiency.
+I’ll use the command to grant access to new users.
+
+-- potential SAGE ERP inputs --
+-- label 0 --
+John Smith, Senior Sales Manager, has successfully closed multiple deals this quarter, contributing significantly to the team’s overall performance.
+Alice Johnson, a new customer, registered on 2023-08-04 and has shown interest in our premium product line.
+The invoice dated 2023-12-31 for $2,500.00 was sent to Michael Brown for the recent order of 150 units of Product A.
+David Wilson placed an order for 200 units of Product B on 2023-11-20, taking advantage of the 10% discount offer.
+The quarterly report titled "Sales Performance Q3 2023" indicates a 25% increase in sales compared to the previous quarter.
+Emily Garcia, our top-performing sales representative, achieved $10,000.00 in sales last month, setting a new record for the team.
+A shipment of 300 units of Product C is scheduled for delivery on 2024-01-15, with tracking information to be provided shortly.
+The customer feedback collected on 2023-10-10 highlighted the excellent service provided by Jessica Lee during the purchase process.
+Daniel Anderson has been assigned as the project lead for the upcoming product launch scheduled for 2024-03-01.
+The order confirmation for 100 units of Product D was sent to Laura Thomas on 2023-09-30, with an expected delivery date of 2023-10-15.
+A payment of $1,200.00 was received from Christopher Martinez on 2023-11-05, settling the outstanding invoice.
+The title "Best Customer Service Award" was presented to Sarah Davis during the annual company meeting held on 2023-12-15.
+The new product line, "Eco-Friendly Office Supplies," launched on 2023-08-01, has received positive reviews from customers.
+A credit note for $500.00 was issued to David Wilson on 2024-02-10 due to a pricing error on the previous invoice.
+The sales meeting scheduled for 2024-04-20 will focus on strategies to improve customer retention and satisfaction.
+The report titled "Inventory Status Report" dated 2023-09-01 shows that we have 150 units of Product E in stock.
+A promotional email was sent to all customers on 2023-07-15, announcing a summer sale with discounts of up to 30%.
+The customer loyalty program, "Gold Tier," was launched on 2023-11-01 to reward our most loyal clients.
+A total of 250 units of Product F were sold during the Black Friday sale on 2023-11-24, exceeding our sales expectations.
+The meeting notes from the strategy session held on 2023-10-05 emphasize the importance of expanding our market reach.
+A new supplier, ABC Supplies, was added to the system on 2023-08-20, providing us with better pricing on office materials.
+The purchase order #PO123456 for 500 units of Product G was approved on 2024-01-10, with an estimated delivery date of 2024-01-20.
+The training session titled "Effective Sales Techniques" is scheduled for 2024-02-15, aimed at enhancing the skills of our sales team.
+A refund of $150.00 was processed for the customer John Doe on 2023-12-01 due to a returned item.
+The product review for Product H submitted on 2023-11-30 praised its quality and functionality.
+A reminder email regarding the upcoming payment due on 2024-03-05 was sent to all outstanding accounts.
+The annual budget meeting is set for 2024-04-25 to discuss financial projections and resource allocation.
+The title "Employee of the Month" was awarded to Emily Garcia for her outstanding contributions in March 2024.
+John Smith
+123456
+$1,250.75
+2023-09-30
+Christopher Martinez
+147258
+$900.75
+2023-08-15
+1001 Main St, Springfield
+2023-01-01
+10% Discount on all items
+500 units of Product A
+PO# 123456789
+2024-03-01
+Customer ID: CUST001
+$1,000.00 payment received
+Invoice #INV2024-001
+2023-06-30
+150 items shipped on 2024-04-15
+25% off on next purchase
+200 units of Product B
+2023-07-01
+50% of total sales target achieved
+300 units of Product C
+2024-06-30
+New customer registration: Jane Doe
+2023-03-15
+$150.00 refund processed
+Supplier contact: John Doe
+2023-05-25
+$1,500.00 invoice amount
+2024-02-10
+600 units of Product G
+2023-09-01
+
+
+
+-- sql queries with complex non-keywords --
+-- label 1 --
+UPDATE home_suppliers_db.android_tvs SET size_without_pads = CASE WHEN has_pads = TRUE THEN 100 ELSE 90 END;
+SELECT product_name, price FROM inventory WHERE stock > 0 AND (category = 'Electronics' OR category = 'Appliances');
+INSERT INTO customer_feedback (customer_id, feedback_text, submission_date) VALUES (12345, 'The service was exceptional and the product quality exceeded expectations.', NOW());
+DELETE FROM order_history WHERE order_date < '2023-01-01' AND status = 'Cancelled';
+SELECT DISTINCT customer_id FROM orders WHERE order_total > 500 AND (payment_method = 'Credit Card' OR payment_method = 'PayPal');
+UPDATE employee_records SET bonus = CASE WHEN performance_rating >= 4.5 THEN bonus + 1000 ELSE bonus END WHERE department = 'Sales';
+SELECT employee_name, department FROM employee_directory WHERE (hire_date BETWEEN '2020-01-01' AND '2023-12-31') AND (status = 'Active' OR status = 'On Leave');
+INSERT INTO product_catalog (product_id, product_name, launch_date) VALUES (101, 'Eco-Friendly Water Bottle', '2024-05-01');
+UPDATE inventory SET reorder_level = CASE WHEN stock_level < 50 THEN 20 ELSE 10 END WHERE category = 'Office Supplies';
+SELECT COUNT(*) AS total_orders FROM orders WHERE order_status IN ('Shipped', 'Delivered') AND (shipping_method = 'Express' OR shipping_method = 'Standard');
+DELETE FROM session_logs WHERE last_access < NOW() - INTERVAL 30 DAY AND user_id IS NOT NULL;
+SELECT AVG(rating) AS average_rating FROM product_reviews WHERE product_id = 202 AND (review_date >= '2023-01-01' AND review_date <= '2023-12-31');
+UPDATE user_profiles SET notification_preferences = 'Email' WHERE user_id IN (SELECT user_id FROM subscriptions WHERE active = TRUE);
+SELECT supplier_name FROM suppliers WHERE (supplier_rating >= 4.0 AND (location = 'USA' OR location = 'Canada'));
+INSERT INTO sales_data (sale_id, product_id, sale_amount, sale_date) VALUES (1001, 202, 150.00, NOW());
+UPDATE project_assignments SET status = CASE WHEN deadline < NOW() THEN 'Overdue' ELSE 'On Track' END WHERE project_id = 303;
+UPDATE home_suppliers_db.android_tvs SET size_without_pads = CASE WHEN has_pads = TRUE THEN 100 ELSE 90 END;
+SELECT product_name, price FROM inventory WHERE stock > 0 AND (category = 'Electronics' OR category = 'Appliances');
+INSERT INTO customer_feedback (customer_id, feedback_text, submission_date) VALUES (12345, 'The service was exceptional and the product quality exceeded expectations.', NOW());
+DELETE FROM order_history WHERE order_date < '2023-01-01' AND status = 'Cancelled';
+SELECT DISTINCT customer_id FROM orders WHERE order_total > 500 AND (payment_method = 'Credit Card' OR payment_method = 'PayPal');
+UPDATE employee_records SET bonus = CASE WHEN performance_rating >= 4.5 THEN bonus + 1000 ELSE bonus END WHERE department = 'Sales';
+SELECT employee_name, department FROM employee_directory WHERE (hire_date BETWEEN '2020-01-01' AND '2023-12-31') AND (status = 'Active' OR status = 'On Leave');
+INSERT INTO product_catalog (product_id, product_name, launch_date) VALUES (101, 'Eco-Friendly Water Bottle', '2024-05-01');
+UPDATE inventory SET reorder_level = CASE WHEN stock_level < 50 THEN 20 ELSE 10 END WHERE category = 'Office Supplies';
+SELECT COUNT(*) AS total_orders FROM orders WHERE order_status IN ('Shipped', 'Delivered') AND (shipping_method = 'Express' OR shipping_method = 'Standard');
+DELETE FROM session_logs WHERE last_access < NOW() - INTERVAL 30 DAY AND user_id IS NOT NULL;
+SELECT AVG(rating) AS average_rating FROM product_reviews WHERE product_id = 202 AND (review_date >= '2023-01-01' AND review_date <= '2023-12-31');
+UPDATE user_profiles SET notification_preferences = 'Email' WHERE user_id IN (SELECT user_id FROM subscriptions WHERE active = TRUE);
+SELECT supplier_name FROM suppliers WHERE (supplier_rating >= 4.0 AND (location = 'USA' OR location = 'Canada'));
+INSERT INTO sales_data (sale_id, product_id, sale_amount, sale_date) VALUES (1001, 202, 150.00, NOW());
+UPDATE project_assignments SET status = CASE WHEN deadline < NOW() THEN 'Overdue' ELSE 'On Track' END WHERE project_id = 303;
+SELECT DISTINCT department FROM employee_directory WHERE (status = 'Active' OR status = 'On Leave') AND (hire_date < '2022-01-01');
+DELETE FROM inventory WHERE product_id NOT IN (SELECT product_id FROM sales_data WHERE sale_date >= NOW() - INTERVAL 1 YEAR);
+UPDATE customer_accounts SET loyalty_points = loyalty_points + CASE WHEN last_purchase_date >= NOW() - INTERVAL 1 YEAR THEN 100 ELSE 50 END;
+SELECT COUNT(DISTINCT user_id) AS unique_users FROM user_activity WHERE last_login >= '2023-01-01';
+INSERT INTO promotions (promo_code, discount_percentage, start_date, end_date) VALUES ('SUMMER2024', 20, '2024-06-01', '2024-09-01');
+UPDATE orders SET shipping_status = 'Delayed' WHERE order_id IN (SELECT order_id FROM shipments WHERE estimated_delivery < NOW());
+SELECT product_name, SUM(quantity_sold) AS total_sold FROM sales WHERE sale_date BETWEEN '2023-01-01' AND '2023-12-31' GROUP BY product_name HAVING total_sold > 100;
+DELETE FROM user_sessions WHERE last_activity < NOW() - INTERVAL 1 HOUR AND user_id IS NULL;
+SELECT AVG(salary) AS average_salary FROM employees WHERE (department = 'Engineering' OR department = 'Marketing') AND (status = 'Active');
+UPDATE inventory SET stock_level = stock_level - 1 WHERE product_id = 101 AND stock_level > 0;
+SELECT customer_id, COUNT(order_id) AS order_count FROM orders WHERE order_date >= '2023-01-01' GROUP BY customer_id HAVING order_count > 5;
+INSERT INTO feedback (customer_id, comments, submission_date) VALUES (54321, 'Great experience, will recommend!', NOW());
+UPDATE projects SET budget = budget + CASE WHEN progress < 50 THEN 5000 ELSE 2000 END WHERE project_id = 404;
+SELECT DISTINCT product_id FROM product_reviews WHERE rating >= 4 AND review_date >= '2023-01-01';
+DELETE FROM logs WHERE log_date < NOW() - INTERVAL 90 DAY;
+UPDATE employee_records SET status = 'Inactive' WHERE last_login < NOW() - INTERVAL 6 MONTH;
+SELECT COUNT(*) AS total_customers FROM customers WHERE registration_date >= '2023-01-01' AND (status = 'Active' OR status = 'Pending');
+INSERT INTO orders (customer_id, order_date, total_amount) VALUES (67890, NOW(), 250.00);
+UPDATE user_profiles SET last_updated = NOW() WHERE user_id IN (SELECT user_id FROM user_activity WHERE last_login < NOW() - INTERVAL 30 DAY);
+SELECT employee_name, department FROM employees WHERE (hire_date BETWEEN '2020-01-01' AND '2023-12-31') AND (status = 'Active');
+DELETE FROM sessions WHERE session_id NOT IN (SELECT session_id FROM active_sessions);
+UPDATE products SET price = price * 0.9 WHERE category = 'Clearance' AND (stock_level < 50);
+SELECT product_name FROM products WHERE (category = 'Electronics' OR category = 'Appliances') AND (price <= 300);
+INSERT INTO inventory (product_id, quantity, restock_date) VALUES (303, 100, '2024-02-01');
+UPDATE orders SET payment_status = 'Refunded' WHERE order_id IN (SELECT order_id FROM refunds WHERE refund_date >= NOW() - INTERVAL 30 DAY);

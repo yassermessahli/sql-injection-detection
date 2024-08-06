@@ -1,0 +1,2602 @@
+[
+    {
+        "content": "SELECT * FROM users WHERE id = 1;",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT name, age FROM employees WHERE department = 'Sales';",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "INSERT INTO orders (order_id, customer_id, order_date) VALUES (1, 2, '2024-08-04');",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "UPDATE products SET price = price * 1.1 WHERE category = 'Electronics';",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "DELETE FROM sessions WHERE session_date < '2024-01-01';",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT COUNT(*) FROM sales WHERE sale_date BETWEEN '2023-01-01' AND '2023-12-31';",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT customer_id, SUM(order_total) as total_spent FROM orders GROUP BY customer_id HAVING total_spent > 1000;",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT p.product_name, c.category_name FROM products p JOIN categories c ON p.category_id = c.category_id WHERE c.category_name = 'Books';",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT * FROM products WHERE price > 100 AND stock < 50;",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT DISTINCT city FROM customers WHERE country = 'USA';",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "CREATE TABLE new_table (id INT PRIMARY KEY, name VARCHAR(100));",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "ALTER TABLE users ADD COLUMN email VARCHAR(255);",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "DROP TABLE IF EXISTS old_table;",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT AVG(salary) FROM employees WHERE department_id = 3;",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT MAX(order_date) FROM orders;",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT * FROM orders WHERE order_date > '2024-01-01' ORDER BY order_total DESC;",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT * FROM users WHERE registration_date BETWEEN '2023-01-01' AND '2023-12-31';",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT customer_id, COUNT(*) FROM orders GROUP BY customer_id;",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT product_name FROM products WHERE stock > 0 ORDER BY product_name;",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "The concert will start at 8 PM on August 10, 2024.",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "The population of the city is approximately 1.5 million.",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "On December 31, 2023, the world will celebrate New Year's Eve.",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "The average temperature in July is around 30 degrees Celsius.",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "The marathon will take place on November 5, 2024, in New York.",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "My brother is 10 years old and loves playing soccer.",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "The movie 'Inception' was released in 2010 and is a masterpiece.",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "The last train leaves at 11:45 PM every night.",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "The project starts on 2023-09-01 and ends on 2024-06-30.",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "My favorite color is blue, and I have a cat named Whiskers.",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "Alice was born on March 15, 1995, and loves to travel.",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "The price of the product is $43.99 and ships on November 1st.",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "In 2024, the Olympics will be held in Paris, France.",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "The temperature today is 25 degrees Celsius.",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "Yesterday was July 25, 2023, and it was sunny all day.",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "John Smith",
+        "type": "random input",
+        "label": 0
+    },
+    {
+        "content": "123456",
+        "type": "random input",
+        "label": 0
+    },
+    {
+        "content": "John Smith is a software engineer with over 10 years of experience in web development. He enjoys coding in Python and JavaScript and has a passion for creating user-friendly applications.",
+        "type": "random input",
+        "label": 0
+    },
+    {
+        "content": "The quick brown fox jumps over the lazy dog.",
+        "type": "random input",
+        "label": 0
+    },
+    {
+        "content": "The cat chased the mouse around the garden.",
+        "type": "random input",
+        "label": 0
+    },
+    {
+        "content": "March 15, 2023",
+        "type": "random input",
+        "label": 0
+    },
+    {
+        "content": "Honey never spoils; archaeologists have found pots of honey in ancient Egyptian tombs that are over 3000 years old and still edible.",
+        "type": "random input",
+        "label": 0
+    },
+    {
+        "content": "Alice Johnson",
+        "type": "random input",
+        "label": 0
+    },
+    {
+        "content": "9876543210",
+        "type": "random input",
+        "label": 0
+    },
+    {
+        "content": "select on from this 'table', 'database'",
+        "type": "random input",
+        "label": 0
+    },
+    {
+        "content": "Alice Johnson recently graduated from university with a degree in marketing. She loves working with social media and helping brands connect with their audience through creative campaigns.",
+        "type": "random input",
+        "label": 0
+    },
+    {
+        "content": "2023-08-04 is a significant date for many people.",
+        "type": "random input",
+        "label": 0
+    },
+    {
+        "content": "I have a meeting scheduled for 10 AM tomorrow.",
+        "type": "random input",
+        "label": 0
+    },
+    {
+        "content": "December 31, 2024",
+        "type": "random input",
+        "label": 0
+    },
+    {
+        "content": "A group of flamingos is called a \"flamboyance.\"",
+        "type": "random input",
+        "label": 0
+    },
+    {
+        "content": "Michael Brown",
+        "type": "random input",
+        "label": 0
+    },
+    {
+        "content": "3.14159",
+        "type": "random input",
+        "label": 0
+    },
+    {
+        "content": "Michael Brown is an avid traveler who has visited over 30 countries. His favorite destination is Japan, where he enjoyed the culture, food, and beautiful landscapes.",
+        "type": "random input",
+        "label": 0
+    },
+    {
+        "content": "The average temperature in July is around 30 degrees Celsius.",
+        "type": "random input",
+        "label": 0
+    },
+    {
+        "content": "The cake was delicious, and everyone enjoyed it.",
+        "type": "random input",
+        "label": 0
+    },
+    {
+        "content": "July 4, 2025",
+        "type": "random input",
+        "label": 0
+    },
+    {
+        "content": "Bananas are berries, but strawberries are not.",
+        "type": "random input",
+        "label": 0
+    },
+    {
+        "content": "Sarah Davis",
+        "type": "random input",
+        "label": 0
+    },
+    {
+        "content": "2024",
+        "type": "random input",
+        "label": 0
+    },
+    {
+        "content": "Sarah Davis is a talented artist who specializes in watercolor painting. She often finds inspiration in nature and enjoys painting landscapes and wildlife.",
+        "type": "random input",
+        "label": 0
+    },
+    {
+        "content": "My favorite book is \"To Kill a Mockingbird\" by Harper Lee.",
+        "type": "random input",
+        "label": 0
+    },
+    {
+        "content": "She bought a new car last week, and it's red.",
+        "type": "random input",
+        "label": 0
+    },
+    {
+        "content": "January 1, 2022",
+        "type": "random input",
+        "label": 0
+    },
+    {
+        "content": "The weather today is sunny with a chance of rain later.",
+        "type": "random input",
+        "label": 0
+    },
+    {
+        "content": "David Wilson",
+        "type": "random input",
+        "label": 0
+    },
+    {
+        "content": "1500",
+        "type": "random input",
+        "label": 0
+    },
+    {
+        "content": "Select all the colors from the rainbow and filter them by brightness",
+        "type": "sql-like normal text",
+        "label": 0
+    },
+    {
+        "content": "Update the records in the database where the user is not found",
+        "type": "sql-like normal text",
+        "label": 0
+    },
+    {
+        "content": "Delete the unnecessary entries from the list and keep the important ones",
+        "type": "sql-like normal text",
+        "label": 0
+    },
+    {
+        "content": "Insert a new row into the table of dreams and make sure it has a unique ID",
+        "type": "sql-like normal text",
+        "label": 0
+    },
+    {
+        "content": "Join the tables of knowledge and wisdom to get the best results",
+        "type": "sql-like normal text",
+        "label": 0
+    },
+    {
+        "content": "Select the first ten fruits from the basket and arrange them in alphabetical order",
+        "type": "sql-like normal text",
+        "label": 0
+    },
+    {
+        "content": "Create a new view of the mountains and set the height to 3000 meters",
+        "type": "sql-like normal text",
+        "label": 0
+    },
+    {
+        "content": "Count the number of stars in the sky and group them by brightness level",
+        "type": "sql-like normal text",
+        "label": 0
+    },
+    {
+        "content": "Where is the best place to find hidden treasures in the database",
+        "type": "sql-like normal text",
+        "label": 0
+    },
+    {
+        "content": "Select the top 5 movies of all time and order them by release date",
+        "type": "sql-like normal text",
+        "label": 0
+    },
+    {
+        "content": "Update the status of the project to 'completed' and notify the team",
+        "type": "sql-like normal text",
+        "label": 0
+    },
+    {
+        "content": "Filter the results where the answers are not clear and highlight them",
+        "type": "sql-like normal text",
+        "label": 0
+    },
+    {
+        "content": "Select this table from here and put it where you go",
+        "type": "sql-like normal text",
+        "label": 0
+    },
+    {
+        "content": "I have a 5*5 matrix and I do not know where I should select from it",
+        "type": "sql-like normal text",
+        "label": 0
+    },
+    {
+        "content": "Delete all the duplicates from the list and keep the original entries",
+        "type": "sql-like normal text",
+        "label": 0
+    },
+    {
+        "content": "Select the best route to the destination and avoid traffic",
+        "type": "sql-like normal text",
+        "label": 0
+    },
+    {
+        "content": "Join the data from last year with this year's results and analyze the differences",
+        "type": "sql-like normal text",
+        "label": 0
+    },
+    {
+        "content": "Insert a new entry for the unknown variable and define its parameters",
+        "type": "sql-like normal text",
+        "label": 0
+    },
+    {
+        "content": "Group the items by category and sort them by price",
+        "type": "sql-like normal text",
+        "label": 0
+    },
+    {
+        "content": "Where can I find the missing documents in the archive",
+        "type": "sql-like normal text",
+        "label": 0
+    },
+    {
+        "content": "Select the rows where the temperature exceeds 100 degrees and alert the system",
+        "type": "sql-like normal text",
+        "label": 0
+    },
+    {
+        "content": "Update the configuration settings to optimize performance and reduce errors",
+        "type": "sql-like normal text",
+        "label": 0
+    },
+    {
+        "content": "Count how many times the word 'success' appears in the report",
+        "type": "sql-like normal text",
+        "label": 0
+    },
+    {
+        "content": "Select the last five entries from the log and review them for errors",
+        "type": "sql-like normal text",
+        "label": 0
+    },
+    {
+        "content": "Create a backup of the current settings and store it in the cloud",
+        "type": "sql-like normal text",
+        "label": 0
+    },
+    {
+        "content": "Join the lists of participants and check for any duplicates",
+        "type": "sql-like normal text",
+        "label": 0
+    },
+    {
+        "content": "Select the highest score from the test results and display it",
+        "type": "sql-like normal text",
+        "label": 0
+    },
+    {
+        "content": "Where should I insert the new data into the existing structure",
+        "type": "sql-like normal text",
+        "label": 0
+    },
+    {
+        "content": "Update the inventory count where items are running low and reorder them",
+        "type": "sql-like normal text",
+        "label": 0
+    },
+    {
+        "content": "Select the unique identifiers from the dataset and export them to CSV",
+        "type": "sql-like normal text",
+        "label": 0
+    },
+    {
+        "content": "Count the total number of hours worked and summarize the results",
+        "type": "sql-like normal text",
+        "label": 0
+    },
+    {
+        "content": "Select the names of the winners and display them in a trophy case",
+        "type": "sql-like normal text",
+        "label": 0
+    },
+    {
+        "content": "SELECT product_name, price FROM inventory WHERE stock > 50 AND category = 'Electronics'",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT customer_id, COUNT(order_id) FROM orders WHERE order_date >= '2023-01-01' GROUP BY customr_id HAVING COUNT(order_id) > 5;",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT name, email FROM users WHERE active = TRUE AND last_login > '2024-01-01'",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT city, AVG(rating) FROM reviews WHERE product_id = 123 GROUP BY city HAVING AVG(rating) > .5;",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT order_id, SUM(quantity) FROM order_details WHERE product_id IN (1, 2, 3) GROUP BY order_i;",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT DISTINCT department FROM employees WHERE salary > 60000 ORDER BY department",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT MAX(salary) AS highest_salary FROM employees WHERE position = 'Manager'",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT name, age FROM customers WHERE registration_date < '2023-06-01' AND status = 'active'",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT COUNT(*) FROM products WHERE discount > 0 AND available = TRUE",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT user_id, login_count FROM user_activity WHERE last_active > '2023-12-31' ORDER BY login_cunt DESC;",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT category, SUM(sales) FROM sales_data WHERE year = 2023 GROUP BY category",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT first_name, last_name FROM staff WHERE role = 'Admin' AND status = 'active'",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT COUNT(DISTINCT user_id) FROM purchases WHERE purchase_date BETWEEN '2023-01-01' AND '202312-31';",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT product_id, SUM(quantity) FROM sales WHERE sale_date BETWEEN '2023-01-01' AND '2023-12-31 GROUP BY product_id;",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT email FROM subscribers WHERE subscribed = TRUE AND last_email_sent < '2024-01-01'",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT name, COUNT(*) FROM attendees WHERE event_id = 456 GROUP BY name HAVING COUNT(*) > 1",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT AVG(price) FROM products WHERE category = 'Books' AND stock > 0",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT user_id, COUNT(order_id) FROM orders WHERE order_date > '2023-01-01' GROUP BY user_id HAVNG COUNT(order_id) > 3;",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT item_name, quantity FROM inventory WHERE location = 'Warehouse' AND quantity < 10",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT DISTINCT country FROM customers WHERE last_purchase > '2024-01-01'",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT product_name, SUM(revenue) FROM sales WHERE region = 'North' GROUP BY product_name",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT user_id, MAX(login_date) FROM user_logins WHERE login_date > '2023-01-01' GROUP BY user_i;",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT name, role FROM employees WHERE department = 'Sales' AND status = 'active'",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT COUNT(*) FROM transactions WHERE amount > 1000 AND transaction_date BETWEEN '2023-01-01' ND '2023-12-31';",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT customer_id, SUM(total_amount) FROM invoices WHERE status = 'Paid' GROUP BY customer_id",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT product_id, AVG(rating) FROM product_reviews WHERE review_date > '2023-01-01' GROUP BY prduct_id;",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT name FROM users WHERE age BETWEEN 18 AND 30 AND active = TRUE",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT DISTINCT product_name FROM orders WHERE order_date > '2023-01-01'",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT COUNT(*) FROM feedback WHERE rating < 3 AND feedback_date > '2023-01-01'",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT user_id, COUNT(*) FROM comments WHERE post_id = 789 GROUP BY user_id HAVING COUNT(*) > 5",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT AVG(salary) FROM employees WHERE department_id = 2 AND employment_status = 'Full-time'",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "1 OR 1=1; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "admin' --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' OR 'a'='a'; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' UNION SELECT username, password FROM users; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' AND (SELECT COUNT(*) FROM users) > 0; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' OR EXISTS(SELECT * FROM products WHERE price < 100); --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' OR (SELECT 1 FROM users WHERE username = 'admin') IS NOT NULL; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' AND (SELECT LENGTH(password) FROM users WHERE username = 'admin') = 8; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' UNION SELECT NULL, username, password FROM users; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1; DROP TABLE users; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1; SELECT * FROM products WHERE category = 'Electronics' AND price < 100; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' OR (SELECT CASE WHEN (1=1) THEN 1 ELSE 0 END) = 1; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' OR (SELECT COUNT(*) FROM information_schema.tables) > 0; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "\" AND (SELECT MIN(id) FROM users WHERE username LIKE 'a%') IS NOT NULL; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "\" UNION SELECT NULL, NULL, NULL FROM dual; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "\" OR (SELECT COUNT(*) FROM orders WHERE status = 'shipped') > 0; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "\" AND (SELECT COUNT(*) FROM products WHERE category_id = (SELECT id FROM categories WHERE name = 'Electronics')) > 0; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "\" OR (SELECT 1 FROM users WHERE username = 'admin') = 1; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "\" AND (SELECT COUNT(*) FROM information_schema.columns WHERE table_name = 'users') > 0; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "\" UNION SELECT NULL, (SELECT email FROM users WHERE username = 'admin'), NULL; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "\" OR (SELECT COUNT(*) FROM orders WHERE order_date > '2023-01-01') > 0; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "\" AND (SELECT COUNT(*) FROM users WHERE username = 'admin') > 0; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "\" OR (SELECT CASE WHEN (1=1) THEN 'true' ELSE 'false' END) = 'true'; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "\" AND (SELECT COUNT(*) FROM products WHERE price < 50) > 0; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "\" OR (SELECT 1 FROM users WHERE username = 'admin') = 1; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "\" AND (SELECT LENGTH(password) FROM users WHERE username = 'admin') = 8; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "\" UNION SELECT NULL, (SELECT username FROM users WHERE username = 'admin'), NULL; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' OR (SELECT COUNT(*) FROM orders WHERE status = 'pending') > 0; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' AND (SELECT COUNT(*) FROM feedback WHERE rating < 3) > 0; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' OR (SELECT COUNT(*) FROM products WHERE price < 50) > 0; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "admin' OR '1'='1'; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' OR 1=1; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' UNION SELECT 1, 2, 3; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' AND 1=(SELECT COUNT(*) FROM tablename) --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' OR 'x'='x' AND 'y'='y'; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' AND (SELECT 1 FROM dual) WHERE (SELECT COUNT(*) FROM orders) > 0; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' OR (SELECT COUNT(*) FROM users WHERE username = 'admin') > 0; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' AND (SELECT 1 FROM users WHERE username = 'admin') IS NOT NULL; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' UNION SELECT NULL, NULL, NULL FROM dual WHERE (SELECT COUNT(*) FROM users) = 0; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' OR (SELECT CASE WHEN (1=1) THEN 1 ELSE 0 END) = 1; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' AND (SELECT COUNT(*) FROM products WHERE category_id = (SELECT id FROM categories WHERE name = 'Electronics')) > 0; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' OR (SELECT 1 FROM users WHERE username = 'admin') IS NOT NULL; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' AND (SELECT SUBSTRING(username, 1, 1) FROM users WHERE username = 'admin') = 'a'; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' UNION SELECT NULL, username, password FROM users WHERE '1'='1' AND 'x'='x'; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' OR (SELECT COUNT(*) FROM orders WHERE order_date > '2023-01-01') > 0; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' AND (SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = database()) > 0; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1' OR '1'='",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' OR '1'='1' -",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' OR '1'='1' /",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' UNION SELECT username, password FROM users --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' UNION SELECT null, username, password FROM users --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "\" AND (SELECT COUNT(*) FROM users) > 0 --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' OR EXISTS(SELECT * FROM users WHERE username = 'admin') --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "\" OR 'a'='",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' OR 1=1 LIMIT 1; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "\" OR 1=1; -",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' AND 1=1; -",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "\") UNION SELECT 1, 'test', 'test' --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "') UNION SELECT NULL, username, password FROM users --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "\"))) AND (SELECT SUBSTRING(password, 1, 1) FROM users WHERE username = 'admin') = 'a' --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "\"))) OR (SELECT COUNT(*) FROM information_schema.tables) > 0 --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "\"))) AND (SELECT LENGTH(password) FROM users WHERE username = 'admin') = 8 --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "\"))) OR (SELECT 1 FROM dual) = 1 -",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "\") UNION SELECT 1, 2, 3, 4, 5 -",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "\") AND 1=(SELECT COUNT(*) FROM tablename) --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "\") OR 'x'='x' AND 'y'='y'",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "\")) SELECT * FROM products WHERE id = 1 UNION SELECT username, password FROM users --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "\")) AND (SELECT MIN(username) FROM users) = 'admin' --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "\")) UNION SELECT username, password FROM users WHERE '1'='1' --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "')) OR (SELECT 1 FROM users WHERE username = 'admin') --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "')) OR (SELECT 1 FROM dual) = 1; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "')) OR (SELECT COUNT(*) FROM users) > 0; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "')) AND (SELECT 1 FROM users WHERE username = 'admin') IS NOT NULL --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "')) OR (SELECT 1 FROM users WHERE username = 'admin') IS NOT NULL; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "')) OR (SELECT SUBSTRING(username, 1, 1) FROM users) = 'a' --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "')) OR (SELECT 1 FROM users WHERE username = 'admin') IS NOT NULL; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "') UNION SELECT NULL, NULL, NULL FROM dual --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "') AND (SELECT 1 FROM users WHERE username = 'admin') IS NOT NULL; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "') OR 1=1; DROP TABLE users; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "') OR 1=1; SELECT * FROM products; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "') AND (SELECT COUNT(*) FROM users WHERE username = 'admin') > 0 --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' OR (SELECT 1 FROM users WHERE username = 'admin') = 1; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' UNION SELECT NULL, NULL, NULL FROM dual; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' OR (SELECT COUNT(*) FROM users) > 0; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' OR (SELECT 1 FROM users WHERE username = 'admin') = 1; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' OR (SELECT SUBSTRING(password, 1, 1) FROM users WHERE username = 'admin') = 'a'; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1' AND (SELECT COUNT(*) FROM users WHERE username = 'admin' AND password LIKE 'a%') > 0; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' OR (SELECT CASE WHEN (1=1) THEN 1 ELSE 0 END) = 1; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "\" UNION SELECT NULL, username, password FROM users WHERE '1'='1' LIMIT 1 OFFSET 0; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' AND (SELECT SUBSTRING(password, 1, 1) FROM users WHERE username = 'admin') = 'a'; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "\" OR EXISTS(SELECT * FROM products WHERE price < 100) AND 'x'='x'; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "')) AND (SELECT 1 FROM dual) WHERE (SELECT COUNT(*) FROM orders) > 0; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' UNION SELECT 1, 'test', (SELECT email FROM users WHERE username = 'admin') --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "') AND (SELECT LENGTH(password) FROM users WHERE username = 'admin') = 8; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' OR (SELECT 1 FROM information_schema.tables WHERE table_schema = database()) IS NOT NULL; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "'))) AND (SELECT MIN(id) FROM users WHERE username LIKE 'a%') IS NOT NULL; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' OR (SELECT COUNT(*) FROM information_schema.columns WHERE table_name = 'users') > 0; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' UNION SELECT 1, 2, (SELECT password FROM users WHERE username = 'admin') --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "\" AND (SELECT COUNT(*) FROM orders WHERE order_date > '2023-01-01') > 0; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' OR (SELECT 1 FROM users WHERE username = 'admin') = 1; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "'; AND (SELECT 1 FROM users WHERE username = 'admin') IS NOT NULL; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' UNION SELECT NULL, NULL, NULL FROM dual WHERE (SELECT COUNT(*) FROM users) = 0; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' OR (SELECT CASE WHEN (1=1) THEN 'true' ELSE 'false' END) = 'true'; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "'; AND (SELECT COUNT(*) FROM products WHERE category_id = (SELECT id FROM categories WHERE name = Electronics')) > 0; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' OR (SELECT 1 FROM users WHERE username = 'admin') IS NOT NULL; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "';( AND (SELECT SUBSTRING(username, 1, 1) FROM users WHERE username = 'admin') = 'a'; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' UNION SELECT NULL, username, password FROM users WHERE '1'='1' AND 'x'='x'; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' OR (SELECT COUNT(*) FROM orders WHERE status = 'shipped') > 0; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "')) AND (SELECT 1 FROM users WHERE username = 'admin') IS NOT NULL; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' UNION SELECT NULL, NULL, NULL FROM dual WHERE (SELECT COUNT(*) FROM users) = 0; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' OR (SELECT CASE WHEN (1=1) THEN 1 ELSE 0 END) = 1; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "')))) AND (SELECT COUNT(*) FROM products WHERE price < 100) > 0; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' OR (SELECT 1 FROM users WHERE username = 'admin') = 1; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' AND (SELECT LENGTH(password) FROM users WHERE username = 'admin') = 8; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "')); UNION SELECT NULL, (SELECT email FROM users WHERE username = 'admin'), NULL; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' OR (SELECT COUNT(*) FROM orders WHERE order_date > '2023-01-01') > 0; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' AND (SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = database()) > 0; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' OR (SELECT CASE WHEN (1=1) THEN 'true' ELSE 'false' END) = 'true'; --",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "The SELECT statement retrieves data from the database.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "I want to INSERT new records into the users table.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "Can you UPDATE the status of the order to shipped?",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The DELETE command removes entries from the table.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "We need to JOIN the customer data with their orders.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The WHERE clause filters results based on specific criteria.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "I want to ORDER BY the last name in ascending order.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The GROUP BY clause aggregates data for analysis.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "Let\u00e2\u20ac\u2122s use a UNION to combine results from two queries.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The database schema defines the structure of the tables.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "I need to create a VIEW for the sales summary.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The transaction must be COMMITTED to save changes.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "Can you ROLLBACK the last transaction if it fails?",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The primary key uniquely identifies each record in the table.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "We should INDEX the columns for faster search performance.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The HAVING clause is used to filter aggregated results.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "I\u00e2\u20ac\u2122ll use the COUNT function to get the total number of users.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The AVG function calculates the average sales amount.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "We need to SELECT DISTINCT values to avoid duplicates.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The INSERT INTO statement adds new rows to the table.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "Can you show me the latest records using LIMIT?",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The database normalization process reduces data redundancy.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The schema includes tables, views, and procedures.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "I want to retrieve the MAX salary from the employees table.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The INNER JOIN combines rows from two or more tables.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The OUTER JOIN retrieves matching rows and unmatched rows.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "We should use a subquery to filter results effectively.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The LIKE operator allows pattern matching in queries.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "I\u00e2\u20ac\u2122ll use the EXISTS operator to check for data presence.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The SQL injection vulnerability can lead to data breaches.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The TRUNCATE command quickly removes all rows from a table.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "We can use a temporary table for intermediate results.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The database backup is essential for data recovery.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "I need to ALTER the table to add a new column.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The database server must handle concurrent connections.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The SELECT INTO statement creates a new table from a query.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The data type defines the kind of data stored in a column.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "We can use the CASE statement for conditional logic in queries.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The SQL syntax must be followed to avoid errors.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The database engine processes the SQL commands efficiently.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "I want to change the data type of a column using ALTER.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The GROUP_CONCAT function aggregates values into a single string.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The data integrity constraints ensure accurate data entry.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "I\u00e2\u20ac\u2122ll use the COALESCE function to handle NULL values.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The database query optimizer improves performance.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "We need to define foreign key relationships between tables.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The SQL command line interface allows direct database interaction.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The data warehouse stores large volumes of historical data.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "I\u00e2\u20ac\u2122ll use the CONCAT function to combine first and last names.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The SQL statement must end with a semicolon.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The REPLACE function updates specific values in a string.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "We can use the TRIM function to remove whitespace from data.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The database log tracks all changes made to the data.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "I want to create a stored procedure for repetitive tasks.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The SQL standard defines the syntax and rules for queries.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The data visualization tools help analyze query results.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "I\u00e2\u20ac\u2122ll use the GROUP BY clause to summarize sales data.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The SQL command must be executed within a transaction.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The data model outlines how data is structured",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The cat decided to SELECT the coziest spot in the house.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "I need to INSERT some new ideas into the project proposal.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "Can you UPDATE the presentation slides with the latest data?",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The DELETE button was accidentally pressed, removing important files.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "Let\u00e2\u20ac\u2122s JOIN our efforts to complete the project on time.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The WHERE are my keys? I can\u00e2\u20ac\u2122t find them anywhere!",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "I want to ORDER my thoughts before the meeting starts.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The GROUP of friends decided to go on a trip together.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "I\u00e2\u20ac\u2122ll UNION my playlist with yours for the party.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The schema of the building was designed by a famous architect.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "I need to create a VIEW of the city from the rooftop.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The transaction must be COMMITTED before we can proceed.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "Can you ROLLBACK the changes made to the document?",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The primary key to happiness is a positive mindset.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "We should INDEX our favorite movies for easy access.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The HAVING fun at the carnival was unforgettable.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "I\u00e2\u20ac\u2122ll COUNT the number of attendees for the event.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The AVG temperature this week has been quite pleasant.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "We need to SELECT DISTINCT flavors for the ice cream menu.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The INSERT INTO the recipe book was a delightful addition.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "Can you show me the LIMIT of your patience?",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The normalization of the data helped improve clarity.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The schema of the project outlines our objectives.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "I want to retrieve the MAX score from the last game.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The INNER circle of friends met for dinner last night.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The OUTER edges of the paper were frayed and torn.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "We should use a subquery to find the best options.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The LIKE-minded individuals gathered for the discussion.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "I\u00e2\u20ac\u2122ll EXISTS in the moment and enjoy the experience.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The SQL injection vulnerability was a major concern.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The TRUNCATE of the old files made space for new ones.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "We can use a temporary solution until the main one is ready.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The backup of the important files is essential.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "I need to ALTER my plans for the weekend.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The server must handle concurrent requests efficiently.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The SELECT INTO the new project was exciting.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The data type of the new gadget is quite innovative.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "We can use the CASE scenario to decide the next steps.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The syntax of the poem was beautifully crafted.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The engine processes the commands with great efficiency.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "I want to change the data type of my favorite song.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The GROUP of musicians played beautifully together.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The COALESCE of their opinions led to a consensus.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The integrity of the project was maintained throughout.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "I\u00e2\u20ac\u2122ll use the CONCAT function to combine the names.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The statement must end with a period for clarity.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The REPLACE function updated the old information.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "We can TRIM the excess details from the report.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The log tracks all changes made to the project.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "I want to create a stored memory for future reference.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The standard defines the rules for our collaboration.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The visualization tools helped present our findings.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "I\u00e2\u20ac\u2122ll use the GROUP BY clause to categorize the results.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The command must be executed within a defined timeframe.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The model outlines how we will approach the task.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The functions can simplify complex calculations.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "We need to optimize the workflow for better results.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The connection string specifies the details for access.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "I\u00e2\u20ac\u2122ll FETCH the latest updates from the team.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The command can be executed using a simple script.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The migration process transfers ideas between groups.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The error messages help identify issues in the project.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "I want to use a CTE for better organization of thoughts.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The client allows users to interact with the interface.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The import process requires proper formatting of data.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "We can use the JSON format to handle structured information.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The query can be parameterized for security purposes.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The documentation of the project must be thorough.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "I\u00e2\u20ac\u2122ll use the RANK function to prioritize tasks.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The standard supports various formats for submission.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The administrator manages user access to resources.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The results can be returned in different formats.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "I want to use the ROLLUP for additional insights.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The command can be scheduled for regular updates.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The checks prevent invalid entries in the system.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The query can be optimized using efficient methods.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "I\u00e2\u20ac\u2122ll INTERSECT the two lists to find common items.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The command can be executed in a timely manner.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The export process generates reports for stakeholders.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "We can monitor performance using the profiling tools.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The conditions can include multiple JOIN criteria.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "I want to use the CROSS JOIN to explore all possibilities.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The cleansing process improves the quality of information.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The command can be executed asynchronously if needed.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The replication ensures that data is always available.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "I\u00e2\u20ac\u2122ll create a new table for the upcoming events.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The functions can be used to analyze different scenarios.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The retention policy defines how long we keep records.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The command can be executed in a batch for efficiency.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The triggers automate responses based on specific events.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "I want to use the DROP command to remove unnecessary files.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The query can be formatted for better readability.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The analysis tools help visualize the project outcomes.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The command can modify existing records as needed.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "The performance tuning improves overall efficiency.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "I\u00e2\u20ac\u2122ll use the command to grant access to new users.",
+        "type": "texts with sql keywords",
+        "label": 0
+    },
+    {
+        "content": "John Smith, Senior Sales Manager, has successfully closed multiple deals this quarter, contributing significantly to the team\u00e2\u20ac\u2122s overall performance.",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "Alice Johnson, a new customer, registered on 2023-08-04 and has shown interest in our premium product line.",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "The invoice dated 2023-12-31 for $2,500.00 was sent to Michael Brown for the recent order of 150 units of Product A.",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "David Wilson placed an order for 200 units of Product B on 2023-11-20, taking advantage of the 10% discount offer.",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "The quarterly report titled \"Sales Performance Q3 2023\" indicates a 25% increase in sales compared to the previous quarter.",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "Emily Garcia, our top-performing sales representative, achieved $10,000.00 in sales last month, setting a new record for the team.",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "A shipment of 300 units of Product C is scheduled for delivery on 2024-01-15, with tracking information to be provided shortly.",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "The customer feedback collected on 2023-10-10 highlighted the excellent service provided by Jessica Lee during the purchase process.",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "Daniel Anderson has been assigned as the project lead for the upcoming product launch scheduled for 2024-03-01.",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "The order confirmation for 100 units of Product D was sent to Laura Thomas on 2023-09-30, with an expected delivery date of 2023-10-15.",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "A payment of $1,200.00 was received from Christopher Martinez on 2023-11-05, settling the outstanding invoice.",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "The title \"Best Customer Service Award\" was presented to Sarah Davis during the annual company meeting held on 2023-12-15.",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "The new product line, \"Eco-Friendly Office Supplies,\" launched on 2023-08-01, has received positive reviews from customers.",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "A credit note for $500.00 was issued to David Wilson on 2024-02-10 due to a pricing error on the previous invoice.",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "The sales meeting scheduled for 2024-04-20 will focus on strategies to improve customer retention and satisfaction.",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "The report titled \"Inventory Status Report\" dated 2023-09-01 shows that we have 150 units of Product E in stock.",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "A promotional email was sent to all customers on 2023-07-15, announcing a summer sale with discounts of up to 30%.",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "The customer loyalty program, \"Gold Tier,\" was launched on 2023-11-01 to reward our most loyal clients.",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "A total of 250 units of Product F were sold during the Black Friday sale on 2023-11-24, exceeding our sales expectations.",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "The meeting notes from the strategy session held on 2023-10-05 emphasize the importance of expanding our market reach.",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "A new supplier, ABC Supplies, was added to the system on 2023-08-20, providing us with better pricing on office materials.",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "The purchase order #PO123456 for 500 units of Product G was approved on 2024-01-10, with an estimated delivery date of 2024-01-20.",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "The training session titled \"Effective Sales Techniques\" is scheduled for 2024-02-15, aimed at enhancing the skills of our sales team.",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "A refund of $150.00 was processed for the customer John Doe on 2023-12-01 due to a returned item.",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "The product review for Product H submitted on 2023-11-30 praised its quality and functionality.",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "A reminder email regarding the upcoming payment due on 2024-03-05 was sent to all outstanding accounts.",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "The annual budget meeting is set for 2024-04-25 to discuss financial projections and resource allocation.",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "The title \"Employee of the Month\" was awarded to Emily Garcia for her outstanding contributions in March 2024.",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "John Smith",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "123456",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "$1,250.75",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "2023-09-30",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "Christopher Martinez",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "147258",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "$900.75",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "2023-08-15",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "1001 Main St, Springfield",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "2023-01-01",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "10% Discount on all items",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "500 units of Product A",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "PO# 123456789",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "2024-03-01",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "Customer ID: CUST001",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "$1,000.00 payment received",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "Invoice #INV2024-001",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "2023-06-30",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "150 items shipped on 2024-04-15",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "25% off on next purchase",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "200 units of Product B",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "2023-07-01",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "50% of total sales target achieved",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "300 units of Product C",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "2024-06-30",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "New customer registration: Jane Doe",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "2023-03-15",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "$150.00 refund processed",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "Supplier contact: John Doe",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "2023-05-25",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "$1,500.00 invoice amount",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "2024-02-10",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "600 units of Product G",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "2023-09-01",
+        "type": "potential SAGE ERP inputs",
+        "label": 0
+    },
+    {
+        "content": "UPDATE home_suppliers_db.android_tvs SET size_without_pads = CASE WHEN has_pads = TRUE THEN 100 ELSE 90 END;",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "SELECT product_name, price FROM inventory WHERE stock > 0 AND (category = 'Electronics' OR category = 'Appliances');",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "INSERT INTO customer_feedback (customer_id, feedback_text, submission_date) VALUES (12345, 'The service was exceptional and the product quality exceeded expectations.', NOW());",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "DELETE FROM order_history WHERE order_date < '2023-01-01' AND status = 'Cancelled';",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "SELECT DISTINCT customer_id FROM orders WHERE order_total > 500 AND (payment_method = 'Credit Card' OR payment_method = 'PayPal');",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "UPDATE employee_records SET bonus = CASE WHEN performance_rating >= 4.5 THEN bonus + 1000 ELSE bonus END WHERE department = 'Sales';",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "SELECT employee_name, department FROM employee_directory WHERE (hire_date BETWEEN '2020-01-01' AND '2023-12-31') AND (status = 'Active' OR status = 'On Leave');",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "INSERT INTO product_catalog (product_id, product_name, launch_date) VALUES (101, 'Eco-Friendly Water Bottle', '2024-05-01');",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "UPDATE inventory SET reorder_level = CASE WHEN stock_level < 50 THEN 20 ELSE 10 END WHERE category = 'Office Supplies';",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "SELECT COUNT(*) AS total_orders FROM orders WHERE order_status IN ('Shipped', 'Delivered') AND (shipping_method = 'Express' OR shipping_method = 'Standard');",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "DELETE FROM session_logs WHERE last_access < NOW() - INTERVAL 30 DAY AND user_id IS NOT NULL;",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "SELECT AVG(rating) AS average_rating FROM product_reviews WHERE product_id = 202 AND (review_date >= '2023-01-01' AND review_date <= '2023-12-31');",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "UPDATE user_profiles SET notification_preferences = 'Email' WHERE user_id IN (SELECT user_id FROM subscriptions WHERE active = TRUE);",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "SELECT supplier_name FROM suppliers WHERE (supplier_rating >= 4.0 AND (location = 'USA' OR location = 'Canada'));",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "INSERT INTO sales_data (sale_id, product_id, sale_amount, sale_date) VALUES (1001, 202, 150.00, NOW());",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "UPDATE project_assignments SET status = CASE WHEN deadline < NOW() THEN 'Overdue' ELSE 'On Track' END WHERE project_id = 303;",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "UPDATE home_suppliers_db.android_tvs SET size_without_pads = CASE WHEN has_pads = TRUE THEN 100 ELSE 90 END;",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "SELECT product_name, price FROM inventory WHERE stock > 0 AND (category = 'Electronics' OR category = 'Appliances');",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "INSERT INTO customer_feedback (customer_id, feedback_text, submission_date) VALUES (12345, 'The service was exceptional and the product quality exceeded expectations.', NOW());",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "DELETE FROM order_history WHERE order_date < '2023-01-01' AND status = 'Cancelled';",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "SELECT DISTINCT customer_id FROM orders WHERE order_total > 500 AND (payment_method = 'Credit Card' OR payment_method = 'PayPal');",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "UPDATE employee_records SET bonus = CASE WHEN performance_rating >= 4.5 THEN bonus + 1000 ELSE bonus END WHERE department = 'Sales';",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "SELECT employee_name, department FROM employee_directory WHERE (hire_date BETWEEN '2020-01-01' AND '2023-12-31') AND (status = 'Active' OR status = 'On Leave');",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "INSERT INTO product_catalog (product_id, product_name, launch_date) VALUES (101, 'Eco-Friendly Water Bottle', '2024-05-01');",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "UPDATE inventory SET reorder_level = CASE WHEN stock_level < 50 THEN 20 ELSE 10 END WHERE category = 'Office Supplies';",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "SELECT COUNT(*) AS total_orders FROM orders WHERE order_status IN ('Shipped', 'Delivered') AND (shipping_method = 'Express' OR shipping_method = 'Standard');",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "DELETE FROM session_logs WHERE last_access < NOW() - INTERVAL 30 DAY AND user_id IS NOT NULL;",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "SELECT AVG(rating) AS average_rating FROM product_reviews WHERE product_id = 202 AND (review_date >= '2023-01-01' AND review_date <= '2023-12-31');",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "UPDATE user_profiles SET notification_preferences = 'Email' WHERE user_id IN (SELECT user_id FROM subscriptions WHERE active = TRUE);",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "SELECT supplier_name FROM suppliers WHERE (supplier_rating >= 4.0 AND (location = 'USA' OR location = 'Canada'));",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "INSERT INTO sales_data (sale_id, product_id, sale_amount, sale_date) VALUES (1001, 202, 150.00, NOW());",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "UPDATE project_assignments SET status = CASE WHEN deadline < NOW() THEN 'Overdue' ELSE 'On Track' END WHERE project_id = 303;",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "SELECT DISTINCT department FROM employee_directory WHERE (status = 'Active' OR status = 'On Leave') AND (hire_date < '2022-01-01');",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "DELETE FROM inventory WHERE product_id NOT IN (SELECT product_id FROM sales_data WHERE sale_date >= NOW() - INTERVAL 1 YEAR);",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "UPDATE customer_accounts SET loyalty_points = loyalty_points + CASE WHEN last_purchase_date >= NOW() - INTERVAL 1 YEAR THEN 100 ELSE 50 END;",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "SELECT COUNT(DISTINCT user_id) AS unique_users FROM user_activity WHERE last_login >= '2023-01-01';",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "INSERT INTO promotions (promo_code, discount_percentage, start_date, end_date) VALUES ('SUMMER2024', 20, '2024-06-01', '2024-09-01');",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "UPDATE orders SET shipping_status = 'Delayed' WHERE order_id IN (SELECT order_id FROM shipments WHERE estimated_delivery < NOW());",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "SELECT product_name, SUM(quantity_sold) AS total_sold FROM sales WHERE sale_date BETWEEN '2023-01-01' AND '2023-12-31' GROUP BY product_name HAVING total_sold > 100;",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "DELETE FROM user_sessions WHERE last_activity < NOW() - INTERVAL 1 HOUR AND user_id IS NULL;",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "SELECT AVG(salary) AS average_salary FROM employees WHERE (department = 'Engineering' OR department = 'Marketing') AND (status = 'Active');",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "UPDATE inventory SET stock_level = stock_level - 1 WHERE product_id = 101 AND stock_level > 0;",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "SELECT customer_id, COUNT(order_id) AS order_count FROM orders WHERE order_date >= '2023-01-01' GROUP BY customer_id HAVING order_count > 5;",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "INSERT INTO feedback (customer_id, comments, submission_date) VALUES (54321, 'Great experience, will recommend!', NOW());",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "UPDATE projects SET budget = budget + CASE WHEN progress < 50 THEN 5000 ELSE 2000 END WHERE project_id = 404;",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "SELECT DISTINCT product_id FROM product_reviews WHERE rating >= 4 AND review_date >= '2023-01-01';",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "DELETE FROM logs WHERE log_date < NOW() - INTERVAL 90 DAY;",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "UPDATE employee_records SET status = 'Inactive' WHERE last_login < NOW() - INTERVAL 6 MONTH;",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "SELECT COUNT(*) AS total_customers FROM customers WHERE registration_date >= '2023-01-01' AND (status = 'Active' OR status = 'Pending');",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "INSERT INTO orders (customer_id, order_date, total_amount) VALUES (67890, NOW(), 250.00);",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "UPDATE user_profiles SET last_updated = NOW() WHERE user_id IN (SELECT user_id FROM user_activity WHERE last_login < NOW() - INTERVAL 30 DAY);",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "SELECT employee_name, department FROM employees WHERE (hire_date BETWEEN '2020-01-01' AND '2023-12-31') AND (status = 'Active');",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "DELETE FROM sessions WHERE session_id NOT IN (SELECT session_id FROM active_sessions);",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "UPDATE products SET price = price * 0.9 WHERE category = 'Clearance' AND (stock_level < 50);",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "SELECT product_name FROM products WHERE (category = 'Electronics' OR category = 'Appliances') AND (price <= 300);",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "INSERT INTO inventory (product_id, quantity, restock_date) VALUES (303, 100, '2024-02-01');",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    },
+    {
+        "content": "UPDATE orders SET payment_status = 'Refunded' WHERE order_id IN (SELECT order_id FROM refunds WHERE refund_date >= NOW() - INTERVAL 30 DAY);",
+        "type": "sql queries with complex non-keywords",
+        "label": 1
+    }
+]
