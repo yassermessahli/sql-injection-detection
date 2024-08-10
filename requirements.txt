@@ -1,0 +1,7 @@
+h5py==3.11.0
+transformers==4.44.0
+numpy==1.26.4
+regex==2024.5.15
+# modeling
+tensorflow==2.17.0
+keras==3.4.0

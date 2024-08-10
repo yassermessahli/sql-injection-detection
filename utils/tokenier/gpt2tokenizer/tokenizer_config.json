@@ -82,7 +82,7 @@
       "single_word": false,
       "special": true
     },
-    "30875": {
+    "31652": {
       "content": "<|bos|>",
       "lstrip": false,
       "normalized": true,
@@ -90,7 +90,7 @@
       "single_word": false,
       "special": true
     },
-    "30876": {
+    "31653": {
       "content": "<|eos|>",
       "lstrip": false,
       "normalized": true,
@@ -98,7 +98,7 @@
       "single_word": false,
       "special": true
     },
-    "30877": {
+    "31654": {
       "content": "<|unk|>",
       "lstrip": false,
       "normalized": true,

