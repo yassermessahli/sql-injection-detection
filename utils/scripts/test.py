@@ -1,7 +1,13 @@
+"""
+Test the model by making a prediction. `0` for non-sql and `1` for sql injection.
+Adjust the path to the model, vocab, and merges files basedon your directory structure.
+"""
+
 from prediction import AutoEncoder
 import warnings
 
 warnings.filterwarnings("ignore")
+
 
 # setup dependancies paths
 vocab = "utils/tokenier/vocab/vocab.json"

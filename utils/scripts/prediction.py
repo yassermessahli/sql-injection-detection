@@ -8,8 +8,26 @@ import numpy as np
 
 
 class AutoEncoder:
+    """
+    LASTM-AutoEncoder class for sql injection detection.
     
-    # params
+    ### Methods:
+        **__init__***: class constructor
+        ***pre_process***: text preprocessing
+        ***encode***: text encoding
+        ***masked_sparse_categorical_accuracy***: model metric
+        ***masked_sparse_categorical_crossentropy***: model loss
+        ***analyse***: prediction function
+        ***check_input***: check input validity
+        
+    ### Attributes:
+        **VOCAB_PATH**: path to the vocabulary file
+        **MERGES_PATH**: path to the merges file
+        **MODEL_PATH**: path to the model file
+        **THRESHOLD**: prediction threshold
+    """
+    
+    # attributes
     VOCAB_PATH = ""
     MERGES_PATH = ""
     MODEL_PATH = ""
@@ -30,6 +48,7 @@ class AutoEncoder:
     
     # text preprocessing
     def pre_process(self, text: str) -> str:
+        """Preprocess text data before prediction. """
 
         text = text.replace("\n", "")
         text = text.lower()
@@ -57,6 +76,7 @@ class AutoEncoder:
 
 
     def encode(self, query: str, tokenizer) -> list[int]:
+        """Encode text data for prediction. """
         query = self.pre_process(query)
         tok = tokenizer.tokenize(query)
         tok = list(map(lambda x: x.replace("Ġ", ""), tok))
@@ -103,11 +123,24 @@ class AutoEncoder:
             lambda: tf.reduce_sum(masked_loss) / mask_sum,
             lambda: tf.constant(0.0, dtype=tf.float32)
         )
+        
+    def check_input(self, input:list) -> bool:
+        """Check input validity. """
+        input = input[input != 0]
+        is_short = len(input) <= 3
+        is_ones = np.all(np.array(input) == 1)
+        is_empty = len(input) == 0
+        acceptable = not (is_short or is_ones or is_empty)
+        
+        return acceptable
 
 
     # prediction function
     def analyse(self, input: str) -> bool:
+        """Predict if the input is a SQL injection. """
         y_true = np.array(self.encode(input, tokenizer=self.gpt2tokenizer)).reshape((1, 40))
+        if not self.check_input(y_true):
+            return 0
         y_pred = self.model.predict(y_true, verbose=0)
         proba = self.masked_sparse_categorical_accuracy(y_true, y_pred)
         return int(proba >= self.THRESHOLD)
