@@ -1,3 +1,14 @@
+"""
+This module defines the AutoEncoder class for SQL injection detection using a LSTM-AutoEncoder model.
+
+### Classes:
+AutoEncoder: A class to handle text preprocessing, encoding, and prediction for SQL injection detection.
+
+### Usage:
+Initialize the AutoEncoder with paths to the vocabulary, merges, and model files.
+Use the `analyse` method to make predictions on input queries.
+"""
+
 from transformers import GPT2Tokenizer
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.sequence import pad_sequences
@@ -34,6 +45,14 @@ class AutoEncoder:
     THRESHOLD = 0.35
     
     def __init__(self, vocab_path, merges_path, model_path, threshold=0.35) -> None:
+        """
+        Initializes the AutoEncoder with the specified paths.
+
+        Args:
+            vocab_path (str): Path to the vocabulary file.
+            merges_path (str): Path to the merges file.
+            model_path (str): Path to the trained model file.
+        """
         self.VOCAB_PATH = vocab_path
         self.MERGES_PATH = merges_path
         self.MODEL_PATH = model_path
@@ -48,7 +67,15 @@ class AutoEncoder:
     
     # text preprocessing
     def pre_process(self, text: str) -> str:
-        """Preprocess text data before prediction. """
+        """
+        Preprocesses the input text by cleaning and tokenizing.
+
+        Args:
+            text (str): The input text to preprocess.
+
+        Returns:
+            list: A list of token IDs.
+        """
 
         text = text.replace("\n", "")
         text = text.lower()
@@ -76,7 +103,15 @@ class AutoEncoder:
 
 
     def encode(self, query: str, tokenizer) -> list[int]:
-        """Encode text data for prediction. """
+        """
+        Encodes the tokenized text into padded sequences.
+
+        Args:
+            tokens (list): List of token IDs.
+
+        Returns:
+            np.array: Padded sequence of token IDs.
+        """
         query = self.pre_process(query)
         tok = tokenizer.tokenize(query)
         tok = list(map(lambda x: x.replace("Ġ", ""), tok))
@@ -88,7 +123,6 @@ class AutoEncoder:
 
         seq = tokenizer.convert_tokens_to_ids(tok)
         seq = [item for item in seq if item != None]
-        act_len = np.min([len(seq), 40])
         seq = pad_sequences(sequences=[seq], maxlen=40, padding="post", truncating="post")
         return seq[0]
 
@@ -125,9 +159,17 @@ class AutoEncoder:
         )
         
     def check_input(self, input:list) -> bool:
-        """Check input validity. """
+        """
+        Checks the validity of the input query.
+
+        Args:
+            query (str): The input query to check.
+
+        Returns:
+            bool: True if the input is valid, False otherwise.
+        """
         input = input[input != 0]
-        is_short = len(input) <= 3
+        is_short = len(input) <= 2
         is_ones = np.all(np.array(input) == 1)
         is_empty = len(input) == 0
         acceptable = not (is_short or is_ones or is_empty)
@@ -137,7 +179,15 @@ class AutoEncoder:
 
     # prediction function
     def analyse(self, input: str) -> bool:
-        """Predict if the input is a SQL injection. """
+        """
+        The prediction function. We called it `analyse` instead of `predict` because `predict` is a reserved in the prediction function of the model.
+
+        Args:
+            query (str): The input query to analyze.
+
+        Returns:
+            int: Prediction result (0 for non-SQL, 1 for SQL injection).
+        """
         y_true = np.array(self.encode(input, tokenizer=self.gpt2tokenizer)).reshape((1, 40))
         if not self.check_input(y_true):
             return 0
