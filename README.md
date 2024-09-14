@@ -1,5 +1,7 @@
 ## LLMs models for SQL injection detection.
 
+The SQL injection detection problem is such a major and hard problem that made many researchers working for it for years. Many research papers was released about this problematic, that I analyzed some of them during the internship. This project can be just another idea for solving this major problem, it can be a good starting point for researchers to develop an even more sophisticated model that well detect SQL injections. 
+
 This project implements an anomaly detection model based on an AutoEncoder architecture with LSTM layers to capture long-term dependencies. 
 
 The objective is to detect whether an input represents an SQL injection or normal text.
